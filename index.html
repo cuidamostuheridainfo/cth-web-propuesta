@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>CTH — Inicio · Propuesta para revisión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#167E89}a:hover{color:#013451}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:62px;height:62px;border-radius:999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(1,52,81,.28);transition:transform .2s ease, box-shadow .2s ease}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:999px;border:3px solid #25D366;animation:waPulse 2.4s ease-out infinite}
+.wa-float:hover,.wa-float:focus-visible{transform:scale(1.08);box-shadow:0 12px 28px rgba(1,52,81,.35);outline:none}
+.wa-tip{position:absolute;right:74px;white-space:nowrap;background:#013451;color:#FFFFFF;font-size:14px;font-weight:700;padding:8px 14px;border-radius:999px;opacity:0;transform:translateX(8px);transition:opacity .2s ease, transform .2s ease;pointer-events:none}
+.wa-float:hover .wa-tip,.wa-float:focus-visible .wa-tip{opacity:1;transform:none}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@media (prefers-reduced-motion: reduce){.wa-float::before{animation:none;opacity:0}.wa-float{transition:none}}
+.nav-link{position:relative;padding:8px 0 10px;transition:color .2s ease}
+.nav-link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px;background:#D4E7EE;transition:background .2s ease, box-shadow .2s ease}
+.nav-link:hover,.nav-link:focus-visible{color:#167E89 !important;outline:none}
+.nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
+.nav-faq{transition:background .2s ease, color .2s ease}
+.nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
+.inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
+.inst-down{animation-name:instDown;animation-duration:38s}
+.inst-photos:hover .inst-col{animation-play-state:paused}
+@keyframes instUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 6px))}}
+@keyframes instDown{from{transform:translateY(calc(-50% - 6px))}to{transform:translateY(0)}}
+.inst-card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.inst-card:hover{transform:translateX(-4px);border-color:#1664AC !important;box-shadow:6px 8px 0 #1664AC}
+.need-card{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.need-card:hover,.need-card:focus-visible{transform:translateY(-8px);border-color:#00A0D0 !important;box-shadow:0 0 0 3px rgba(0,160,208,.35),0 0 22px rgba(0,160,208,.45),0 18px 36px rgba(1,52,81,.18);outline:none}
+.step-reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease, transform .6s ease}
+.steps-in .step-reveal{opacity:1;transform:none}
+.step-card{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.step-card:hover,.step-card:focus-within{transform:translate(-4px,-6px)}
+.step-c1:hover,.step-c1:focus-within{box-shadow:10px 12px 0 #00A0D0;border-color:#00A0D0 !important}
+.step-c2:hover,.step-c2:focus-within{box-shadow:10px 12px 0 #84B953;border-color:#84B953 !important}
+.step-c3:hover,.step-c3:focus-within{box-shadow:10px 12px 0 #013451;border-color:#013451 !important}
+.step-card:hover .step-icon{animation:stepPop .5s ease}
+.step-card.is-active{transform:translate(-4px,-6px)}
+.step-c1.is-active{box-shadow:10px 12px 0 #00A0D0;border-color:#00A0D0 !important}
+.step-c2.is-active{box-shadow:10px 12px 0 #84B953;border-color:#84B953 !important}
+.step-c3.is-active{box-shadow:10px 12px 0 #013451;border-color:#013451 !important}
+.spec-tile{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.spec-tile:hover,.spec-tile:focus-visible{transform:translateY(-4px);border-color:#00A0D0 !important;box-shadow:0 0 0 3px rgba(0,160,208,.25),0 10px 22px rgba(1,52,81,.12);outline:none}
+.spec-tile.is-active{border-color:#84B953 !important;box-shadow:6px 8px 0 #84B953;transform:translate(-3px,-4px)}
+.spec-tile.spec-dark.is-active{box-shadow:6px 8px 0 #84B953}
+.step-panel{padding:32px;animation:panelIn .35s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.cal-check{stroke-dasharray:12;stroke-dashoffset:12}
+.steps-in .cal-check{animation:drawCheck .6s ease .9s forwards}
+.step-card:hover .cal-check{stroke-dashoffset:12;animation:drawCheck .5s ease forwards}
+@keyframes stepPop{0%{transform:scale(1)}40%{transform:scale(1.15) rotate(-6deg)}70%{transform:scale(.97) rotate(3deg)}100%{transform:scale(1)}}
+@keyframes drawCheck{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){.step-reveal{opacity:1;transform:none;transition:none}.step-card{transition:none}.step-card:hover{transform:none}.step-card:hover .step-icon{animation:none}.cal-check{stroke-dashoffset:0;animation:none}.step-panel{animation:none}.step-card.is-active{transform:none}.spec-tile{transition:none}.spec-tile:hover,.spec-tile.is-active{transform:none}.inst-col{animation:none}.inst-card{transition:none}.inst-card:hover{transform:none}}
+@media (prefers-reduced-motion: reduce){.need-card{transition:none}.need-card:hover,.need-card:focus-visible{transform:none}}
+</style>
+</head>
+<body>
+<div role="note" style="background:#013451;color:#FFFFFF;font-family:Roboto,Arial,sans-serif;font-size:14px;text-align:center;padding:10px 16px;">Propuesta de diseño para revisión interna · Los textos entre corchetes son contenido pendiente</div>
+<div style="font-family: Roboto, Arial, sans-serif; color: #013451; background: #FFFFFF;">
+
+<!-- CABECERA -->
+<header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="#inicio" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<a class="nav-link" href="#pacientes" style="color: #013451; text-decoration: none;">Pacientes</a>
+<a class="nav-link" href="#instituciones" style="color: #013451; text-decoration: none;">Instituciones</a>
+<a class="nav-link" href="#productos" style="color: #013451; text-decoration: none;">Productos</a>
+<a class="nav-link" href="#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
+<a class="nav-link" href="#cumbre" style="color: #013451; text-decoration: none;">Nosotros</a>
+<a class="nav-faq" href="preguntas-frecuentes.html" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border-radius: 999px; border: 2px solid #013451; color: #013451; text-decoration: none; font-weight: 700;">Preguntas frecuentes</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" style="background: #F6F7F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 48px;">
+<div style="flex: 1 1 480px; display: flex; flex-direction: column; gap: 22px;">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 34px; padding: 0 16px; border-radius: 999px; background: #167E89; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Unidad de Cuidado Avanzado de Heridas y Piel · Caracas</p>
+<h1 style="margin: 0; font-size: 48px; line-height: 1.12; font-weight: 700; color: #013451;"><em style="color: #00A0D0;">Prevenimos</em> y tratamos tus heridas.<br>Cuidamos tu piel.</h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #514C4C; max-width: 520px;">¿Tu herida no sana como esperabas, vas a operarte o tienes un familiar en cama por mucho tiempo? Somos una unidad multidisciplinaria y te atendemos en nuestras sedes, en tu casa o por telemedicina.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px;">
+<a href="#pacientes" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 32px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Soy paciente</a>
+<a href="#instituciones" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 32px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Soy institución</a>
+</div>
+</div>
+<div style="flex: 1 1 420px; min-height: 440px; border-radius: 24px; background: #024448; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; padding: 24px; box-sizing: border-box;">
+<video data-ref="setHeroVideo" src="assets/unidad-completo.mp4" poster="assets/unidad-poster.jpg" autoplay muted loop playsinline aria-label="Video: qué es la Unidad de Cuidamos Tu Herida" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;"></video>
+<button type="button" data-click="toggleSound" data-attr-aria-pressed="soundOn" style="position: absolute; left: 16px; bottom: 16px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: none; background: rgba(255,255,255,0.92); color: #013451; display: flex; align-items: center; gap: 8px; font-family: Roboto, Arial, sans-serif; font-size: 15px; font-weight: 700; cursor: pointer;"><div data-if="heroMuted" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"></path><path d="m23 9-6 6M17 9l6 6"></path></svg></div><div data-if="soundOn" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z"></path><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"></path></svg></div><span data-text="soundLabel"></span></button>
+<button type="button" data-click="toggleHero" data-attr-aria-label="heroLabel" style="position: absolute; right: 16px; bottom: 16px; width: 44px; height: 44px; border-radius: 999px; border: none; background: rgba(255,255,255,0.92); display: flex; align-items: center; justify-content: center; cursor: pointer;">
+<div data-if="heroPaused" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="#013451" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></div>
+<div data-if="heroPlaying" hidden><svg width="18" height="18" viewBox="0 0 24 24" fill="#013451" aria-hidden="true"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg></div>
+</button>
+</div>
+</div>
+</section>
+
+<!-- QUÉ NECESITAS -->
+<section aria-labelledby="necesitas" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-direction: column; gap: 28px;">
+<h2 id="necesitas" style="margin: 0; font-size: 30px; font-weight: 700; text-align: center;">¿Qué <em style="color: #00A0D0;">necesitas</em>?</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+<a href="#pacientes" class="need-card" style="display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 16px; border: 1px solid #024448; background: #024448; color: #FFFFFF; text-decoration: none;">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#84B953" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.2l7.8-7.7 1-1.1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
+<span style="font-size: 22px; font-weight: 700;">Necesito atención</span>
+<span style="font-size: 16px; line-height: 1.5;">Para ti o un familiar: tratar o prevenir una herida, cuidar tu piel, consultar a un especialista o hacerte exámenes.</span>
+<span style="font-size: 15px; font-weight: 700; color: #84B953;">Ver cómo te atendemos →</span>
+</a>
+<a href="#instituciones" class="need-card" style="display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 16px; background: #FFFFFF; border: 1px solid #C9D9DE; color: #013451; text-decoration: none;">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#167E89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1M14 9h1M9 13h1M14 13h1M10 21v-4h4v4"></path></svg>
+<span style="font-size: 22px; font-weight: 700;">Represento una institución</span>
+<span style="font-size: 16px; line-height: 1.5; color: #514C4C;">Aseguradoras, hospitales, clínicas y empresas que buscan un aliado en cuidado de heridas.</span>
+<span style="font-size: 15px; font-weight: 700; color: #167E89;">Ver soluciones institucionales →</span>
+</a>
+<a href="#productos" class="need-card" style="display: flex; flex-direction: column; gap: 12px; padding: 28px; border-radius: 16px; background: #FFFFFF; border: 1px solid #C9D9DE; color: #013451; text-decoration: none;">
+<svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#167E89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M12 11v5M9.5 13.5h5"></path></svg>
+<span style="font-size: 22px; font-weight: 700;">Busco un producto</span>
+<span style="font-size: 16px; line-height: 1.5; color: #514C4C;">Apósitos de tecnología avanzada Covalon y Platsul, con asesoría de un especialista.</span>
+<span style="font-size: 15px; font-weight: 700; color: #167E89;">Ver el catálogo →</span>
+</a>
+</div>
+</div>
+</section>
+
+<!-- CIFRAS -->
+<section data-ref="setBand" aria-label="Datos de confianza" style="background: #013451; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 44px 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; text-align: center;">
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 40px; font-weight: 700; color: #84B953; font-variant-numeric: tabular-nums;"><span data-text="years"></span></span><span style="font-size: 16px;">años de experiencia</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 40px; font-weight: 700; color: #84B953; font-variant-numeric: tabular-nums;"><span data-text="hospitals"></span></span><span style="font-size: 16px;">hospitales y clínicas</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 40px; font-weight: 700; color: #84B953; font-variant-numeric: tabular-nums;"><span data-text="doctors"></span></span><span style="font-size: 16px;">médicos usan nuestros productos</span></div>
+<div style="display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 40px; font-weight: 700; color: #84B953; font-variant-numeric: tabular-nums;"><span data-text="sites"></span></span><span style="font-size: 16px;">sedes en Caracas</span></div>
+</div>
+</section>
+
+<!-- LESIONES -->
+<section id="pacientes" aria-labelledby="lesiones" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px 56px; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;">
+<h2 id="lesiones" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Tratamos lesiones simples y de<br><em style="color: #00A0D0;">difícil cicatrización</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #514C4C; max-width: 680px;">Cada lesión es diferente. Un médico evalúa tu caso y diseña un plan de curación con apósitos de tecnología avanzada.</p>
+</div>
+<div style="width: 100%; max-width: 860px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+<a href="#pacientes" style="display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 16px; border: 1px solid #C9D9DE; color: #013451; text-decoration: none;"><span style="font-size: 20px; font-weight: 700;">Pie diabético</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Cuidado de la lesión, control de infecciones y descarga de presión para recuperar la movilidad.</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más →</span></a>
+<a href="#pacientes" style="display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 16px; background: #024448; color: #FFFFFF; text-decoration: none;"><span style="font-size: 20px; font-weight: 700;">Úlceras por presión</span><span style="font-size: 15px; line-height: 1.5;">Atención de lesiones por inmovilidad o reposo prolongado, en la Unidad o en casa.</span><span style="font-size: 15px; font-weight: 700; color: #84B953;">Saber más →</span></a>
+<a href="#pacientes" style="display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 16px; background: #024448; color: #FFFFFF; text-decoration: none;"><span style="font-size: 20px; font-weight: 700;">Quemaduras y heridas postquirúrgicas</span><span style="font-size: 15px; line-height: 1.5;">Cuidado de tejidos dañados por accidentes o cirugías que se complicaron.</span><span style="font-size: 15px; font-weight: 700; color: #84B953;">Saber más →</span></a>
+<a href="#pacientes" style="display: flex; flex-direction: column; gap: 10px; padding: 26px; border-radius: 16px; border: 1px solid #C9D9DE; color: #013451; text-decoration: none;"><span style="font-size: 20px; font-weight: 700;">Úlceras venosas</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Tratamiento enfocado en la insuficiencia circulatoria para reducir la inflamación y proteger la piel.</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más →</span></a>
+</div>
+</div>
+</section>
+
+<!-- PREVENCIÓN -->
+<section aria-labelledby="prevencion" style="background: #F6F7F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 12px; text-align: center; align-items: center;">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Prevención</p>
+<h2 id="prevencion" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">No esperes a que tu herida <em style="color: #00A0D0;">se complique</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #514C4C; max-width: 700px;">En algunas situaciones la piel corre más riesgo. Con una valoración a tiempo podemos prevenir infecciones, úlceras y problemas de cicatrización.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+<div style="padding: 26px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#167E89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M3 12h18"></path><rect x="3" y="3" width="18" height="18" rx="4"></rect></svg><span style="font-size: 19px; font-weight: 700;">Antes y después de una cirugía</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Preparamos tu piel y cuidamos la herida quirúrgica para favorecer una buena cicatrización.</span></div><div style="padding: 26px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#167E89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18V8M3 14h18v4M21 14v-2a3 3 0 0 0-3-3h-7v5"></path><circle cx="7" cy="11" r="2"></circle></svg><span style="font-size: 19px; font-weight: 700;">Pacientes en cama por mucho tiempo</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Revisamos la piel y enseñamos a la familia a prevenir las úlceras por presión.</span></div><div style="padding: 26px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#167E89" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.5 6 11a6 6 0 0 1-12 0c0-3.5 3-7 6-11z"></path></svg><span style="font-size: 19px; font-weight: 700;">Personas con diabetes</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Revisamos periódicamente los pies para detectar a tiempo cualquier lesión.</span></div>
+</div>
+<a href="#cita" style="align-self: center; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Agenda una valoración preventiva</a>
+</div>
+</section>
+
+<!-- CUIDADO DE LA PIEL -->
+<section aria-labelledby="piel" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px;">
+<div style="border-radius: 24px; background: #024448; color: #FFFFFF; padding: 48px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 16px;">
+<span style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 32px; padding: 0 14px; border-radius: 999px; background: #D9EBC6; color: #013451; font-size: 13px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Próximamente</span>
+<h2 id="piel" style="margin: 0; font-size: 34px; line-height: 1.2; font-weight: 700;">Cuidado integral de <em style="color: #84B953;">tu piel</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D4E7EE;">Además de tratar y prevenir heridas, abriremos un área dedicada a la salud y la apariencia de tu piel, con la misma atención médica de siempre.</p>
+<a href="#contacto" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Avísame cuando abra</a>
+</div>
+<div style="flex: 1 1 360px; display: flex; flex-wrap: wrap; gap: 12px;">
+<span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Dermatología</span><span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Láser</span><span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Cicatrices y marcas</span><span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Cosmética</span><span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Colágeno</span><span style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.45); color: #FFFFFF; font-size: 15px; font-weight: 500;">Péptidos</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CÓMO TE ATENDEMOS -->
+<section aria-labelledby="como" style="background: #F6F7F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px;">
+<h2 id="como" style="margin: 0; font-size: 32px; font-weight: 700; text-align: center;">Cómo <em style="color: #00A0D0;">te atendemos</em></h2>
+<div data-ref="setSteps" data-class="stepsClass" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 28px;">
+<div class="step-reveal" style="transition-delay: 0ms;">
+<button type="button" data-class="c1Class" data-click="open1" data-attr-aria-expanded="c1Open" aria-controls="como-detalle" style="position: relative; overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; padding: 48px 28px 30px; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; cursor: pointer; font-family: Roboto, Arial, sans-serif;">
+<span aria-hidden="true" style="position: absolute; top: 28px; right: -54px; width: 210px; transform: rotate(45deg); background: #D4F1F9; color: #013451; font-size: 16px; font-weight: 700; letter-spacing: 0.03em; padding: 9px 0; text-align: center; box-shadow: 0 2px 6px rgba(1,52,81,0.12);">Paso 1</span>
+<span class="step-icon" style="width: 76px; height: 76px; border-radius: 999px; background: #D4F1F9; display: flex; align-items: center; justify-content: center;"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"></rect><path d="M3 10h18M8 3v4M16 3v4"></path><path class="cal-check" d="m9 15 2 2 4-4"></path></svg></span>
+<span style="font-size: 21px; font-weight: 700; color: #013451;">Solicita tu cita</span>
+<span style="font-size: 14px; font-weight: 700; color: #167E89;"><span data-text="c1Hint"></span></span>
+</button>
+</div>
+<div class="step-reveal" style="transition-delay: 150ms;">
+<button type="button" data-class="c2Class" data-click="open2" data-attr-aria-expanded="c2Open" aria-controls="como-detalle" style="position: relative; overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; padding: 48px 28px 30px; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; cursor: pointer; font-family: Roboto, Arial, sans-serif;">
+<span aria-hidden="true" style="position: absolute; top: 28px; right: -54px; width: 210px; transform: rotate(45deg); background: #E3F1D5; color: #013451; font-size: 16px; font-weight: 700; letter-spacing: 0.03em; padding: 9px 0; text-align: center; box-shadow: 0 2px 6px rgba(1,52,81,0.12);">Paso 2</span>
+<span class="step-icon" style="width: 76px; height: 76px; border-radius: 999px; background: #E3F1D5; display: flex; align-items: center; justify-content: center;"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3v6a5 5 0 0 0 10 0V3"></path><path d="M10 14v2a5 5 0 0 0 10 0v-2"></path><circle cx="20" cy="12" r="2"></circle></svg></span>
+<span style="font-size: 21px; font-weight: 700; color: #013451;">Te evaluamos</span>
+<span style="font-size: 14px; font-weight: 700; color: #167E89;"><span data-text="c2Hint"></span></span>
+</button>
+</div>
+<div class="step-reveal" style="transition-delay: 300ms;">
+<button type="button" data-class="c3Class" data-click="open3" data-attr-aria-expanded="c3Open" aria-controls="como-detalle" style="position: relative; overflow: hidden; width: 100%; height: 100%; box-sizing: border-box; padding: 48px 28px 30px; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; cursor: pointer; font-family: Roboto, Arial, sans-serif;">
+<span aria-hidden="true" style="position: absolute; top: 28px; right: -54px; width: 210px; transform: rotate(45deg); background: #D4E7EE; color: #013451; font-size: 16px; font-weight: 700; letter-spacing: 0.03em; padding: 9px 0; text-align: center; box-shadow: 0 2px 6px rgba(1,52,81,0.12);">Paso 3</span>
+<span class="step-icon" style="width: 76px; height: 76px; border-radius: 999px; background: #D4E7EE; display: flex; align-items: center; justify-content: center;"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"></rect><path d="M9 3v2h6V3M9 9h6"></path><path d="M12 17.5s-3-1.8-3-3.6a1.6 1.6 0 0 1 3-.8 1.6 1.6 0 0 1 3 .8c0 1.8-3 3.6-3 3.6z"></path></svg></span>
+<span style="font-size: 21px; font-weight: 700; color: #013451;">Recibe tu plan de cuidado</span>
+<span style="font-size: 14px; font-weight: 700; color: #167E89;"><span data-text="c3Hint"></span></span>
+</button>
+</div>
+</div>
+<div id="como-detalle" aria-live="polite" style="border-radius: 18px; background: #FFFFFF;">
+<div data-if="c1Open" hidden><div class="step-panel" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 320px;"><span style="font-size: 20px; font-weight: 700;">Solicita tu cita</span><span style="font-size: 16px; line-height: 1.6; color: #514C4C;">Escríbenos por WhatsApp al +58 416-618-1760 o déjanos tus datos y te contactamos. Atendemos de lunes a viernes, de 8:00 a. m. a 5:00 p. m.</span></div>
+<div style="display: flex; flex-wrap: wrap; gap: 14px;"><a href="#cita" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none; background: #84B953;">Solicitar una cita</a><a href="#contacto" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none; background: #D9EBC6;">Prefiero que me contacten</a></div>
+</div></div>
+<div data-if="c2Open" hidden><div class="step-panel" style="display: flex; flex-direction: column; gap: 18px;">
+<span style="font-size: 20px; font-weight: 700;">Te evaluamos donde te quede mejor</span>
+<div style="display: flex; flex-wrap: wrap; gap: 16px;">
+<div style="flex: 1 1 240px; padding: 20px; border-radius: 14px; background: #F6F7F7; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 17px; font-weight: 700;">En nuestras sedes</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">San Bernardino: Centro Clínico Profesional Caracas, piso 13, consultorio 1308.</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Altamira: Av. Francisco de Miranda, Edificio Banco del Orinoco, dentro de OH Laboratorio, Urb. La Floresta.</span></div>
+<div style="flex: 1 1 240px; padding: 20px; border-radius: 14px; background: #F6F7F7; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 17px; font-weight: 700;">A domicilio</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">En Caracas, para pacientes con movilidad reducida o que prefieren atenderse en casa. En algunas zonas no aplica; en esos casos te ofrecemos telemedicina.</span></div>
+<div style="flex: 1 1 240px; padding: 20px; border-radius: 14px; background: #F6F7F7; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 17px; font-weight: 700;">Por telemedicina</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Consulta a distancia para orientar tu caso y darle seguimiento.</span></div>
+</div>
+</div></div>
+<div data-if="c3Open" hidden><div class="step-panel" style="display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between;">
+<div style="display: flex; flex-direction: column; gap: 8px; flex: 1 1 320px;"><span style="font-size: 20px; font-weight: 700;">Recibe tu plan de cuidado</span><span style="font-size: 16px; line-height: 1.6; color: #514C4C;">El especialista define tu tratamiento y te acompaña en cada control. Para tu primera cita, trae tus informes médicos previos, la lista de medicamentos que tomas y tus exámenes recientes, si los tienes.</span></div>
+<a href="preguntas-frecuentes.html" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none; border: 2px solid #013451;">Ver preguntas frecuentes</a>
+</div></div>
+</div>
+</div>
+</section>
+
+<!-- UNIDAD MULTIDISCIPLINARIA -->
+<section aria-labelledby="multi" style="background: #FFFFFF; border-left: 14px solid #84B953; border-right: 14px solid #84B953;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px;">
+<h2 id="multi" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Una unidad <em style="color: #00A0D0;">multidisciplinaria</em></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">El cuidado de heridas y los cuidados preventivos son el centro de lo que hacemos, con enfermería especializada en la sede, a domicilio y por telemedicina. Lo respaldan especialistas que trabajan en equipo en cada caso.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Toca cada especialidad para conocer al especialista y agendar tu consulta.</p>
+<a href="#cita" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda tu consulta</a>
+</div>
+<div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+<div style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+<button type="button" data-class="heridasCls" data-click="pickHeridas" data-attr-aria-expanded="heridasOpen" aria-controls="espec-detalle" style="padding: 20px 24px; border-radius: 16px; background: #024448; color: #FFFFFF; border: 2px solid #024448; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 20px; font-weight: 700;">Cuidado de heridas</span><span style="font-size: 15px;">Incluye enfermería · presencial, domiciliaria y telemedicina</span></span><span style="font-size: 14px; font-weight: 700; color: #84B953; white-space: nowrap;"><span data-text="heridasHint"></span></span></button>
+<button type="button" data-class="prevCls" data-click="pickPrev" data-attr-aria-expanded="prevOpen" aria-controls="espec-detalle" style="padding: 20px 24px; border-radius: 16px; background: #E3F1D5; color: #013451; border: 2px solid #E3F1D5; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 20px; font-weight: 700;">Cuidados preventivos</span><span style="font-size: 15px;">Antes y después de una cirugía · pacientes en cama · diabetes</span></span><span style="font-size: 14px; font-weight: 700; color: #167E89; white-space: nowrap;"><span data-text="prevHint"></span></span></button>
+</div>
+<button type="button" data-class="cls_cg" data-click="pick_cg" data-attr-aria-expanded="open_cg" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía general</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cg"></span></span></button>
+<button type="button" data-class="cls_cc" data-click="pick_cc" data-attr-aria-expanded="open_cc" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía cardiovascular</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cc"></span></span></button>
+<button type="button" data-class="cls_cp" data-click="pick_cp" data-attr-aria-expanded="open_cp" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía plástica</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cp"></span></span></button>
+<button type="button" data-class="cls_mg" data-click="pick_mg" data-attr-aria-expanded="open_mg" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina general</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mg"></span></span></button>
+<button type="button" data-class="cls_mi" data-click="pick_mi" data-attr-aria-expanded="open_mi" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina interna e infectología</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mi"></span></span></button>
+<button type="button" data-class="cls_mf" data-click="pick_mf" data-attr-aria-expanded="open_mf" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina física y rehabilitación</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mf"></span></span></button>
+<button type="button" data-class="cls_nc" data-click="pick_nc" data-attr-aria-expanded="open_nc" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Nutrición clínica</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_nc"></span></span></button>
+<button type="button" data-class="cls_lab" data-click="pick_lab" data-attr-aria-expanded="open_lab" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Laboratorio</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_lab"></span></span></button>
+</div>
+<div id="espec-detalle" aria-live="polite">
+<div data-if="specDoctor" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
+<div style="width: 96px; height: 96px; border-radius: 999px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 12px; color: #013451; flex: 0 0 auto;">[Foto]</div>
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;"><span data-text="specTitle"></span></span>
+<span style="font-size: 20px; font-weight: 700; color: #013451;">[Nombre del especialista]</span>
+<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Credenciales: especialidad, universidad y número de colegiado]</span>
+<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Días y horario de consulta · sede]</span>
+</div>
+<a href="#cita" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda tu consulta</a>
+</div></div>
+<div data-if="prevOpen" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-direction: column; gap: 16px;">
+<span style="font-size: 20px; font-weight: 700; color: #013451;">Cuidados preventivos</span>
+<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">No esperes a que tu herida se infecte o se complique. Te valoramos a tiempo cuando la piel corre más riesgo.</span>
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<div style="flex: 1 1 180px; padding: 16px; border-radius: 12px; background: #FFFFFF; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 16px; font-weight: 700; color: #013451;">Antes y después de una cirugía</span><span style="font-size: 14px; line-height: 1.5; color: #514C4C;">Para favorecer una buena cicatrización.</span></div>
+<div style="flex: 1 1 180px; padding: 16px; border-radius: 12px; background: #FFFFFF; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 16px; font-weight: 700; color: #013451;">Pacientes en cama</span><span style="font-size: 14px; line-height: 1.5; color: #514C4C;">Para prevenir las úlceras por presión.</span></div>
+<div style="flex: 1 1 180px; padding: 16px; border-radius: 12px; background: #FFFFFF; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 16px; font-weight: 700; color: #013451;">Personas con diabetes</span><span style="font-size: 14px; line-height: 1.5; color: #514C4C;">Revisión periódica de los pies.</span></div>
+</div>
+<a href="#cita" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda una valoración preventiva</a>
+</div></div>
+<div data-if="specLab" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
+<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px;">
+<span style="font-size: 20px; font-weight: 700; color: #013451;">Laboratorio</span>
+<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Exámenes de laboratorio en nuestra sede. Escríbenos y te informamos cuáles necesitas y cómo hacerlos.</span>
+</div>
+<a href="#contacto" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Solicita más información</a>
+</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- INSTITUCIONES -->
+<section id="instituciones" aria-labelledby="inst" style="background-color: #ECF5F9; color: #013451;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px; display: flex; flex-direction: row-reverse; flex-wrap: wrap; align-items: stretch; gap: 40px;">
+<div style="flex: 1.3 1 460px; display: flex; flex-direction: column; justify-content: center; gap: 18px;">
+<p style="margin: 0; font-size: 17px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Para instituciones</p>
+<h2 id="inst" style="margin: 0; font-size: 34px; line-height: 1.2; font-weight: 700; color: #013451;">Un aliado especializado en el cuidado de heridas</h2>
+<p style="margin: 0 0 6px; font-size: 18px; line-height: 1.6; color: #514C4C;">Coordinamos la atención de pacientes con heridas complejas junto a aseguradoras, hospitales, clínicas y empresas.</p>
+<div class="inst-card" style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;"><div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 20px; font-weight: 700; color: #013451;">Aseguradoras</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Atención especializada para sus asegurados, con coordinación administrativa y reportes de evolución.</span></div><a href="#reunion" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #1664AC; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap;">Solicitar una reunión</a></div>
+<div class="inst-card" style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;"><div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 20px; font-weight: 700; color: #013451;">Hospitales, clínicas y cirujanos</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Cuidado antes y después de la cirugía, continuidad después del alta, derivación de casos complejos y capacitación.</span></div><a href="#reunion" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #1664AC; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap;">Conversar sobre una alianza</a></div>
+<div class="inst-card" style="padding: 22px 24px; border-radius: 16px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;"><div style="flex: 1 1 260px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 20px; font-weight: 700; color: #013451;">Empresas</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Atención de accidentes laborales y apoyo a la salud de los trabajadores.</span></div><a href="#reunion" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #1664AC; color: #FFFFFF; font-weight: 700; font-size: 15px; text-decoration: none; white-space: nowrap;">Solicitar una reunión</a></div>
+</div>
+<div class="inst-photos" aria-hidden="true" style="flex: 1 1 380px; min-height: 520px; position: relative; overflow: hidden; border-radius: 20px;">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; gap: 12px;">
+<div class="inst-col" style="flex: 1 1 0; min-width: 0;"><img src="assets/tira-consultorio.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-coordinacion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-publico.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-consultorio.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-coordinacion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-publico.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"></div>
+<div class="inst-col inst-down" style="flex: 1 1 0; min-width: 0;"><img src="assets/tira-equipo.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-recepcion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-escenario.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-equipo.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-recepcion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-escenario.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"></div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRODUCTOS -->
+<section id="productos" aria-labelledby="prod" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 20px;">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px;">
+<h2 id="prod" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Apósitos de <em style="color: #00A0D0;">tecnología avanzada</em></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Conoce para qué sirve cada tecnología y consulta con un especialista cuál es la indicada para tu herida.</p>
+</div>
+<a href="#productos" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid #013451; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Ver el catálogo completo</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+<a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Covalon</span><span style="font-size: 19px; font-weight: 700;">Colágeno con plata</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">ColActive Plus Ag</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
+<a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Covalon</span><span style="font-size: 19px; font-weight: 700;">Apósito de silicona</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">CovaWound Silicona</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
+<a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Covalon</span><span style="font-size: 19px; font-weight: 700;">Alginato con plata</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">CovaWound Alginate Ag</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
+<a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Platsul</span><span style="font-size: 19px; font-weight: 700;">Crema de aplicación tópica</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Platsul-A crema</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
+</div>
+</div>
+</section>
+
+<!-- HISTORIAS REALES -->
+<section aria-labelledby="historias" style="background: #F6F7F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px;">
+<h2 id="historias" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700; text-align: center;"><em style="color: #00A0D0;">Historias reales</em> de pacientes</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 24px;">
+<div style="flex: 1 1 420px; padding: 28px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 14px;">
+<span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Caso clínico</span>
+<span style="font-size: 20px; font-weight: 700;">[Título del caso, validado por la Dra. Milagros Jaimes]</span>
+<span style="font-size: 16px; line-height: 1.5; color: #514C4C;">[Resumen de la evolución y el tratamiento. Imágenes ocultas hasta que el visitante decida verlas.]</span>
+<a href="#pacientes" style="font-size: 15px; font-weight: 700; color: #167E89;">Ver el caso (imágenes sensibles) →</a>
+</div>
+<div style="flex: 1 1 420px; padding: 28px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 14px;">
+<div style="height: 180px; border-radius: 12px; background: #013451; display: flex; align-items: center; justify-content: center;"><button type="button" aria-label="Reproducir el testimonio" style="width: 60px; height: 60px; border-radius: 999px; border: none; background: #84B953; display: flex; align-items: center; justify-content: center; cursor: pointer;"><svg width="22" height="22" viewBox="0 0 24 24" fill="#013451" aria-hidden="true"><path d="M8 5v14l11-7z"></path></svg></button></div>
+<span style="font-size: 16px; line-height: 1.5; font-style: italic; color: #013451;">[Testimonio de un familiar, con su autorización]</span>
+<span style="font-size: 14px; color: #514C4C;">[Nombre o iniciales]</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CUMBRE -->
+<section id="cumbre" aria-labelledby="cumbre-t" style="background: #013451; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: center;">
+<img src="assets/cumbre-escenario.jpg" alt="Ponencia en la Cumbre Internacional para el Cuidado Avanzado de Heridas y Piel" style="flex: 1 1 460px; width: 100%; max-width: 560px; height: 340px; object-fit: cover; border-radius: 20px; display: block;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 18px;">
+<img src="assets/logo-cumbre-blanco.png" alt="Cumbre Internacional para el Cuidado Avanzado de Heridas y Piel" style="width: 260px; height: auto; display: block;">
+<h2 id="cumbre-t" style="margin: 0; font-size: 28px; line-height: 1.25; font-weight: 700;">Organizadores de la Cumbre Internacional para el Cuidado Avanzado de Heridas y Piel</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #D4E7EE;">Reunimos a profesionales de la salud para compartir los avances en el cuidado de heridas. [Fecha de la próxima edición, cuando esté confirmada]</p>
+<a href="#cumbre" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Conocer la Cumbre</a>
+</div>
+</div>
+</section>
+
+<!-- APRENDE -->
+<section id="aprende" aria-labelledby="aprende-t" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 16px;">
+<h2 id="aprende-t" style="margin: 0; font-size: 32px; font-weight: 700;"><em style="color: #00A0D0;">Aprende</em> sobre el cuidado de heridas</h2>
+<a href="#aprende" style="font-size: 16px; font-weight: 700;">Ver todos los artículos →</a>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+<a href="#aprende" style="display: flex; flex-direction: column; gap: 12px; color: #013451; text-decoration: none;"><div style="height: 170px; border-radius: 14px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Imagen del artículo]</div><span style="font-size: 19px; font-weight: 700; line-height: 1.35;">¿Qué apósito usar en una herida?</span></a>
+<a href="#aprende" style="display: flex; flex-direction: column; gap: 12px; color: #013451; text-decoration: none;"><div style="height: 170px; border-radius: 14px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Imagen del artículo]</div><span style="font-size: 19px; font-weight: 700; line-height: 1.35;">Causas de las úlceras por presión y cómo prevenirlas</span></a>
+<a href="#aprende" style="display: flex; flex-direction: column; gap: 12px; color: #013451; text-decoration: none;"><div style="height: 170px; border-radius: 14px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Imagen del artículo]</div><span style="font-size: 19px; font-weight: 700; line-height: 1.35;">Guía para el cuidado de heridas</span></a>
+</div>
+</div>
+</section>
+
+<!-- PREGUNTAS FRECUENTES -->
+<section aria-labelledby="faq" style="background: #F6F7F7;">
+<div style="max-width: 860px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 20px;">
+<h2 id="faq" style="margin: 0 0 8px; font-size: 32px; font-weight: 700; text-align: center;">Preguntas <em style="color: #00A0D0;">frecuentes</em></h2>
+<details style="border: 2px solid #00A0D0; border-radius: 999px; background: #FFFFFF; padding: 0 28px;"><summary style="min-height: 56px; display: flex; align-items: center; font-size: 17px; font-weight: 500;">¿Las curaciones son dolorosas?</summary><p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #514C4C;">Usamos técnicas de limpieza cuidadosas y, si es necesario, anestésicos locales para tu comodidad.</p></details>
+<details style="border: 2px solid #00A0D0; border-radius: 999px; background: #FFFFFF; padding: 0 28px;"><summary style="min-height: 56px; display: flex; align-items: center; font-size: 17px; font-weight: 500;">¿Cuánto tiempo tardará en cerrar mi herida?</summary><p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #514C4C;">Cada paciente es único. Después de evaluar tu herida, el especialista te explica el plan de tratamiento y el tiempo estimado.</p></details>
+<details style="border: 2px solid #00A0D0; border-radius: 999px; background: #FFFFFF; padding: 0 28px;"><summary style="min-height: 56px; display: flex; align-items: center; font-size: 17px; font-weight: 500;">¿Pueden atenderme en mi casa?</summary><p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #514C4C;">Sí. Tenemos atención domiciliaria en Caracas. En algunas zonas no aplica; en esos casos te ofrecemos telemedicina.</p></details>
+<details style="border: 2px solid #00A0D0; border-radius: 999px; background: #FFFFFF; padding: 0 28px;"><summary style="min-height: 56px; display: flex; align-items: center; font-size: 17px; font-weight: 500;">¿Qué debo llevar a mi primera consulta?</summary><p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #514C4C;">Tus informes médicos previos, la lista de medicamentos que tomas y, si tienes, estudios de imagen o exámenes de laboratorio recientes.</p></details>
+<a href="preguntas-frecuentes.html" style="align-self: center; margin-top: 8px; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid #013451; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Ver todas las preguntas frecuentes</a>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cita" aria-labelledby="cta-final" style="background: #024448; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+<h2 id="cta-final" style="margin: 0; font-size: 34px; line-height: 1.2; font-weight: 700; max-width: 760px;">Una herida que no sana afecta tu calidad de vida. No esperes más.</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D4E7EE;">Escríbenos y coordinamos tu evaluación.</p>
+<div id="contacto" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
+<a href="#cita" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+Solicitar una cita</a>
+<a href="#contacto" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Prefiero que me contacten</a>
+</div>
+<a href="#cita" style="font-size: 15px; color: #D4E7EE;">¿Prefieres que evaluemos tu caso primero? Agenda con nosotros una evaluación de tu herida →</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #013451; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<img src="assets/logo-cth-blanco.png" alt="Cuidamos Tu Herida" style="width: 180px; height: auto; display: block;">
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #D4E7EE;">Organizadores de la Cumbre Internacional para el Cuidado Avanzado de Heridas y Piel.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.6;">
+<span style="font-size: 15px; font-weight: 700;">Sedes</span>
+<span style="color: #D4E7EE;">San Bernardino: Centro Clínico Profesional Caracas, piso 13, consultorio 1308.</span>
+<span style="color: #D4E7EE;">Altamira: Av. Francisco de Miranda, Edificio Banco del Orinoco, dentro de OH Laboratorio, Urb. La Floresta.</span>
+<span style="color: #D4E7EE;">Lunes a viernes, 8:00 a. m. a 5:00 p. m.</span>
+<span style="color: #D4E7EE;">WhatsApp +58 416-618-1760</span>
+</div>
+<nav aria-label="Pie de página" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+<span style="font-size: 15px; font-weight: 700;">Navegación</span>
+<a href="#pacientes" style="color: #FFFFFF; text-decoration: none;">Pacientes</a>
+<a href="#instituciones" style="color: #FFFFFF; text-decoration: none;">Instituciones</a>
+<a href="#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
+<a href="#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>
+<a href="#cumbre" style="color: #FFFFFF; text-decoration: none;">Nosotros</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.6;">
+<span style="font-size: 15px; font-weight: 700;">Legal</span>
+<a href="#inicio" style="color: #FFFFFF;">Política de privacidad</a>
+<a href="#inicio" style="color: #FFFFFF;">Términos y condiciones</a>
+<span style="color: #D4E7EE;">La información de este sitio es educativa y no sustituye la consulta con un profesional de la salud.</span>
+</div>
+</div>
+<p style="margin: 0; padding-top: 20px; border-top: 1px solid #1E4D6B; font-size: 13px; color: #D4E7EE;">© 2026 Cuidamos Tu Herida, S.A. · RIF J-50456402-8</p>
+</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-INICIO)" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"></path></svg><span class="wa-tip" aria-hidden="true">Escríbenos por WhatsApp</span></a>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
