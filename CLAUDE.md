@@ -23,6 +23,7 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 | Propuesta navegable (fuente de verdad del diseño) | Este repositorio: `index.html`, `preguntas-frecuentes.html`, `assets/` |
 | Enlace publicado para el equipo | https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (GitHub Pages, rama `main`, raíz) |
 | Documento de diseño completo (análisis, embudos, SEO, identidad visual) | Doc de Claude «CTH — Rediseño web: análisis y documento de diseño»: https://claude.ai/artifact/X1GBNNn2zR5BkboAvNYihx |
+| Propuesta del área corporativa para CTH (interna, no va en este repositorio) | Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW |
 | Lienzo de diseño original (referencia, ya no se sincroniza) | https://claude.ai/artifact/LUGmeDURncLakjJXKwQMcF |
 | Datos oficiales de CTH (sedes, horario, preguntas del bot) | Repositorio privado `IRIS-cth` (solo lectura para este frente) |
 | Sitio actual | cuidamostuherida.com (Shopify) |
@@ -43,5 +44,7 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 ## Estructura del código
 
 - `index.html` y `preguntas-frecuentes.html`: HTML estático, estilos en línea y un bloque `<style>` en el `<head>`.
-- `assets/app.js`: comportamiento (video con sonido y pausa, conteo de cifras, paneles de «Cómo te atendemos», especialidades, preguntas). Usa atributos `data-*`: `data-click`, `data-if`, `data-text`, `data-class`, `data-ref`, `data-attr-*`.
+- Seis landing pages (9 nov): `corporativo.html`, `unidad.html`, `atencion-domiciliaria.html`, `telemedicina.html`, `prevencion-de-complicaciones.html`, `cuidado-de-la-piel.html`. Cada una lleva su propia copia de la cabecera, el cierre y el pie del inicio, con los enlaces del menú apuntando a `index.html#...`.
+- **Un cambio en la cabecera, el menú, el cierre o el pie se replica en las ocho páginas.** Al terminar, revisar que todos los enlaces internos lleven a páginas y anclas que existen.
+- `assets/app.js`: comportamiento (video con sonido y pausa, conteo de cifras, tarjetas de los tres módulos del inicio, paneles de «Cómo te atendemos», especialidades, preguntas). Las anclas `#corporativo`, `#cuidamos-tu-herida` y `#prevencion-y-piel` abren la tarjeta del módulo correspondiente. Usa atributos `data-*`: `data-click`, `data-if`, `data-text`, `data-class`, `data-ref`, `data-attr-*`.
 - `assets/`: logo, fotos (las `tira-*` son verticales 480×800 para la franja de Instituciones) y el video `unidad-completo.mp4` (1280 px, H.264).

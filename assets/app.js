@@ -10,7 +10,7 @@
     ['mf', 'Medicina física y rehabilitación'], ['nc', 'Nutrición clínica'], ['lab', 'Laboratorio']
   ];
 
-  var state = { p: 0, heroPaused: false, soundOn: false, stepsIn: false, openStep: 0, openSpec: '' };
+  var state = { p: 0, heroPaused: false, soundOn: false, stepsIn: false, openStep: 0, openSpec: '', openMod: '' };
 
   function fmt(n) { return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, '.'); }
 
@@ -48,6 +48,12 @@
     });
     v.specDoctor = state.openSpec !== '' && state.openSpec !== 'lab' && state.openSpec !== 'prev';
     v.specLab = state.openSpec === 'lab';
+    [['Corp', 'corp', 1], ['Herida', 'herida', 2], ['Prev', 'prev', 3]].forEach(function (m) {
+      var open = state.openMod === m[1];
+      v['mod' + m[0] + 'Open'] = open;
+      v['mod' + m[0] + 'Cls'] = 'mod-card mod-c' + m[2] + (open ? ' is-active' : '');
+      v['mod' + m[0] + 'Hint'] = open ? 'Cerrar ↑' : 'Ver opciones ↓';
+    });
     var found = SPECS.filter(function (sp) { return sp[0] === state.openSpec; })[0];
     v.specTitle = state.openSpec === 'heridas' ? 'Cuidado de heridas' : (found ? found[1] : '');
     return v;
@@ -88,8 +94,19 @@
       set({ soundOn: on, heroPaused: on ? false : state.heroPaused });
     },
     pickHeridas: function () { set({ openSpec: state.openSpec === 'heridas' ? '' : 'heridas' }); },
-    pickPrev: function () { set({ openSpec: state.openSpec === 'prev' ? '' : 'prev' }); }
+    pickPrev: function () { set({ openSpec: state.openSpec === 'prev' ? '' : 'prev' }); },
+    pickModCorp: function () { set({ openMod: state.openMod === 'corp' ? '' : 'corp' }); },
+    pickModHerida: function () { set({ openMod: state.openMod === 'herida' ? '' : 'herida' }); },
+    pickModPrev: function () { set({ openMod: state.openMod === 'prev' ? '' : 'prev' }); }
   };
+
+  // Abrir la tarjeta del módulo cuando se llega desde el menú (#corporativo, #cuidamos-tu-herida, #prevencion-y-piel)
+  var MOD_HASH = { '#corporativo': 'corp', '#cuidamos-tu-herida': 'herida', '#prevencion-y-piel': 'prev' };
+  function openFromHash() {
+    var m = MOD_HASH[window.location.hash];
+    if (m) set({ openMod: m });
+  }
+  window.addEventListener('hashchange', openFromHash);
   [1, 2, 3].forEach(function (i) {
     handlers['open' + i] = function () { set({ openStep: state.openStep === i ? 0 : i }); };
   });
@@ -131,5 +148,6 @@
     onVisible(refs.setBand, runCount, 0.4);
     onVisible(refs.setSteps, function () { set({ stepsIn: true }); }, 0.25);
   }
+  openFromHash();
   render();
 })();

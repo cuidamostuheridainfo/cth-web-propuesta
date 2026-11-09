@@ -50,3 +50,24 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 ## SEO
 
 - Conservar las rutas del blog `/blogs/aprenda-mas/<slug>`. Decisión URL por URL con datos de Search Console. 301 de servidor, sin cadenas; 404 o 410 si no hay equivalente real.
+
+## Estructura del sitio (9 nov 2026, pedido de Daniel a través de Jenny)
+
+- **Corporativo es el norte del negocio.** En el inicio va primero.
+- El inicio muestra tres módulos, en este orden:
+  1. **Corporativo e instituciones**: un solo módulo. Corporativo son las empresas con fines de lucro y las aseguradoras; instituciones, el Estado y las organizaciones sin fines de lucro. En la misma página van los hospitales, clínicas y cirujanos como aliados clínicos.
+  2. **Cuidamos tu herida**: Unidad (las dos sedes), Atención domiciliaria y Telemedicina, en ese orden.
+  3. **Prevención y cuidado de la piel**: un módulo con dos áreas, **Prevención de complicaciones** (antes y después de una cirugía, pacientes en cama, personas con diabetes) y **Cuidamos tu piel** (láser, dermatología con una dermatóloga, cosmetología y péptidos; Próximamente). Precisa los tres pilares del 30 oct, no los reemplaza.
+- Navegación: en el inicio, la tarjeta del módulo se abre con sus opciones y cada opción lleva a su landing page. Así el inicio queda corto.
+- Seis landing pages: `corporativo.html`, `unidad.html`, `atencion-domiciliaria.html`, `telemedicina.html`, `prevencion-de-complicaciones.html`, `cuidado-de-la-piel.html`.
+- Menú: Corporativo · Cuidamos tu herida · Prevención · Productos · Aprende · Nosotros, más el botón «Preguntas frecuentes». El nombre completo del módulo va en la tarjeta, la página y el pie.
+- Salen del inicio y pasan a las landing pages: «No esperes a que tu herida se complique» y «Cuidado integral de tu piel» (a Prevención y a Cuidamos tu piel), «Cómo te atendemos» y «Una unidad multidisciplinaria» (a Unidad) y «Para instituciones» (a Corporativo).
+- En Unidad y en Prevención de complicaciones, después de «Cómo te atendemos» o «Cómo funciona» va la sección **«Dónde te atendemos»** con las tres modalidades (sedes, a domicilio, telemedicina), porque no todos ofrecen telemedicina y atención domiciliaria.
+- Encabezado de Unidad: «Dos sedes en Caracas, telemedicina y atención domiciliaria, con un equipo multidisciplinario y personal dedicado a darte la mejor atención. Un médico evalúa tu caso, diseña tu plan de curación y te acompaña en cada control.»
+- Cumbre: se **reconfirma** que CTH es organizador, no patrocinador. Se resalta la edición 2026 y que se repite en 2027.
+- Cada landing tiene su código neutro de WhatsApp: `WEB-CORPORATIVO`, `WEB-UNIDAD`, `WEB-DOMICILIO`, `WEB-TELEMEDICINA`, `WEB-PREVENCION`, `WEB-PIEL`.
+
+## Lenguaje (9 nov 2026)
+
+- **Se dice «herida», no «lesión»**, en todo el sitio: en Venezuela «lesión» tiene otro contexto. Por ejemplo: «Tratamos heridas simples y de difícil cicatrización».
+- «Úlceras vasculares» (antes «úlceras venosas»).

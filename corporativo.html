@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Corporativo e instituciones · CTH · Propuesta para revisión</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,700&amp;display=swap">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#167E89}a:hover{color:#013451}
+summary{cursor:pointer;list-style:none}
+summary::-webkit-details-marker{display:none}
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:62px;height:62px;border-radius:999px;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 22px rgba(1,52,81,.28);transition:transform .2s ease, box-shadow .2s ease}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:999px;border:3px solid #25D366;animation:waPulse 2.4s ease-out infinite}
+.wa-float:hover,.wa-float:focus-visible{transform:scale(1.08);box-shadow:0 12px 28px rgba(1,52,81,.35);outline:none}
+.wa-tip{position:absolute;right:74px;white-space:nowrap;background:#013451;color:#FFFFFF;font-size:14px;font-weight:700;padding:8px 14px;border-radius:999px;opacity:0;transform:translateX(8px);transition:opacity .2s ease, transform .2s ease;pointer-events:none}
+.wa-float:hover .wa-tip,.wa-float:focus-visible .wa-tip{opacity:1;transform:none}
+@keyframes waPulse{0%{transform:scale(1);opacity:.7}100%{transform:scale(1.55);opacity:0}}
+@media (prefers-reduced-motion: reduce){.wa-float::before{animation:none;opacity:0}.wa-float{transition:none}}
+.nav-link{position:relative;padding:8px 0 10px;transition:color .2s ease}
+.nav-link::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;border-radius:3px;background:#D4E7EE;transition:background .2s ease, box-shadow .2s ease}
+.nav-link:hover,.nav-link:focus-visible{color:#167E89 !important;outline:none}
+.nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
+.nav-faq{transition:background .2s ease, color .2s ease}
+.nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
+.inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
+.inst-down{animation-name:instDown;animation-duration:38s}
+.inst-photos:hover .inst-col{animation-play-state:paused}
+@keyframes instUp{from{transform:translateY(0)}to{transform:translateY(calc(-50% - 6px))}}
+@keyframes instDown{from{transform:translateY(calc(-50% - 6px))}to{transform:translateY(0)}}
+.inst-card{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.inst-card:hover{transform:translateX(-4px);border-color:#1664AC !important;box-shadow:6px 8px 0 #1664AC}
+.need-card{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.need-card:hover,.need-card:focus-visible{transform:translateY(-8px);border-color:#00A0D0 !important;box-shadow:0 0 0 3px rgba(0,160,208,.35),0 0 22px rgba(0,160,208,.45),0 18px 36px rgba(1,52,81,.18);outline:none}
+.step-reveal{opacity:0;transform:translateY(28px);transition:opacity .6s ease, transform .6s ease}
+.steps-in .step-reveal{opacity:1;transform:none}
+.step-card{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease}
+.step-card:hover,.step-card:focus-within{transform:translate(-4px,-6px)}
+.step-c1:hover,.step-c1:focus-within{box-shadow:10px 12px 0 #00A0D0;border-color:#00A0D0 !important}
+.step-c2:hover,.step-c2:focus-within{box-shadow:10px 12px 0 #84B953;border-color:#84B953 !important}
+.step-c3:hover,.step-c3:focus-within{box-shadow:10px 12px 0 #013451;border-color:#013451 !important}
+.step-card:hover .step-icon{animation:stepPop .5s ease}
+.step-card.is-active{transform:translate(-4px,-6px)}
+.step-c1.is-active{box-shadow:10px 12px 0 #00A0D0;border-color:#00A0D0 !important}
+.step-c2.is-active{box-shadow:10px 12px 0 #84B953;border-color:#84B953 !important}
+.step-c3.is-active{box-shadow:10px 12px 0 #013451;border-color:#013451 !important}
+.spec-tile{transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease}
+.spec-tile:hover,.spec-tile:focus-visible{transform:translateY(-4px);border-color:#00A0D0 !important;box-shadow:0 0 0 3px rgba(0,160,208,.25),0 10px 22px rgba(1,52,81,.12);outline:none}
+.spec-tile.is-active{border-color:#84B953 !important;box-shadow:6px 8px 0 #84B953;transform:translate(-3px,-4px)}
+.spec-tile.spec-dark.is-active{box-shadow:6px 8px 0 #84B953}
+.step-panel{padding:32px;animation:panelIn .35s ease}
+@keyframes panelIn{from{opacity:0;transform:translateY(-10px)}to{opacity:1;transform:none}}
+.cal-check{stroke-dasharray:12;stroke-dashoffset:12}
+.steps-in .cal-check{animation:drawCheck .6s ease .9s forwards}
+.step-card:hover .cal-check{stroke-dashoffset:12;animation:drawCheck .5s ease forwards}
+@keyframes stepPop{0%{transform:scale(1)}40%{transform:scale(1.15) rotate(-6deg)}70%{transform:scale(.97) rotate(3deg)}100%{transform:scale(1)}}
+@keyframes drawCheck{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion: reduce){.step-reveal{opacity:1;transform:none;transition:none}.step-card{transition:none}.step-card:hover{transform:none}.step-card:hover .step-icon{animation:none}.cal-check{stroke-dashoffset:0;animation:none}.step-panel{animation:none}.step-card.is-active{transform:none}.spec-tile{transition:none}.spec-tile:hover,.spec-tile.is-active{transform:none}.inst-col{animation:none}.inst-card{transition:none}.inst-card:hover{transform:none}}
+@media (prefers-reduced-motion: reduce){.need-card{transition:none}.need-card:hover,.need-card:focus-visible{transform:none}}
+.mod-grid{display:grid;grid-template-columns:1fr;gap:20px}
+.mod-slot{scroll-margin-top:24px}
+.mod-card{width:100%;height:100%;box-sizing:border-box;padding:30px 28px;border-radius:18px;border:2px solid;display:flex;flex-direction:column;gap:12px;text-align:left;cursor:pointer;font-family:Roboto,Arial,sans-serif;transition:transform .25s ease, box-shadow .25s ease}
+.mod-card:hover,.mod-card:focus-visible{transform:translateY(-6px);box-shadow:0 0 0 3px rgba(0,160,208,.35),0 18px 36px rgba(1,52,81,.18);outline:none}
+.mod-card.is-active{transform:translate(-4px,-6px);box-shadow:10px 12px 0 #00A0D0}
+.mod-c3.is-active{box-shadow:10px 12px 0 #84B953}
+.mod-panel-in{border-radius:18px;background:#F6F7F7;display:flex;flex-direction:column;gap:18px}
+.mod-subgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.mod-sub{display:flex;flex-direction:column;gap:8px;padding:22px;border-radius:14px;background:#FFFFFF;border:1px solid #C9D9DE;color:#013451;text-decoration:none}
+.mod-sub-t{font-size:19px;font-weight:700}
+.mod-sub-d{font-size:15px;line-height:1.5;color:#514C4C}
+.mod-sub-l{font-size:15px;font-weight:700;color:#167E89;margin-top:auto}
+@media (min-width: 900px){.mod-grid{grid-template-columns:repeat(3,1fr)}.mod-panel{order:10;grid-column:1 / -1}}
+@media (prefers-reduced-motion: reduce){.mod-card{transition:none}.mod-card:hover,.mod-card.is-active{transform:none}}
+</style>
+</head>
+<body>
+<div role="note" style="background:#013451;color:#FFFFFF;font-family:Roboto,Arial,sans-serif;font-size:14px;text-align:center;padding:10px 16px;">Propuesta de diseño para revisión interna · Los textos entre corchetes son contenido pendiente</div>
+<div style="font-family: Roboto, Arial, sans-serif; color: #013451; background: #FFFFFF;">
+
+<!-- CABECERA -->
+<header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="index.html" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
+<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<a class="nav-link" href="index.html#corporativo" style="color: #013451; text-decoration: none;">Corporativo</a>
+<a class="nav-link" href="index.html#cuidamos-tu-herida" style="color: #013451; text-decoration: none;">Cuidamos tu herida</a>
+<a class="nav-link" href="index.html#prevencion-y-piel" style="color: #013451; text-decoration: none;">Prevención</a>
+<a class="nav-link" href="index.html#productos" style="color: #013451; text-decoration: none;">Productos</a>
+<a class="nav-link" href="index.html#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
+<a class="nav-link" href="index.html#cumbre" style="color: #013451; text-decoration: none;">Nosotros</a>
+<a class="nav-faq" href="preguntas-frecuentes.html" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 18px; border-radius: 999px; border: 2px solid #013451; color: #013451; text-decoration: none; font-weight: 700;">Preguntas frecuentes</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO DE LA LANDING -->
+<section id="inicio" style="background-color: #ECF5F9;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-direction: column; gap: 28px;">
+<nav aria-label="Ruta" style="font-size: 14px; color: #514C4C;"><a href="index.html" style="color: #167E89;">Inicio</a> › <span aria-current="page">Corporativo e instituciones</span></nav>
+<div style="display: flex; flex-wrap: wrap; align-items: stretch; gap: 40px;">
+<div style="flex: 1.3 1 460px; display: flex; flex-direction: column; justify-content: center; gap: 20px;">
+<p style="margin: 0; align-self: flex-start; display: inline-flex; align-items: center; min-height: 34px; padding: 0 16px; border-radius: 999px; background: #013451; color: #FFFFFF; font-size: 14px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">Corporativo e instituciones</p>
+<h1 style="margin: 0; font-size: 42px; line-height: 1.15; font-weight: 700; color: #013451;">Un aliado especializado en el cuidado de heridas <em style="color: #00A0D0;">para organizaciones</em></h1>
+<p style="margin: 0; font-size: 19px; line-height: 1.6; color: #514C4C; max-width: 560px;">Convenios a la medida para empresas, aseguradoras e instituciones: atención en nuestras sedes, a domicilio y por telemedicina, y programas de prevención para su gente.</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 16px;">
+<a href="#propuesta" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; font-weight: 700; font-size: 17px; text-decoration: none; background: #84B953; color: #013451;">Solicitar una propuesta</a>
+<a href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-CORPORATIVO)" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 30px; border-radius: 999px; font-weight: 700; font-size: 17px; text-decoration: none; background: #D9EBC6; color: #013451;">Escríbenos por WhatsApp</a>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 15px;">
+<a href="#empresas" style="color: #167E89; font-weight: 700;">Empresas</a><span aria-hidden="true">·</span>
+<a href="#aseguradoras" style="color: #167E89; font-weight: 700;">Aseguradoras</a><span aria-hidden="true">·</span>
+<a href="#instituciones" style="color: #167E89; font-weight: 700;">Instituciones</a><span aria-hidden="true">·</span>
+<a href="#clinicas" style="color: #167E89; font-weight: 700;">Hospitales, clínicas y cirujanos</a>
+</div>
+</div>
+<div class="inst-photos" aria-hidden="true" style="flex: 1 1 380px; min-height: 520px; position: relative; overflow: hidden; border-radius: 20px;">
+<div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; display: flex; gap: 12px;">
+<div class="inst-col" style="flex: 1 1 0; min-width: 0;"><img src="assets/tira-consultorio.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-coordinacion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-publico.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-consultorio.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-coordinacion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-publico.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"></div>
+<div class="inst-col inst-down" style="flex: 1 1 0; min-width: 0;"><img src="assets/tira-equipo.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-recepcion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-escenario.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-equipo.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-recepcion.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"><img src="assets/tira-cumbre-escenario.jpg" alt="" style="width: 100%; aspect-ratio: 3 / 5; object-fit: cover; border-radius: 14px; display: block;"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="empresas" aria-labelledby="empresas-t" style="background: #FFFFFF; scroll-margin-top: 16px;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Empresas</p>
+<h2 id="empresas-t" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700;">Atención y prevención para el personal</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Para empresas grandes y pequeñas, incluidas las de alto riesgo: talleres, construcción, metalmecánica, cocinas industriales y plantas.</p>
+</div>
+<ul style="flex: 1 1 420px; margin: 0; padding: 28px; list-style: none; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; gap: 14px;"><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Atención de accidentes laborales: cortes, quemaduras y heridas.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Convenios con tarifa preferencial o paquetes de servicios para el personal.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Jornadas de prevención en la empresa.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Un contacto dedicado y un canal de atención prioritario.</span></li></ul>
+</div>
+</section>
+
+<section id="aseguradoras" aria-labelledby="aseguradoras-t" style="background: #F6F7F7; scroll-margin-top: 16px;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Aseguradoras</p>
+<h2 id="aseguradoras-t" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700;">Manejo especializado de los casos de heridas</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Atención especializada para sus asegurados, con coordinación administrativa y reportes de evolución.</p>
+</div>
+<ul style="flex: 1 1 420px; margin: 0; padding: 28px; list-style: none; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; gap: 14px;"><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Atención en nuestras sedes, a domicilio y por telemedicina.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Seguimiento de cada caso hasta el cierre del tratamiento.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Convenio con tarifa por caso. [Condiciones por definir con CTH]</span></li></ul>
+</div>
+</section>
+
+<section id="instituciones" aria-labelledby="instituciones-t" style="background: #FFFFFF; scroll-margin-top: 16px;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Instituciones</p>
+<h2 id="instituciones-t" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700;">Convenios para organismos y organizaciones</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Para organismos públicos, organizaciones sin fines de lucro, gremios y colegios profesionales que quieren ofrecer atención a su personal o a sus miembros.</p>
+</div>
+<ul style="flex: 1 1 420px; margin: 0; padding: 28px; list-style: none; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; gap: 14px;"><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Condiciones preferenciales para su personal o sus miembros.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Programas de prevención y charlas educativas.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>[Otras modalidades por definir con CTH]</span></li></ul>
+</div>
+</section>
+
+<section id="clinicas" aria-labelledby="clinicas-t" style="background: #F6F7F7; scroll-margin-top: 16px;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 12px;">
+<p style="margin: 0; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167E89;">Aliados clínicos</p>
+<h2 id="clinicas-t" style="margin: 0; font-size: 30px; line-height: 1.2; font-weight: 700;">Hospitales, clínicas y cirujanos</h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Trabajamos junto a los equipos médicos para dar continuidad al cuidado de la herida.</p>
+</div>
+<ul style="flex: 1 1 420px; margin: 0; padding: 28px; list-style: none; border-radius: 18px; background: #FFFFFF; border: 1px solid #DCE6EA; display: flex; flex-direction: column; gap: 14px;"><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Cuidado antes y después de la cirugía.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Continuidad después del alta.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Derivación de casos complejos.</span></li><li style="display: flex; gap: 10px; align-items: flex-start; font-size: 16px; line-height: 1.5; color: #514C4C;"><span aria-hidden="true" style="color: #84B953; font-weight: 700;">✓</span><span>Capacitación. [Alcance por confirmar con CTH]</span></li></ul>
+</div>
+</section>
+
+<!-- CÓMO TRABAJAMOS -->
+<section aria-labelledby="modelos-t" style="background: #013451; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center;">
+<h2 id="modelos-t" style="margin: 0; font-size: 32px; font-weight: 700;">Cómo <em style="color: #84B953;">trabajamos</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D4E7EE;">Armamos cada convenio según el tamaño y las necesidades de la organización.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+<div style="padding: 26px; border-radius: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">Tarifa preferencial</span><span style="font-size: 15px; line-height: 1.5; color: #D4E7EE;">Condiciones especiales para el personal o los miembros de la organización.</span></div>
+<div style="padding: 26px; border-radius: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">Paquetes de servicios</span><span style="font-size: 15px; line-height: 1.5; color: #D4E7EE;">Un cupo de servicios definido para un período, que la organización contrata por adelantado.</span></div>
+<div style="padding: 26px; border-radius: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">Programas de prevención</span><span style="font-size: 15px; line-height: 1.5; color: #D4E7EE;">Jornadas y charlas en la organización sobre el cuidado de heridas y quemaduras.</span></div>
+<div style="padding: 26px; border-radius: 16px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">Convenios con aseguradoras</span><span style="font-size: 15px; line-height: 1.5; color: #D4E7EE;">Atención de los casos de heridas de sus asegurados con una tarifa acordada.</span></div>
+</div>
+<p style="margin: 0; text-align: center; font-size: 15px; line-height: 1.6; color: #D4E7EE;">La organización recibe un reporte de uso, nunca diagnósticos ni datos clínicos de las personas atendidas.</p>
+</div>
+</section>
+
+<!-- BENEFICIOS -->
+<section aria-labelledby="benef-t" style="background: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px;">
+<h2 id="benef-t" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700; text-align: center;">Lo que gana <em style="color: #00A0D0;">la organización</em></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+<div style="padding: 26px; border-radius: 16px; background: #F6F7F7; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">[Beneficio 1]</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Texto por definir con CTH]</span></div>
+<div style="padding: 26px; border-radius: 16px; background: #F6F7F7; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">[Beneficio 2]</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Texto por definir con CTH]</span></div>
+<div style="padding: 26px; border-radius: 16px; background: #F6F7F7; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 19px; font-weight: 700;">[Beneficio 3]</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Texto por definir con CTH]</span></div>
+</div>
+</div>
+</section>
+
+<!-- FORMULARIO DE PROPUESTA -->
+<style>
+.f-l{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700;color:#013451}
+.f-i{min-height:46px;padding:0 14px;border-radius:10px;border:1px solid #C9D9DE;font-family:Roboto,Arial,sans-serif;font-size:16px;font-weight:400;color:#013451;background:#FFFFFF;box-sizing:border-box;width:100%}
+.f-i:focus{outline:3px solid rgba(0,160,208,.35);border-color:#00A0D0}
+</style>
+<section id="propuesta" aria-labelledby="prop-t" style="background: #ECF5F9;">
+<div style="max-width: 860px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 24px;">
+<div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center;">
+<h2 id="prop-t" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Solicita una propuesta <em style="color: #00A0D0;">para tu organización</em></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Déjanos tus datos y te contactamos para conocer lo que necesitan.</p>
+</div>
+<form onsubmit="return false;" style="padding: 32px; border-radius: 20px; background: #FFFFFF; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; font-family: Roboto, Arial, sans-serif;">
+<label class="f-l">Nombre de la organización<input class="f-i" type="text" name="organizacion" autocomplete="organization"></label>
+<label class="f-l">Tipo de organización<select class="f-i" name="tipo"><option value="">Selecciona</option><option>Empresa</option><option>Aseguradora</option><option>Institución pública</option><option>Organización sin fines de lucro, gremio o colegio</option><option>Hospital, clínica o consultorio</option></select></label>
+<label class="f-l">Sector<input class="f-i" type="text" name="sector"></label>
+<label class="f-l">Número de trabajadores o miembros<select class="f-i" name="tamano"><option value="">Selecciona</option><option>Menos de 20</option><option>20 a 100</option><option>101 a 500</option><option>Más de 500</option></select></label>
+<label class="f-l">Persona de contacto<input class="f-i" type="text" name="contacto" autocomplete="name"></label>
+<label class="f-l">Cargo<input class="f-i" type="text" name="cargo" autocomplete="organization-title"></label>
+<label class="f-l">Teléfono<input class="f-i" type="tel" name="telefono" autocomplete="tel"></label>
+<label class="f-l">Correo<input class="f-i" type="email" name="correo" autocomplete="email"></label>
+<label class="f-l" style="grid-column: 1 / -1;">¿Qué le interesa a tu organización?<select class="f-i" name="interes"><option value="">Selecciona</option><option>Atención para el personal o los miembros</option><option>Programa de prevención</option><option>Convenio para asegurados</option><option>Alianza clínica</option><option>Otro</option></select></label>
+<p style="grid-column: 1 / -1; margin: 0; font-size: 14px; line-height: 1.5; color: #514C4C;">No incluyas datos de salud de ninguna persona. Usaremos estos datos solo para contactarte.</p>
+<button type="submit" style="grid-column: 1 / -1; justify-self: start; min-height: 52px; padding: 0 32px; border-radius: 999px; border: none; background: #84B953; color: #013451; font-family: Roboto, Arial, sans-serif; font-weight: 700; font-size: 17px; cursor: pointer;">Enviar solicitud</button>
+</form>
+</div>
+</section>
+
+<!-- CTA FINAL -->
+<section id="cita" aria-labelledby="cta-final" style="background: #024448; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center;">
+<h2 id="cta-final" style="margin: 0; font-size: 34px; line-height: 1.2; font-weight: 700; max-width: 760px;">Hablemos de un convenio para tu organización</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #D4E7EE;">Escríbenos y preparamos una propuesta a la medida.</p>
+<div id="contacto" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 20px;">
+<a href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-CORPORATIVO)" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+Escríbenos por WhatsApp</a>
+<a href="#contacto" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 17px; text-decoration: none;">Prefiero que me contacten</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: #013451; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 56px 24px 32px; display: flex; flex-direction: column; gap: 36px;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px;">
+<div style="display: flex; flex-direction: column; gap: 14px;">
+<img src="assets/logo-cth-blanco.png" alt="Cuidamos Tu Herida" style="width: 180px; height: auto; display: block;">
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #D4E7EE;">Organizadores de la Cumbre Internacional para el Cuidado Avanzado de Heridas y Piel.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.6;">
+<span style="font-size: 15px; font-weight: 700;">Sedes</span>
+<span style="color: #D4E7EE;">San Bernardino: Centro Clínico Profesional Caracas, piso 13, consultorio 1308.</span>
+<span style="color: #D4E7EE;">Altamira: Av. Francisco de Miranda, Edificio Banco del Orinoco, dentro de OH Laboratorio, Urb. La Floresta.</span>
+<span style="color: #D4E7EE;">Lunes a viernes, 8:00 a. m. a 5:00 p. m.</span>
+<span style="color: #D4E7EE;">WhatsApp +58 416-618-1760</span>
+</div>
+<nav aria-label="Pie de página" style="display: flex; flex-direction: column; gap: 10px; font-size: 14px;">
+<span style="font-size: 15px; font-weight: 700;">Navegación</span>
+<a href="index.html#corporativo" style="color: #FFFFFF; text-decoration: none;">Corporativo e instituciones</a>
+<a href="index.html#cuidamos-tu-herida" style="color: #FFFFFF; text-decoration: none;">Cuidamos tu herida</a>
+<a href="index.html#prevencion-y-piel" style="color: #FFFFFF; text-decoration: none;">Prevención y cuidado de la piel</a>
+<a href="index.html#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
+<a href="index.html#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>
+<a href="index.html#cumbre" style="color: #FFFFFF; text-decoration: none;">Nosotros</a>
+</nav>
+<div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; line-height: 1.6;">
+<span style="font-size: 15px; font-weight: 700;">Legal</span>
+<a href="#inicio" style="color: #FFFFFF;">Política de privacidad</a>
+<a href="#inicio" style="color: #FFFFFF;">Términos y condiciones</a>
+<span style="color: #D4E7EE;">La información de este sitio es educativa y no sustituye la consulta con un profesional de la salud.</span>
+</div>
+</div>
+<p style="margin: 0; padding-top: 20px; border-top: 1px solid #1E4D6B; font-size: 13px; color: #D4E7EE;">© 2026 Cuidamos Tu Herida, S.A. · RIF J-50456402-8</p>
+</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-CORPORATIVO)" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"></path></svg><span class="wa-tip" aria-hidden="true">Escríbenos por WhatsApp</span></a>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
