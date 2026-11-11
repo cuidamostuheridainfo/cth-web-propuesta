@@ -35,3 +35,7 @@
 - Formulario de productos en el inicio.
 - Revisión final: nueve páginas sin enlaces internos rotos, sin errores de JavaScript y sin desborde a 1280, 1100, 1024 y 390 px.
 - Quedó sin hacer el punto 5 (tres modalidades y ecosistema) porque necesita la decisión de Jenny; la sesión se cerró porque entró otro proyecto.
+
+## 11 nov 2026 (tercera sesión)
+
+- El cliente pidió resaltar dónde se atiende como un segmento. Sección «¿Dónde podemos ayudarte?» en el inicio, después de los módulos. Revisada en escritorio y a 390 px, sin enlaces rotos ni errores.

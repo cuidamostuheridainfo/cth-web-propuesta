@@ -33,7 +33,8 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 ## Decisiones de Jenny
 
-- **Punto 5 de la sesión del 11 nov:** ¿franja de las tres modalidades (sede, domicilio y telemedicina) en el inicio, después de los módulos? ¿El ecosistema del grupo se muestra ya en la propuesta para el comité o sigue reservado hasta la aprobación del plan? Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields implementa IA) es el mensaje de esas piezas.
+- **Ecosistema del grupo:** ¿se muestra ya en la propuesta para el comité o sigue reservado hasta la aprobación del plan? (Las tres modalidades ya quedaron resueltas con «¿Dónde podemos ayudarte?».)
+- Orden de «¿Dónde podemos ayudarte?»: se usó el que dio Jenny (domicilio, telemedicina, Unidad). En el módulo Cuidamos tu herida el orden es Unidad, domicilio, telemedicina. Confirmar si se dejan distintos. Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields implementa IA) es el mensaje de esas piezas.
 - Revisar los ajustes que hizo Claude el 11 nov: en «Cuidado de heridas» aparecen la Dra. Milagros, el Dr. Hinojosa, la Dra. Cedeño y el Dr. Lozada (según sus áreas); a la Dra. Milagros se le agregó «Consulta de medicina general»; a la Lic. Fernández, «Consulta nutricional» en lugar de «Consulta médica nutricional»; el resumen de ecografía en Prevención no es cita textual; la línea de ecografía en Fisiatría no se pidió.
 - Confirmar «usted» para instituciones y «tú» para pacientes. Hoy el formulario de Corporativo dice «tu organización».
 - Consultas institucionales de productos: ¿casos de CTH o de Medical Shields? (con Gerencia Comercial).

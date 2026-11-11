@@ -100,3 +100,7 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 - **Ecografía y Doppler** es un servicio de Cuidamos tu herida y de Prevención y cuidado de la piel. Se dice que **se hacen jornadas de ecografía** y que **próximamente se publicará la nueva jornada**. Código `WEB-ECOGRAFIA`.
 - **Dermatóloga:** queda pendiente; CTH sigue conversando con ella. La **estética facial del Dr. Lozada** va en Cosmetología, dentro de Cuidamos tu piel.
 - **Publicación:** todavía no se publica como sitio final.
+
+## Dónde podemos ayudarte (11 nov 2026, pedido del cliente)
+
+- Los sitios donde se atiende al paciente se resaltan como un **segmento propio** en el inicio, justo después de «¿Cómo podemos ayudarte?»: **«¿Dónde podemos ayudarte?»** con A domicilio, Por telemedicina y En nuestra Unidad, cada una con enlace a su landing.
