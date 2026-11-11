@@ -16,3 +16,9 @@
 - Propuesta del área corporativa en un Doc de Claude para presentarla a CTH: segmentos, cinco modelos de convenio, piloto de 90 días, riesgos (incluido el posible encuadre como medicina prepagada) y decisiones pendientes.
 - Ajustes de Jenny: sección «Dónde te atendemos» en Unidad y Prevención, nuevo encabezado de Unidad, «heridas» en lugar de «lesiones» en todo el sitio, «úlceras vasculares», Cumbre 2026 y 2027 (CTH sigue como organizador).
 - Menú y pie actualizados en las ocho páginas. Revisión final: estructura, enlaces internos, JavaScript y ancho a 390 px sin problemas.
+
+## 11 nov 2026
+
+- Lectura del plan común «Grupo Medical Shields: un solo ecosistema web» (decisiones del 10 nov: cuatro marcas, barra y pie iguales, sección del ecosistema, puentes y sello de cuatro anillos).
+- Espacios reservados, invisibles, para las piezas del grupo en las ocho páginas. Comprobado que las páginas se ven idénticas a antes, en escritorio y en teléfono.
+- Se mantiene «herida» como provisional; el nombre y el logo de la Cumbre quedan como están hasta que Jenny lo indique.

@@ -1,6 +1,6 @@
 # PENDIENTES — Rediseño web de CTH
 
-Última actualización: 9 nov 2026.
+Última actualización: 11 nov 2026.
 
 ## Enviado a CTH (mensaje de nueve puntos, 30 oct)
 
@@ -38,6 +38,16 @@
 - Presentar a CTH la propuesta del área corporativa (Doc de Claude, enlace en `ESTADO.md`) y obtener sus decisiones: segmentos, modelos de convenio, tarifas y paquetes (Administración y Finanzas), capacidad mensual, responsable y revisión legal.
 - **Revisión legal:** un paquete de cuota fija que cubra lo que cada persona necesite puede encuadrarse como medicina prepagada, que es actividad regulada. La propuesta plantea vender servicios definidos con cupo. Debe revisarlo un abogado antes del primer contrato.
 - **Inconsistencia en preguntas frecuentes:** la respuesta «¿Aceptan seguros médicos?» dice que no hay convenio directo con aseguradoras, y la página Corporativo ofrece convenios con aseguradoras. Confirmar con CTH cuál vale hoy antes de publicar.
+
+## Ecosistema del grupo (11 nov)
+
+- Aplicar la barra, el pie, la sección «Un solo ecosistema» y los puentes en los espacios reservados (`data-grupo`) cuando el cliente apruebe el plan con el video.
+- Copiar el sello desde el repositorio `cumbre-web`, carpeta `assets/img/grupo/` (versión de cuatro anillos, clara y oscura).
+- Textos de los puentes hacia productos: validación de la Dra. Milagros Jaimes.
+- Consentimiento de los formularios: cuando Daniel y Gerencia Comercial aprueben la base única de contactos, cambiar «Usaremos estos datos solo para contactarte» (formulario de Corporativo) por el texto del grupo, con la opción de no recibir ofertas.
+- Nombre y logo de la Cumbre: cambiar cuando Jenny lo indique (inicio, pie de las ocho páginas y textos alternativos). El logo nuevo es `logo-cumbre-27-blanco.png` en `cumbre-web`.
+- «Herida» o «lesión»: lo deciden la Dra. Milagros y Social media para las cuatro webs.
+- Teléfono de Medical Shields (+58 412-2853958): el número que el plan marca como error (+58 414 618 17 60) se parece al WhatsApp de CTH (+58 416-618-1760). Confirmar que en la presentación no se mezclaron. La web de CTH no muestra el teléfono de Medical Shields.
 
 ## Dra. Milagros Jaimes
 

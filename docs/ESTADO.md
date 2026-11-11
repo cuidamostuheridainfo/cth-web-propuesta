@@ -1,13 +1,15 @@
 # ESTADO — Rediseño web de CTH
 
-Última actualización: 9 nov 2026.
+Última actualización: 11 nov 2026.
 
 ## Dónde estamos
 
 - **Fase actual:** propuesta de diseño con el inicio reorganizado en tres módulos y seis landing pages. Se trabajó el 9 nov a partir de lo que pidió Daniel: resaltar cada servicio por separado y darle más peso a lo corporativo.
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Los cambios del 9 nov se publican cuando Jenny haga el commit y lo suba a `main`.
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Los cambios del 9 nov ya están publicados (commit `a30cd50`).
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
+- **Ecosistema del grupo (10 nov):** CTH es una de las cuatro webs del plan «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). El 11 nov quedaron reservados, invisibles, los espacios de la barra, el pie, la sección del ecosistema y los puentes; se aplican cuando el cliente apruebe el plan con un video (ver `DECISIONES-VIGENTES.md`).
+- El 9 nov se publicó la propuesta para la revisión del comité.
 - Las respuestas de CTH al mensaje de nueve puntos del 30 oct y el feedback de Social Media todavía no llegan.
 
 ## Qué tiene la propuesta
@@ -36,7 +38,7 @@ Revisión del 9 nov: las ocho páginas sin errores de estructura, todos los enla
 
 ## Próximo paso
 
-1. Jenny sube los cambios del 9 nov y envía el enlace al equipo y a Daniel.
+1. Recibir el feedback del comité sobre la propuesta publicada el 9 nov.
 2. Presentar a CTH la propuesta del área corporativa y obtener sus decisiones.
 3. Recibir de CTH el contenido de cada landing (lista en `PENDIENTES.md`), las fotos nuevas y el video.
 4. Menú desplegable para teléfono (ahora son seis opciones más el botón).

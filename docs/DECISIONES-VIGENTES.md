@@ -69,5 +69,21 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 
 ## Lenguaje (9 nov 2026)
 
-- **Se dice «herida», no «lesión»**, en todo el sitio: en Venezuela «lesión» tiene otro contexto. Por ejemplo: «Tratamos heridas simples y de difícil cicatrización».
+- **Se dice «herida», no «lesión»**, en todo el sitio: en Venezuela «lesión» tiene otro contexto. Por ejemplo: «Tratamos heridas simples y de difícil cicatrización». **Provisional desde el 10 nov:** para las cuatro webs del grupo lo deciden la Dra. Milagros Jaimes y Social media, con criterio médico; mientras tanto, en CTH se sigue usando «herida».
 - «Úlceras vasculares» (antes «úlceras venosas»).
+
+## Ecosistema del Grupo Medical Shields (10 y 11 nov 2026)
+
+- CTH sigue el plan común de las cuatro webs: documento «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). Las decisiones del grupo se toman allí, no en este repositorio.
+- Cuatro marcas: Medical Shields, Cuidamos tu Herida, Cumbre y Ethical Shields. Cada una conserva su web y su dominio. Nombre visible: «Grupo Medical Shields». Lema: «Ecosistema de Salud y Bienestar Integral».
+- Piezas comunes: barra del grupo arriba, pie del grupo, sección «Un solo ecosistema», puentes en contexto y sello de cuatro anillos en rombo.
+- **En CTH las piezas están reservadas, invisibles, en el código (11 nov).** Se aplican cuando el cliente apruebe el plan con el video (fase 2 del plan). Cada reserva lleva un comentario que dice qué va y un contenedor oculto con `data-grupo`:
+  - `barra` y `pie`: en las ocho páginas.
+  - `ecosistema`: en el inicio, antes de la Cumbre.
+  - `puente-productos` (hacia Medical Shields): en el inicio, después de «Tratamos heridas…», y en Unidad, después de «Qué atendemos».
+  - `puente-cumbre`: en Unidad, después de la unidad multidisciplinaria.
+  - `grupo-corporativo` (el grupo ante empresas y aseguradoras, con puentes a Medical Shields y la Cumbre): en Corporativo, antes de «Cómo trabajamos».
+- Los puentes hacia productos se presentan como criterio clínico, nunca como venta al paciente. Sus textos los valida la Dra. Milagros Jaimes.
+- Prioridad del mensaje: la fuerza del grupo ante empresas y aseguradoras. En CTH va sobre todo en Corporativo e instituciones.
+- Nombre y logo de la Cumbre: por decisión de Jenny (11 nov), CTH mantiene por ahora el nombre y el logo actuales, aunque el plan pide «II Cumbre Internacional para el Cuidado Avanzado de Heridas, Piel y Longevidad». Se cambian cuando Jenny lo indique.
+- Todo cambio en CTH que afecte a las otras marcas se anota en el «Registro de cambios», al final del documento del plan.
