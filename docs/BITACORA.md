@@ -22,3 +22,16 @@
 - Lectura del plan común «Grupo Medical Shields: un solo ecosistema web» (decisiones del 10 nov: cuatro marcas, barra y pie iguales, sección del ecosistema, puentes y sello de cuatro anillos).
 - Espacios reservados, invisibles, para las piezas del grupo en las ocho páginas. Comprobado que las páginas se ven idénticas a antes, en escritorio y en teléfono.
 - Se mantiene «herida» como provisional; el nombre y el logo de la Cumbre quedan como están hasta que Jenny lo indique.
+
+## 11 nov 2026 (segunda sesión)
+
+- Ritual de inicio. Llegaron las respuestas de CTH a los puntos 2, 3 y parte del 4, y el texto de la Dra. Milagros sobre el equipo y los equipos. El comité sigue decidiendo el logo del grupo.
+- Panel de especialistas abierto: `assets/equipo.js` con los nueve especialistas, Traumatología y ortopedia nueva, Ecografía y Doppler como servicio. El panel se arma solo desde ese archivo.
+- Láser: sección «Unidad de Cicatrización Avanzada con Tecnología Láser» en Unidad, bloque en Prevención y tarjeta actualizada en Cuidamos tu piel, más la estética facial del Dr. Lozada en Cosmetología.
+- Módulo nuevo «Fisiatría avanzada y terapia láser»: cuarta tarjeta del inicio, landing `fisiatria.html`, opción dentro de Cuidamos tu herida y enlaces desde Unidad.
+- Menú con siete opciones («Fisiatría» corto, tras ver las dos opciones en capturas) y desplegable por debajo de 1100 px, en las nueve páginas.
+- Ecografía y Doppler con jornadas en Unidad y Prevención; mención en Fisiatría.
+- Preguntas frecuentes: sección nueva «Láser y ecografía», equipos especiales actualizados y respuestas de productos (la web no vende).
+- Formulario de productos en el inicio.
+- Revisión final: nueve páginas sin enlaces internos rotos, sin errores de JavaScript y sin desborde a 1280, 1100, 1024 y 390 px.
+- Quedó sin hacer el punto 5 (tres modalidades y ecosistema) porque necesita la decisión de Jenny; la sesión se cerró porque entró otro proyecto.

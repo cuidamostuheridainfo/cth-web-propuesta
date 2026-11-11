@@ -87,3 +87,16 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 - Prioridad del mensaje: la fuerza del grupo ante empresas y aseguradoras. En CTH va sobre todo en Corporativo e instituciones.
 - Nombre y logo de la Cumbre: por decisión de Jenny (11 nov), CTH mantiene por ahora el nombre y el logo actuales, aunque el plan pide «II Cumbre Internacional para el Cuidado Avanzado de Heridas, Piel y Longevidad». Se cambian cuando Jenny lo indique.
 - Todo cambio en CTH que afecte a las otras marcas se anota en el «Registro de cambios», al final del documento del plan.
+
+## Respuestas de CTH y estructura (11 nov 2026, segunda sesión)
+
+- **Corporativo:** CTH respondió «Seguros y corporativos», pero a nivel comercial manda Daniel: queda como él lo orientó el 9 nov (empresas, aseguradoras, Estado y organizaciones sin fines de lucro). No se cambia la página.
+- **Productos:** la web no vende ni muestra precios; una persona de CTH atiende la compra, como hasta ahora. Para captar el contacto hay un formulario «¿Te interesa un producto?» en la sección Productos del inicio (`#info-producto`): nombre y teléfono obligatorios, producto de interés y correo opcional, código `WEB-PRODUCTOS`. La llamada la hace la ejecutiva de telemarketing.
+- **Textos de la Dra. Milagros Jaimes** (equipo, láser, fisiatría con láser, ecografía y Doppler): están validados por ella y van tal cual. Solo se aplican las reglas de lenguaje vigentes («Heridas que tratamos», «úlceras vasculares»). «Lesión» se mantiene donde se refiere a músculos, tendones o articulaciones.
+- **Equipo de la Unidad:** nueve especialistas con nombre, especialidad y áreas. Entra **Traumatología y ortopedia** (Dr. José Gregorio Barrio). **Medicina general** la atiende la Dra. Milagros. El equipo va a crecer: se mantiene en `assets/equipo.js`, separado del código.
+- **Láser:** es un solo equipo con varias funciones. Está activo en Cuidamos tu herida (cicatrización avanzada) y también se usa en fisiatría, en la prevención (antes y después de una cirugía) y, próximamente, en cosmetología y cuidado antienvejecimiento.
+- **Fisiatría avanzada y terapia láser** es un **módulo aparte**, para darle más relevancia, y además se incluye en Cuidamos tu herida. Va **después de Cuidamos tu herida**: Corporativo · Cuidamos tu herida · Fisiatría avanzada y terapia láser · Prevención y cuidado de la piel. Landing `fisiatria.html`, código `WEB-FISIATRIA`. Precisa la estructura del 9 nov, no la reemplaza.
+- **Menú:** dice solo «Fisiatría» para que la cabecera quepa en una línea en escritorio y no pese en el teléfono. El nombre completo va en la tarjeta, la landing y el pie. Por debajo de 1100 px el menú es desplegable.
+- **Ecografía y Doppler** es un servicio de Cuidamos tu herida y de Prevención y cuidado de la piel. Se dice que **se hacen jornadas de ecografía** y que **próximamente se publicará la nueva jornada**. Código `WEB-ECOGRAFIA`.
+- **Dermatóloga:** queda pendiente; CTH sigue conversando con ella. La **estética facial del Dr. Lozada** va en Cosmetología, dentro de Cuidamos tu piel.
+- **Publicación:** todavía no se publica como sitio final.

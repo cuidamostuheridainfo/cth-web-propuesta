@@ -21,7 +21,7 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 
 | Qué | Dónde |
 |---|---|
-| Propuesta navegable (fuente de verdad del diseño) | Este repositorio: `index.html`, `preguntas-frecuentes.html`, `assets/` |
+| Propuesta navegable (fuente de verdad del diseño) | Este repositorio: `index.html`, `preguntas-frecuentes.html`, las siete landing pages y `assets/` |
 | Enlace publicado para el equipo | https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (GitHub Pages, rama `main`, raíz) |
 | Documento de diseño completo (análisis, embudos, SEO, identidad visual) | Doc de Claude «CTH — Rediseño web: análisis y documento de diseño»: https://claude.ai/artifact/X1GBNNn2zR5BkboAvNYihx |
 | Propuesta del área corporativa para CTH (interna, no va en este repositorio) | Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW |
@@ -36,7 +36,7 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 - **El repositorio es público** (GitHub Pages gratis). No se suben aquí datos internos sensibles: precios, datos de pacientes, credenciales, detalles técnicos de GMS o IRIS. Esos van en sus propios repositorios privados.
 - **Todas las páginas llevan** `<meta name="robots" content="noindex, nofollow">` y la franja «Propuesta de diseño para revisión interna» mientras sean propuesta.
 - **Contenido pendiente entre corchetes** `[...]`. No se inventan cifras, nombres, credenciales ni testimonios.
-- **Afirmaciones clínicas** (beneficios, tiempos de cierre, prevención): no se publican sin validación de la Dra. Milagros Jaimes.
+- **Afirmaciones clínicas** (beneficios, tiempos de cierre, prevención): no se publican sin validación de la Dra. Milagros Jaimes. Los textos que ella misma envía cuentan como validados y van tal cual, salvo las reglas de lenguaje vigentes («herida», «úlceras vasculares»).
 - **Sin precios** en la web.
 - **Ningún dato clínico** en formularios, en el mensaje precargado de WhatsApp ni en Analytics. El código de origen es neutro (por ejemplo `WEB-INICIO`), nunca el nombre de una lesión.
 - **Tono:** «tú» para pacientes; «usted» para instituciones queda pendiente de confirmar.
@@ -48,8 +48,10 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 ## Estructura del código
 
 - `index.html` y `preguntas-frecuentes.html`: HTML estático, estilos en línea y un bloque `<style>` en el `<head>`.
-- Seis landing pages (9 nov): `corporativo.html`, `unidad.html`, `atencion-domiciliaria.html`, `telemedicina.html`, `prevencion-de-complicaciones.html`, `cuidado-de-la-piel.html`. Cada una lleva su propia copia de la cabecera, el cierre y el pie del inicio, con los enlaces del menú apuntando a `index.html#...`.
-- **Un cambio en la cabecera, el menú, el cierre o el pie se replica en las ocho páginas.** Al terminar, revisar que todos los enlaces internos lleven a páginas y anclas que existen.
+- Siete landing pages: `corporativo.html`, `unidad.html`, `atencion-domiciliaria.html`, `telemedicina.html`, `prevencion-de-complicaciones.html`, `cuidado-de-la-piel.html` (9 nov) y `fisiatria.html` (11 nov). Cada una lleva su propia copia de la cabecera, el cierre y el pie del inicio, con los enlaces del menú apuntando a `index.html#...`.
+- **Un cambio en la cabecera, el menú, el cierre o el pie se replica en las nueve páginas.** Al terminar, revisar que todos los enlaces internos lleven a páginas y anclas que existen.
+- Menú (11 nov): por debajo de 1100 px se vuelve desplegable con el botón «Menú» (`.nav-toggle`, `#nav-principal`). Si se agrega una opción, comprobar que en 1100 px la cabecera siga en una sola línea.
+- **`assets/equipo.js` es contenido, no código (11 nov):** especialidades, especialistas y servicios (Laboratorio, Ecografía y Doppler) del panel de Unidad y de «Quién te atiende» en Fisiatría. Para agregar un médico o una especialidad se agrega un bloque ahí; las instrucciones están al principio del archivo. Un especialista puede estar en varias especialidades (campo `en`). Una página muestra los especialistas de una especialidad con `<div data-equipo="mf">`.
 - Espacios reservados del grupo: comentarios `GRUPO MEDICAL SHIELDS ·` con un contenedor oculto `data-grupo` (`barra`, `pie`, `ecosistema`, `puente-productos`, `puente-cumbre`, `grupo-corporativo`). Se buscan con `data-grupo=`.
-- `assets/app.js`: comportamiento (video con sonido y pausa, conteo de cifras, tarjetas de los tres módulos del inicio, paneles de «Cómo te atendemos», especialidades, preguntas). Las anclas `#corporativo`, `#cuidamos-tu-herida` y `#prevencion-y-piel` abren la tarjeta del módulo correspondiente. Usa atributos `data-*`: `data-click`, `data-if`, `data-text`, `data-class`, `data-ref`, `data-attr-*`.
+- `assets/app.js`: comportamiento (video con sonido y pausa, conteo de cifras, tarjetas de los cuatro módulos del inicio, paneles de «Cómo te atendemos», especialidades desde `equipo.js`, menú desplegable, preguntas). Las anclas `#corporativo`, `#cuidamos-tu-herida`, `#fisiatria` y `#prevencion-y-piel` abren la tarjeta del módulo correspondiente. Usa atributos `data-*`: `data-click`, `data-if`, `data-text`, `data-class`, `data-ref`, `data-attr-*`.
 - `assets/`: logo, fotos (las `tira-*` son verticales 480×800 para la franja de Instituciones) y el video `unidad-completo.mp4` (1280 px, H.264).

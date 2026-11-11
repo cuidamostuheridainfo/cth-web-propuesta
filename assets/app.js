@@ -4,11 +4,9 @@
   var refs = {};
   document.querySelectorAll('[data-ref]').forEach(function (el) { refs[el.getAttribute('data-ref')] = el; });
 
-  var SPECS = [
-    ['cg', 'Cirugía general'], ['cc', 'Cirugía cardiovascular'], ['cp', 'Cirugía plástica'],
-    ['mg', 'Medicina general'], ['mi', 'Medicina interna e infectología'],
-    ['mf', 'Medicina física y rehabilitación'], ['nc', 'Nutrición clínica'], ['lab', 'Laboratorio']
-  ];
+  // Equipo de la Unidad: el contenido vive en assets/equipo.js (solo se carga en unidad.html)
+  var EQ = window.CTH_EQUIPO || { especialidades: [], especialistas: [] };
+  var SPECS = EQ.especialidades || [];
 
   var state = { p: 0, heroPaused: false, soundOn: false, stepsIn: false, openStep: 0, openSpec: '', openMod: '' };
 
@@ -40,22 +38,12 @@
     v.prevOpen = state.openSpec === 'prev';
     v.prevCls = 'spec-tile spec-prev' + (v.prevOpen ? ' is-active' : '');
     v.prevHint = v.prevOpen ? 'Cerrar ↑' : 'Ver más ↓';
-    SPECS.forEach(function (sp) {
-      var open = state.openSpec === sp[0];
-      v['open_' + sp[0]] = open;
-      v['cls_' + sp[0]] = 'spec-tile' + (open ? ' is-active' : '');
-      v['icon_' + sp[0]] = open ? '−' : '+';
-    });
-    v.specDoctor = state.openSpec !== '' && state.openSpec !== 'lab' && state.openSpec !== 'prev';
-    v.specLab = state.openSpec === 'lab';
-    [['Corp', 'corp', 1], ['Herida', 'herida', 2], ['Prev', 'prev', 3]].forEach(function (m) {
+    [['Corp', 'corp', 1], ['Herida', 'herida', 2], ['Fis', 'fis', 4], ['Prev', 'prev', 3]].forEach(function (m) {
       var open = state.openMod === m[1];
       v['mod' + m[0] + 'Open'] = open;
       v['mod' + m[0] + 'Cls'] = 'mod-card mod-c' + m[2] + (open ? ' is-active' : '');
       v['mod' + m[0] + 'Hint'] = open ? 'Cerrar ↑' : 'Ver opciones ↓';
     });
-    var found = SPECS.filter(function (sp) { return sp[0] === state.openSpec; })[0];
-    v.specTitle = state.openSpec === 'heridas' ? 'Cuidado de heridas' : (found ? found[1] : '');
     return v;
   }
 
@@ -75,6 +63,102 @@
         var k = el.getAttribute('data-attr-' + a); if (k in v) el.setAttribute(a, String(v[k]));
       });
     });
+    renderSpecs();
+  }
+
+  // ---- Especialidades y especialistas (desde assets/equipo.js) ----
+  var BTN_STYLE = 'min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;';
+  var CTA_STYLE = 'align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;';
+
+  function node(tag, style, text) {
+    var e = document.createElement(tag);
+    if (style) e.setAttribute('style', style);
+    if (text != null) e.textContent = text;
+    return e;
+  }
+
+  function buildSpecButtons() {
+    var grid = refs.specGrid;
+    if (!grid) return;
+    SPECS.forEach(function (sp) {
+      var b = node('button', BTN_STYLE);
+      b.type = 'button';
+      b.className = 'spec-tile';
+      b.setAttribute('data-spec', sp.id);
+      b.setAttribute('aria-controls', 'espec-detalle');
+      b.setAttribute('aria-expanded', 'false');
+      b.appendChild(node('span', null, sp.nombre));
+      var icon = node('span', 'font-size: 18px; color: #167E89;', '+');
+      icon.setAttribute('aria-hidden', 'true');
+      b.appendChild(icon);
+      b.addEventListener('click', function () { set({ openSpec: state.openSpec === sp.id ? '' : sp.id }); });
+      grid.appendChild(b);
+    });
+  }
+
+  function doctorCard(d) {
+    var card = node('div', 'flex: 1 1 260px; padding: 20px; border-radius: 14px; background: #FFFFFF; display: flex; gap: 16px; align-items: flex-start;');
+    card.appendChild(node('div', 'width: 64px; height: 64px; border-radius: 999px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #013451; flex: 0 0 auto;', d.foto ? null : '[Foto]'));
+    var info = node('div', 'flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 6px;');
+    info.appendChild(node('h3', 'margin: 0; font-size: 18px; line-height: 1.3; font-weight: 700; color: #013451;', d.nombre));
+    info.appendChild(node('span', 'font-size: 14px; font-weight: 700; color: #167E89;', d.especialidad));
+    if (d.areas && d.areas.length) {
+      var ul = node('ul', 'margin: 4px 0 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 15px; line-height: 1.5; color: #514C4C;');
+      d.areas.forEach(function (a) { ul.appendChild(node('li', null, a)); });
+      info.appendChild(ul);
+    }
+    if (d.credenciales) info.appendChild(node('span', 'font-size: 14px; line-height: 1.5; color: #514C4C;', d.credenciales));
+    if (d.horario) info.appendChild(node('span', 'font-size: 14px; line-height: 1.5; color: #514C4C;', d.horario));
+    card.appendChild(info);
+    return card;
+  }
+
+  var shownSpec = null;
+  function renderSpecs() {
+    document.querySelectorAll('[data-spec]').forEach(function (b) {
+      var open = state.openSpec === b.getAttribute('data-spec');
+      b.className = 'spec-tile' + (open ? ' is-active' : '');
+      b.setAttribute('aria-expanded', String(open));
+      b.lastChild.textContent = open ? '−' : '+';
+    });
+    var box = refs.specPanel;
+    if (!box || shownSpec === state.openSpec) return;
+    shownSpec = state.openSpec;
+    while (box.firstChild) box.removeChild(box.firstChild);
+    var id = state.openSpec;
+    if (!id || id === 'prev') return;
+    var sp = id === 'heridas'
+      ? { id: 'heridas', nombre: (EQ.heridas && EQ.heridas.nombre) || 'Cuidado de heridas', texto: EQ.heridas && EQ.heridas.texto }
+      : SPECS.filter(function (x) { return x.id === id; })[0];
+    if (!sp) return;
+    var panel = node('div', 'border-radius: 18px; background: #F6F7F7; display: flex; flex-direction: column; gap: 20px;');
+    panel.className = 'step-panel';
+    if (sp.servicio) {
+      panel.appendChild(node('span', 'font-size: 20px; font-weight: 700; color: #013451;', sp.nombre));
+      panel.appendChild(node('span', 'font-size: 15px; line-height: 1.5; color: #514C4C;', sp.servicio.texto));
+      var a = node('a', CTA_STYLE + ' background: #D9EBC6;', sp.servicio.boton);
+      a.href = sp.servicio.enlace;
+      panel.appendChild(a);
+    } else {
+      panel.appendChild(node('span', 'font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;', sp.nombre));
+      if (sp.texto) panel.appendChild(node('span', 'font-size: 15px; line-height: 1.5; color: #514C4C;', sp.texto));
+      var docs = (EQ.especialistas || []).filter(function (d) { return d.en && d.en.indexOf(id) !== -1; });
+      var wrap = node('div', 'display: flex; flex-wrap: wrap; gap: 14px;');
+      if (docs.length) docs.forEach(function (d) { wrap.appendChild(doctorCard(d)); });
+      else wrap.appendChild(doctorCard({ nombre: '[Nombre del especialista]', especialidad: sp.nombre, credenciales: '[Credenciales: universidad y número de colegiado]', horario: '[Días y horario de consulta · sede]' }));
+      panel.appendChild(wrap);
+      var row = node('div', 'display: flex; flex-wrap: wrap; align-items: center; gap: 20px;');
+      var cta = node('a', CTA_STYLE + ' background: #84B953;', 'Agenda tu consulta');
+      cta.href = '#cita';
+      row.appendChild(cta);
+      if (sp.enlace) {
+        var more = node('a', 'font-size: 15px; font-weight: 700; color: #167E89; text-decoration: none;', sp.enlace.texto);
+        more.href = sp.enlace.href;
+        row.appendChild(more);
+      }
+      panel.appendChild(row);
+    }
+    box.appendChild(panel);
   }
 
   function set(patch) { for (var k in patch) state[k] = patch[k]; render(); }
@@ -97,11 +181,12 @@
     pickPrev: function () { set({ openSpec: state.openSpec === 'prev' ? '' : 'prev' }); },
     pickModCorp: function () { set({ openMod: state.openMod === 'corp' ? '' : 'corp' }); },
     pickModHerida: function () { set({ openMod: state.openMod === 'herida' ? '' : 'herida' }); },
+    pickModFis: function () { set({ openMod: state.openMod === 'fis' ? '' : 'fis' }); },
     pickModPrev: function () { set({ openMod: state.openMod === 'prev' ? '' : 'prev' }); }
   };
 
-  // Abrir la tarjeta del módulo cuando se llega desde el menú (#corporativo, #cuidamos-tu-herida, #prevencion-y-piel)
-  var MOD_HASH = { '#corporativo': 'corp', '#cuidamos-tu-herida': 'herida', '#prevencion-y-piel': 'prev' };
+  // Abrir la tarjeta del módulo cuando se llega desde el menú (#corporativo, #cuidamos-tu-herida, #fisiatria, #prevencion-y-piel)
+  var MOD_HASH = { '#corporativo': 'corp', '#cuidamos-tu-herida': 'herida', '#fisiatria': 'fis', '#prevencion-y-piel': 'prev' };
   function openFromHash() {
     var m = MOD_HASH[window.location.hash];
     if (m) set({ openMod: m });
@@ -110,8 +195,24 @@
   [1, 2, 3].forEach(function (i) {
     handlers['open' + i] = function () { set({ openStep: state.openStep === i ? 0 : i }); };
   });
-  SPECS.forEach(function (sp) {
-    handlers['pick_' + sp[0]] = function () { set({ openSpec: state.openSpec === sp[0] ? '' : sp[0] }); };
+  buildSpecButtons();
+  // Menú desplegable en pantallas angostas
+  document.querySelectorAll('.nav-toggle').forEach(function (btn) {
+    var nav = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!nav) return;
+    function setOpen(open) {
+      nav.classList.toggle('is-open', open);
+      btn.setAttribute('aria-expanded', String(open));
+      var t = btn.querySelector('.nav-toggle-t'); if (t) t.textContent = open ? 'Cerrar' : 'Menú';
+    }
+    btn.addEventListener('click', function () { setOpen(!nav.classList.contains('is-open')); });
+    nav.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setOpen(false); }); });
+  });
+  // Tarjetas fijas de una especialidad, por ejemplo <div data-equipo="mf"> en fisiatria.html
+  document.querySelectorAll('[data-equipo]').forEach(function (box) {
+    var id = box.getAttribute('data-equipo');
+    (EQ.especialistas || []).filter(function (d) { return d.en && d.en.indexOf(id) !== -1; })
+      .forEach(function (d) { box.appendChild(doctorCard(d)); });
   });
   document.querySelectorAll('[data-click]').forEach(function (el) {
     var h = handlers[el.getAttribute('data-click')];

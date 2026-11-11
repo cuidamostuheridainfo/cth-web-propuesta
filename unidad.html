@@ -25,6 +25,8 @@ summary::-webkit-details-marker{display:none}
 .nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
 .nav-faq{transition:background .2s ease, color .2s ease}
 .nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.nav-toggle{display:none;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #013451;background:#FFFFFF;color:#013451;font-family:Roboto,Arial,sans-serif;font-size:15px;font-weight:700;cursor:pointer}
+@media (max-width: 1099px){.nav-toggle{display:inline-flex}.nav-main{display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 0 8px;border-top:1px solid #E3ECEF}.nav-main.is-open{display:flex !important}.nav-main .nav-link{padding:14px 0}.nav-main .nav-faq{align-self:flex-start;margin-top:12px}}
 .inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
 .inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
 .inst-down{animation-name:instDown;animation-duration:38s}
@@ -86,9 +88,11 @@ summary::-webkit-details-marker{display:none}
 <header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="index.html" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-principal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="nav-toggle-t">Menú</span></button>
+<nav id="nav-principal" class="nav-main" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
 <a class="nav-link" href="index.html#corporativo" style="color: #013451; text-decoration: none;">Corporativo</a>
 <a class="nav-link" href="index.html#cuidamos-tu-herida" style="color: #013451; text-decoration: none;">Cuidamos tu herida</a>
+<a class="nav-link" href="index.html#fisiatria" style="color: #013451; text-decoration: none;">Fisiatría</a>
 <a class="nav-link" href="index.html#prevencion-y-piel" style="color: #013451; text-decoration: none;">Prevención</a>
 <a class="nav-link" href="index.html#productos" style="color: #013451; text-decoration: none;">Productos</a>
 <a class="nav-link" href="index.html#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
@@ -161,13 +165,51 @@ summary::-webkit-details-marker{display:none}
 <!-- GRUPO MEDICAL SHIELDS · PUENTE A MEDICAL SHIELDS («Productos que usamos»). Reservado e invisible hasta que el cliente apruebe el plan del ecosistema (doc «Grupo Medical Shields: un solo ecosistema web»). Se presenta como criterio clínico, nunca como venta al paciente. El texto lo valida la Dra. Milagros Jaimes. -->
 <div data-grupo="puente-productos" hidden></div>
 
+<!-- TECNOLOGÍA LÁSER (texto enviado por la Dra. Milagros Jaimes, 11 nov 2026; validado). Mismo equipo que se usará en prevención y cosmetología. -->
+<section id="laser" aria-labelledby="laser-t" style="background: #024448; color: #FFFFFF;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start;">
+<div style="flex: 1 1 340px; display: flex; flex-direction: column; gap: 16px;">
+<span style="font-size: 13px; font-weight: 700; color: #84B953; text-transform: uppercase; letter-spacing: 0.06em;">Tecnología láser</span>
+<h2 id="laser-t" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700; color: #FFFFFF;">Unidad de Cicatrización Avanzada con <em style="color: #46B7E0;">Tecnología Láser</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6;">Aceleramos el cierre de heridas complejas con tecnología láser de última generación.</p>
+<p style="margin: 0; font-size: 15px; line-height: 1.6; color: #D4E7EE;">El mismo equipo se usa en <a href="fisiatria.html" style="color: #FFFFFF; font-weight: 700;">fisiatría y terapia láser</a>, apoya el <a href="prevencion-de-complicaciones.html" style="color: #FFFFFF; font-weight: 700;">cuidado preventivo</a> y, próximamente, el <a href="cuidado-de-la-piel.html" style="color: #FFFFFF; font-weight: 700;">cuidado de tu piel</a>.</p>
+<a href="#cita" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda tu evaluación</a>
+</div>
+<ul style="flex: 1 1 440px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px;">
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; border-radius: 16px; background: rgba(255,255,255,0.08);"><span style="font-size: 17px; font-weight: 700; color: #84B953;">¿Cómo actúa?</span><span style="font-size: 15px; line-height: 1.6;">Utilizamos láser de alta y baja potencia para reducir la inflamación, eliminar bacterias y estimular la formación de tejido sano.</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; border-radius: 16px; background: rgba(255,255,255,0.08);"><span style="font-size: 17px; font-weight: 700; color: #84B953;">Heridas que tratamos</span><span style="font-size: 15px; line-height: 1.6;">Úlceras por pie diabético, úlceras vasculares, heridas quirúrgicas con retraso en el cierre y úlceras por presión (escaras).</span></li>
+<li style="display: flex; flex-direction: column; gap: 6px; padding: 22px 24px; border-radius: 16px; background: rgba(255,255,255,0.08);"><span style="font-size: 17px; font-weight: 700; color: #84B953;">Ventajas</span><span style="font-size: 15px; line-height: 1.6;">Procedimiento 100% ambulatorio, sin quirófano, indoloro y respaldado por un equipo multidisciplinario (heridas, infectología, cirugía, nutrición).</span></li>
+</ul>
+</div>
+</section>
+
+<!-- ECOGRAFÍA Y DOPPLER (texto enviado por la Dra. Milagros Jaimes, 11 nov 2026; validado). Se usa en Cuidamos tu herida y en Prevención y cuidado de la piel. -->
+<section id="ecografia" aria-labelledby="eco-t" style="background: #F6F7F7;">
+<div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-direction: column; gap: 28px;">
+<div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center;">
+<span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Diagnóstico</span>
+<h2 id="eco-t" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Servicio de Ecografía General y <em style="color: #00A0D0;">Doppler</em></h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.6; color: #514C4C; max-width: 720px;">Diagnóstico preciso y en tiempo real para respaldar tu tratamiento médico o fisiátrico.</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px;">
+<div style="padding: 24px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 18px; font-weight: 700; color: #013451;">¿En qué consiste?</span><span style="font-size: 15px; line-height: 1.6; color: #514C4C;">Contamos con un equipo de ecografía de alta precisión para evaluar de forma directa y no invasiva los tejidos blandos, el sistema musculoesquelético y el flujo sanguíneo vascular.</span></div>
+<div style="padding: 24px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 18px; font-weight: 700; color: #013451;">Aplicaciones principales</span><ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; font-size: 15px; line-height: 1.6; color: #514C4C;"><li>Valoración de la circulación y estado profundo en heridas complejas y pie diabético (Doppler).</li><li>Diagnóstico exacto de lesiones en tendones, ligamentos, músculos y articulaciones.</li></ul></div>
+<div style="padding: 24px; border-radius: 16px; background: #FFFFFF; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 18px; font-weight: 700; color: #013451;">Ventajas</span><span style="font-size: 15px; line-height: 1.6; color: #514C4C;">Resultados inmediatos en el consultorio, sin dolor y esenciales para que el equipo médico defina el abordaje terapéutico más acertado para tu caso.</span></div>
+</div>
+<div style="padding: 24px 28px; border-radius: 16px; background: #013451; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; justify-content: space-between;">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #84B953; text-transform: uppercase; letter-spacing: 0.06em;">Jornadas de ecografía</span><span style="font-size: 17px; line-height: 1.5;">Realizamos jornadas de ecografía. Próximamente publicaremos nuestra nueva jornada.</span></div>
+<a href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-ECOGRAFIA)" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Quiero saber de la próxima jornada</a>
+</div>
+</div>
+</section>
+
 <!-- UNIDAD MULTIDISCIPLINARIA -->
 <section aria-labelledby="multi" style="background: #FFFFFF; border-left: 14px solid #84B953; border-right: 14px solid #84B953;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 72px 24px; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start;">
 <div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px;">
 <h2 id="multi" style="margin: 0; font-size: 32px; line-height: 1.2; font-weight: 700;">Una unidad <em style="color: #00A0D0;">multidisciplinaria</em></h2>
 <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">El cuidado de heridas y los cuidados preventivos son el centro de lo que hacemos, con enfermería especializada en la sede, a domicilio y por telemedicina. Lo respaldan especialistas que trabajan en equipo en cada caso.</p>
-<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Toca cada especialidad para conocer al especialista y agendar tu consulta.</p>
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Toca cada especialidad para conocer a nuestros especialistas y agendar tu consulta.</p>
 <a href="#cita" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda tu consulta</a>
 </div>
 <div style="flex: 2 1 520px; display: flex; flex-direction: column; gap: 16px; min-width: 0;">
@@ -176,26 +218,10 @@ summary::-webkit-details-marker{display:none}
 <button type="button" data-class="heridasCls" data-click="pickHeridas" data-attr-aria-expanded="heridasOpen" aria-controls="espec-detalle" style="padding: 20px 24px; border-radius: 16px; background: #024448; color: #FFFFFF; border: 2px solid #024448; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 20px; font-weight: 700;">Cuidado de heridas</span><span style="font-size: 15px;">Incluye enfermería · presencial, domiciliaria y telemedicina</span></span><span style="font-size: 14px; font-weight: 700; color: #84B953; white-space: nowrap;"><span data-text="heridasHint"></span></span></button>
 <button type="button" data-class="prevCls" data-click="pickPrev" data-attr-aria-expanded="prevOpen" aria-controls="espec-detalle" style="padding: 20px 24px; border-radius: 16px; background: #E3F1D5; color: #013451; border: 2px solid #E3F1D5; display: flex; align-items: center; justify-content: space-between; gap: 16px; text-align: left; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span style="display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 20px; font-weight: 700;">Cuidados preventivos</span><span style="font-size: 15px;">Antes y después de una cirugía · pacientes en cama · diabetes</span></span><span style="font-size: 14px; font-weight: 700; color: #167E89; white-space: nowrap;"><span data-text="prevHint"></span></span></button>
 </div>
-<button type="button" data-class="cls_cg" data-click="pick_cg" data-attr-aria-expanded="open_cg" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía general</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cg"></span></span></button>
-<button type="button" data-class="cls_cc" data-click="pick_cc" data-attr-aria-expanded="open_cc" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía cardiovascular</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cc"></span></span></button>
-<button type="button" data-class="cls_cp" data-click="pick_cp" data-attr-aria-expanded="open_cp" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Cirugía plástica</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_cp"></span></span></button>
-<button type="button" data-class="cls_mg" data-click="pick_mg" data-attr-aria-expanded="open_mg" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina general</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mg"></span></span></button>
-<button type="button" data-class="cls_mi" data-click="pick_mi" data-attr-aria-expanded="open_mi" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina interna e infectología</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mi"></span></span></button>
-<button type="button" data-class="cls_mf" data-click="pick_mf" data-attr-aria-expanded="open_mf" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Medicina física y rehabilitación</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_mf"></span></span></button>
-<button type="button" data-class="cls_nc" data-click="pick_nc" data-attr-aria-expanded="open_nc" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Nutrición clínica</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_nc"></span></span></button>
-<button type="button" data-class="cls_lab" data-click="pick_lab" data-attr-aria-expanded="open_lab" aria-controls="espec-detalle" style="min-height: 64px; padding: 16px 20px; border-radius: 14px; border: 2px solid #DCE6EA; background: #FFFFFF; color: #013451; display: flex; align-items: center; justify-content: space-between; gap: 12px; text-align: left; font-size: 16px; font-weight: 500; cursor: pointer; font-family: Roboto, Arial, sans-serif;"><span>Laboratorio</span><span aria-hidden="true" style="font-size: 18px; color: #167E89;"><span data-text="icon_lab"></span></span></button>
+<div data-ref="specGrid" style="grid-column: 1 / -1; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;"><!-- Los botones se arman desde assets/equipo.js --></div>
 </div>
 <div id="espec-detalle" aria-live="polite">
-<div data-if="specDoctor" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-wrap: wrap; gap: 24px; align-items: center;">
-<div style="width: 96px; height: 96px; border-radius: 999px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 12px; color: #013451; flex: 0 0 auto;">[Foto]</div>
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px;">
-<span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;"><span data-text="specTitle"></span></span>
-<span style="font-size: 20px; font-weight: 700; color: #013451;">[Nombre del especialista]</span>
-<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Credenciales: especialidad, universidad y número de colegiado]</span>
-<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">[Días y horario de consulta · sede]</span>
-</div>
-<a href="#cita" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda tu consulta</a>
-</div></div>
+<div data-ref="specPanel"><!-- El panel del especialista se arma desde assets/equipo.js --></div>
 <div data-if="prevOpen" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-direction: column; gap: 16px;">
 <span style="font-size: 20px; font-weight: 700; color: #013451;">Cuidados preventivos</span>
 <span style="font-size: 15px; line-height: 1.5; color: #514C4C;">No esperes a que tu herida se infecte o se complique. Te valoramos a tiempo cuando la piel corre más riesgo.</span>
@@ -205,13 +231,6 @@ summary::-webkit-details-marker{display:none}
 <div style="flex: 1 1 180px; padding: 16px; border-radius: 12px; background: #FFFFFF; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 16px; font-weight: 700; color: #013451;">Personas con diabetes</span><span style="font-size: 14px; line-height: 1.5; color: #514C4C;">Revisión periódica de los pies.</span></div>
 </div>
 <div style="display: flex; flex-wrap: wrap; gap: 14px; align-items: center;"><a href="#cita" style="align-self: flex-start; display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Agenda una valoración preventiva</a><a href="prevencion-de-complicaciones.html" style="font-size: 15px; font-weight: 700; color: #167E89; text-decoration: none;">Conoce más sobre prevención →</a></div>
-</div></div>
-<div data-if="specLab" hidden><div class="step-panel" style="border-radius: 18px; background: #F6F7F7; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
-<div style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 6px;">
-<span style="font-size: 20px; font-weight: 700; color: #013451;">Laboratorio</span>
-<span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Exámenes de laboratorio en nuestra sede. Escríbenos y te informamos cuáles necesitas y cómo hacerlos.</span>
-</div>
-<a href="#contacto" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #D9EBC6; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Solicita más información</a>
 </div></div>
 </div>
 </div>
@@ -315,6 +334,7 @@ summary::-webkit-details-marker{display:none}
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;">
 <a href="preguntas-frecuentes.html#unidad" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid #013451; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Preguntas sobre la Unidad</a>
 <a href="preguntas-frecuentes.html#ubicacion" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid #013451; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Ubicación y horario</a>
+<a href="preguntas-frecuentes.html#laser" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; border: 2px solid #013451; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Láser y ecografía</a>
 </div>
 </div>
 </section>
@@ -356,6 +376,7 @@ Solicitar una cita</a>
 <span style="font-size: 15px; font-weight: 700;">Navegación</span>
 <a href="index.html#corporativo" style="color: #FFFFFF; text-decoration: none;">Corporativo e instituciones</a>
 <a href="index.html#cuidamos-tu-herida" style="color: #FFFFFF; text-decoration: none;">Cuidamos tu herida</a>
+<a href="index.html#fisiatria" style="color: #FFFFFF; text-decoration: none;">Fisiatría avanzada y terapia láser</a>
 <a href="index.html#prevencion-y-piel" style="color: #FFFFFF; text-decoration: none;">Prevención y cuidado de la piel</a>
 <a href="index.html#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
 <a href="index.html#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>
@@ -375,6 +396,7 @@ Solicitar una cita</a>
 <a class="wa-float" href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-UNIDAD)" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24" fill="#FFFFFF" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"></path></svg><span class="wa-tip" aria-hidden="true">Escríbenos por WhatsApp</span></a>
 </div>
 
+<script src="assets/equipo.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>

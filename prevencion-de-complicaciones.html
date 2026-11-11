@@ -25,6 +25,8 @@ summary::-webkit-details-marker{display:none}
 .nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
 .nav-faq{transition:background .2s ease, color .2s ease}
 .nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.nav-toggle{display:none;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #013451;background:#FFFFFF;color:#013451;font-family:Roboto,Arial,sans-serif;font-size:15px;font-weight:700;cursor:pointer}
+@media (max-width: 1099px){.nav-toggle{display:inline-flex}.nav-main{display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 0 8px;border-top:1px solid #E3ECEF}.nav-main.is-open{display:flex !important}.nav-main .nav-link{padding:14px 0}.nav-main .nav-faq{align-self:flex-start;margin-top:12px}}
 .inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
 .inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
 .inst-down{animation-name:instDown;animation-duration:38s}
@@ -86,9 +88,11 @@ summary::-webkit-details-marker{display:none}
 <header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="index.html" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-principal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="nav-toggle-t">Menú</span></button>
+<nav id="nav-principal" class="nav-main" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
 <a class="nav-link" href="index.html#corporativo" style="color: #013451; text-decoration: none;">Corporativo</a>
 <a class="nav-link" href="index.html#cuidamos-tu-herida" style="color: #013451; text-decoration: none;">Cuidamos tu herida</a>
+<a class="nav-link" href="index.html#fisiatria" style="color: #013451; text-decoration: none;">Fisiatría</a>
 <a class="nav-link" href="index.html#prevencion-y-piel" style="color: #013451; text-decoration: none;">Prevención</a>
 <a class="nav-link" href="index.html#productos" style="color: #013451; text-decoration: none;">Productos</a>
 <a class="nav-link" href="index.html#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
@@ -137,6 +141,36 @@ summary::-webkit-details-marker{display:none}
 <li style="padding: 28px; border-radius: 18px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px;"><span style="width: 44px; height: 44px; border-radius: 999px; background: #E3F1D5; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">2</span><span style="font-size: 20px; font-weight: 700;">Te evaluamos</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Revisamos tu piel y tu situación en la sede, en tu casa o por telemedicina.</span></li>
 <li style="padding: 28px; border-radius: 18px; background: #FFFFFF; display: flex; flex-direction: column; gap: 10px;"><span style="width: 44px; height: 44px; border-radius: 999px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;">3</span><span style="font-size: 20px; font-weight: 700;">Recibe tu plan de prevención</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Te indicamos los cuidados y, si hace falta, los controles.</span></li>
 </ol>
+</div>
+</section>
+
+<!-- LÁSER EN LA PREVENCIÓN (11 nov 2026). Uso y fecha por confirmar con la Dra. Milagros Jaimes. -->
+<section aria-labelledby="laser-p" style="background: #FFFFFF;">
+<div style="max-width: 1000px; margin: 0 auto; padding: 56px 24px;">
+<div style="padding: 32px; border-radius: 18px; background: #024448; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 10px;">
+<h2 id="laser-p" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700; color: #FFFFFF;">Tecnología <em style="color: #46B7E0;">láser</em> en la prevención</h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6;">El mismo láser que usamos para tratar heridas complejas apoya el cuidado de tu piel antes y después de una cirugía. [Cómo se usa en la prevención y desde cuándo, por confirmar con la Dra. Milagros Jaimes]</p>
+</div>
+<a href="unidad.html#laser" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Conoce el láser →</a>
+</div>
+</div>
+</section>
+
+<!-- ECOGRAFÍA Y DOPPLER EN LA PREVENCIÓN (11 nov 2026). Detalle en unidad.html#ecografia. -->
+<section aria-labelledby="eco-p" style="background: #FFFFFF;">
+<div style="max-width: 1000px; margin: 0 auto; padding: 0 24px 56px; display: flex; flex-direction: column; gap: 16px;">
+<div style="padding: 32px; border-radius: 18px; background: #F6F7F7; display: flex; flex-wrap: wrap; gap: 24px; align-items: center; justify-content: space-between;">
+<div style="flex: 1 1 420px; display: flex; flex-direction: column; gap: 10px;">
+<h2 id="eco-p" style="margin: 0; font-size: 26px; line-height: 1.25; font-weight: 700;">Ecografía y <em style="color: #00A0D0;">Doppler</em></h2>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #514C4C;">Diagnóstico preciso y en tiempo real para respaldar tu tratamiento. Valoramos la circulación y el estado profundo de los tejidos sin dolor y con resultados en el consultorio. [Cómo se usa en la prevención, por confirmar con la Dra. Milagros Jaimes]</p>
+</div>
+<a href="unidad.html#ecografia" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Conoce el servicio →</a>
+</div>
+<div style="padding: 24px 28px; border-radius: 16px; background: #013451; color: #FFFFFF; display: flex; flex-wrap: wrap; gap: 16px 24px; align-items: center; justify-content: space-between;">
+<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 6px;"><span style="font-size: 13px; font-weight: 700; color: #84B953; text-transform: uppercase; letter-spacing: 0.06em;">Jornadas de ecografía</span><span style="font-size: 17px; line-height: 1.5;">Realizamos jornadas de ecografía. Próximamente publicaremos nuestra nueva jornada.</span></div>
+<a href="https://wa.me/584166181760?text=Hola%2C%20quiero%20informaci%C3%B3n%20(WEB-ECOGRAFIA)" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 24px; border-radius: 999px; background: #84B953; color: #013451; font-weight: 700; font-size: 16px; text-decoration: none;">Quiero saber de la próxima jornada</a>
+</div>
 </div>
 </section>
 
@@ -231,6 +265,7 @@ Solicitar una cita</a>
 <span style="font-size: 15px; font-weight: 700;">Navegación</span>
 <a href="index.html#corporativo" style="color: #FFFFFF; text-decoration: none;">Corporativo e instituciones</a>
 <a href="index.html#cuidamos-tu-herida" style="color: #FFFFFF; text-decoration: none;">Cuidamos tu herida</a>
+<a href="index.html#fisiatria" style="color: #FFFFFF; text-decoration: none;">Fisiatría avanzada y terapia láser</a>
 <a href="index.html#prevencion-y-piel" style="color: #FFFFFF; text-decoration: none;">Prevención y cuidado de la piel</a>
 <a href="index.html#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
 <a href="index.html#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>

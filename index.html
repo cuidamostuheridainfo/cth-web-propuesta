@@ -25,6 +25,8 @@ summary::-webkit-details-marker{display:none}
 .nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
 .nav-faq{transition:background .2s ease, color .2s ease}
 .nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.nav-toggle{display:none;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #013451;background:#FFFFFF;color:#013451;font-family:Roboto,Arial,sans-serif;font-size:15px;font-weight:700;cursor:pointer}
+@media (max-width: 1099px){.nav-toggle{display:inline-flex}.nav-main{display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 0 8px;border-top:1px solid #E3ECEF}.nav-main.is-open{display:flex !important}.nav-main .nav-link{padding:14px 0}.nav-main .nav-faq{align-self:flex-start;margin-top:12px}}
 .inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
 .inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
 .inst-down{animation-name:instDown;animation-duration:38s}
@@ -72,8 +74,12 @@ summary::-webkit-details-marker{display:none}
 .mod-sub-t{font-size:19px;font-weight:700}
 .mod-sub-d{font-size:15px;line-height:1.5;color:#514C4C}
 .mod-sub-l{font-size:15px;font-weight:700;color:#167E89;margin-top:auto}
-@media (min-width: 900px){.mod-grid{grid-template-columns:repeat(3,1fr)}.mod-panel{order:10;grid-column:1 / -1}}
+@media (min-width: 900px){.mod-grid{grid-template-columns:repeat(2,1fr)}.mod-panel{order:10;grid-column:1 / -1}}
+@media (min-width: 1100px){.mod-grid{grid-template-columns:repeat(4,1fr)}}
 @media (prefers-reduced-motion: reduce){.mod-card{transition:none}.mod-card:hover,.mod-card.is-active{transform:none}}
+.f-l{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:700;color:#013451}
+.f-i{min-height:46px;padding:0 14px;border-radius:10px;border:1px solid #C9D9DE;font-family:Roboto,Arial,sans-serif;font-size:16px;font-weight:400;color:#013451;background:#FFFFFF;box-sizing:border-box;width:100%}
+.f-i:focus{outline:3px solid rgba(0,160,208,.35);border-color:#00A0D0}
 </style>
 </head>
 <body>
@@ -86,9 +92,11 @@ summary::-webkit-details-marker{display:none}
 <header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="#inicio" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-principal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="nav-toggle-t">Menú</span></button>
+<nav id="nav-principal" class="nav-main" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
 <a class="nav-link" href="#corporativo" style="color: #013451; text-decoration: none;">Corporativo</a>
 <a class="nav-link" href="#cuidamos-tu-herida" style="color: #013451; text-decoration: none;">Cuidamos tu herida</a>
+<a class="nav-link" href="#fisiatria" style="color: #013451; text-decoration: none;">Fisiatría</a>
 <a class="nav-link" href="#prevencion-y-piel" style="color: #013451; text-decoration: none;">Prevención</a>
 <a class="nav-link" href="#productos" style="color: #013451; text-decoration: none;">Productos</a>
 <a class="nav-link" href="#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
@@ -121,7 +129,7 @@ summary::-webkit-details-marker{display:none}
 </div>
 </section>
 
-<!-- CÓMO PODEMOS AYUDARTE: TRES MÓDULOS -->
+<!-- CÓMO PODEMOS AYUDARTE: CUATRO MÓDULOS (Fisiatría agregado el 11 nov 2026) -->
 <section id="servicios" aria-labelledby="modulos" style="background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 64px 24px; display: flex; flex-direction: column; gap: 28px;">
 <div style="display: flex; flex-direction: column; gap: 10px; text-align: center; align-items: center;">
@@ -162,6 +170,24 @@ summary::-webkit-details-marker{display:none}
 <a href="unidad.html" class="need-card mod-sub"><span class="mod-sub-t">Unidad</span><span class="mod-sub-d">Dos sedes en Caracas, San Bernardino y Altamira, con un equipo multidisciplinario.</span><span class="mod-sub-l">Ver más →</span></a>
 <a href="atencion-domiciliaria.html" class="need-card mod-sub"><span class="mod-sub-t">Atención domiciliaria</span><span class="mod-sub-d">Te atendemos en tu casa si no puedes trasladarte.</span><span class="mod-sub-l">Ver más →</span></a>
 <a href="telemedicina.html" class="need-card mod-sub"><span class="mod-sub-t">Telemedicina</span><span class="mod-sub-d">Consulta y seguimiento de tu herida a distancia.</span><span class="mod-sub-l">Ver más →</span></a>
+<a href="fisiatria.html" class="need-card mod-sub"><span class="mod-sub-t">Fisiatría y terapia láser</span><span class="mod-sub-d">Rehabilitación y terapia láser para músculos, tendones y articulaciones.</span><span class="mod-sub-l">Ver más →</span></a>
+</div>
+</div>
+</div>
+<div id="fisiatria" class="mod-slot">
+<button type="button" data-class="modFisCls" data-click="pickModFis" data-attr-aria-expanded="modFisOpen" aria-controls="mod-fis" class="mod-card" style="background: #167E89; color: #FFFFFF; border-color: #167E89;">
+<svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+<span style="font-size: 23px; font-weight: 700;">Fisiatría avanzada y terapia láser</span>
+<span style="font-size: 16px; line-height: 1.5; color: #FFFFFF;">Recupera tu movilidad con fisiatría y terapia láser para músculos, tendones y articulaciones.</span>
+<span style="font-size: 15px; font-weight: 700; color: #FFFFFF;"><span data-text="modFisHint"></span></span>
+</button>
+</div>
+<div id="mod-fis" class="mod-panel" data-if="modFisOpen" hidden aria-live="polite">
+<div class="step-panel mod-panel-in">
+<p style="margin: 0; font-size: 17px; line-height: 1.6; color: #514C4C;">Nuestros fisiatras evalúan tu caso y definen tu plan, con el mismo equipo láser que usamos en la cicatrización avanzada de heridas.</p>
+<div class="mod-subgrid">
+<a href="fisiatria.html" class="need-card mod-sub"><span class="mod-sub-t">Terapia láser musculoesquelética</span><span class="mod-sub-d">Tendinitis, fascitis plantar, lesiones deportivas, dolores de columna, artrosis y artritis.</span><span class="mod-sub-l">Ver más →</span></a>
+<a href="fisiatria.html#equipo" class="need-card mod-sub"><span class="mod-sub-t">Consulta de fisiatría</span><span class="mod-sub-d">Evaluación y rehabilitación física con nuestros especialistas.</span><span class="mod-sub-l">Ver más →</span></a>
 </div>
 </div>
 </div>
@@ -230,6 +256,22 @@ summary::-webkit-details-marker{display:none}
 <a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Covalon</span><span style="font-size: 19px; font-weight: 700;">Apósito de silicona</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">CovaWound Silicona</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
 <a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Covalon</span><span style="font-size: 19px; font-weight: 700;">Alginato con plata</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">CovaWound Alginate Ag</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
 <a href="#productos" style="display: flex; flex-direction: column; gap: 12px; border-radius: 16px; border: 1px solid #C9D9DE; overflow: hidden; color: #013451; text-decoration: none;"><div style="height: 150px; background: #D4E7EE; display: flex; align-items: center; justify-content: center; font-size: 14px;">[Foto del producto]</div><div style="padding: 0 22px 22px; display: flex; flex-direction: column; gap: 8px;"><span style="font-size: 13px; font-weight: 700; color: #167E89; text-transform: uppercase; letter-spacing: 0.06em;">Platsul</span><span style="font-size: 19px; font-weight: 700;">Crema de aplicación tópica</span><span style="font-size: 15px; line-height: 1.5; color: #514C4C;">Platsul-A crema</span><span style="font-size: 15px; font-weight: 700; color: #167E89;">Saber más sobre este producto →</span></div></a>
+</div>
+<!-- FORMULARIO DE PRODUCTOS (11 nov 2026). La web no vende: el dato llega a la ejecutiva de telemarketing de CTH, que llama a la persona. Fase 1: lo envía la función de Netlify por correo (destino por confirmar). Sin datos clínicos. -->
+<div id="info-producto" style="padding: 32px; border-radius: 20px; background: #ECF5F9; display: flex; flex-wrap: wrap; gap: 24px 40px; align-items: flex-start;">
+<div style="flex: 1 1 280px; display: flex; flex-direction: column; gap: 10px;">
+<h3 style="margin: 0; font-size: 24px; line-height: 1.25; font-weight: 700; color: #013451;">¿Te interesa un producto?</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.6; color: #514C4C;">Déjanos tu nombre y tu teléfono y una asesora te llama para orientarte y coordinar tu compra.</p>
+</div>
+<form onsubmit="return false;" style="flex: 2 1 420px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; font-family: Roboto, Arial, sans-serif;">
+<input type="hidden" name="origen" value="WEB-PRODUCTOS">
+<label class="f-l">Nombre<input class="f-i" type="text" name="nombre" autocomplete="name" required></label>
+<label class="f-l">Teléfono<input class="f-i" type="tel" name="telefono" autocomplete="tel" required></label>
+<label class="f-l">Producto de interés<select class="f-i" name="producto"><option value="">Selecciona</option><option>Colágeno con plata</option><option>Apósito de silicona</option><option>Alginato con plata</option><option>Crema de aplicación tópica</option><option>Otro o no estoy seguro</option></select></label>
+<label class="f-l">Correo (opcional)<input class="f-i" type="email" name="correo" autocomplete="email"></label>
+<p style="grid-column: 1 / -1; margin: 0; font-size: 14px; line-height: 1.5; color: #514C4C;">No incluyas datos de salud. Usaremos estos datos solo para contactarte.</p>
+<button type="submit" style="grid-column: 1 / -1; justify-self: start; min-height: 52px; padding: 0 32px; border-radius: 999px; border: none; background: #84B953; color: #013451; font-family: Roboto, Arial, sans-serif; font-weight: 700; font-size: 17px; cursor: pointer;">Quiero que me llamen</button>
+</form>
 </div>
 </div>
 </section>
@@ -334,6 +376,7 @@ Solicitar una cita</a>
 <span style="font-size: 15px; font-weight: 700;">Navegación</span>
 <a href="#corporativo" style="color: #FFFFFF; text-decoration: none;">Corporativo e instituciones</a>
 <a href="#cuidamos-tu-herida" style="color: #FFFFFF; text-decoration: none;">Cuidamos tu herida</a>
+<a href="#fisiatria" style="color: #FFFFFF; text-decoration: none;">Fisiatría avanzada y terapia láser</a>
 <a href="#prevencion-y-piel" style="color: #FFFFFF; text-decoration: none;">Prevención y cuidado de la piel</a>
 <a href="#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
 <a href="#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>

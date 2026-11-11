@@ -1,16 +1,17 @@
 # ESTADO — Rediseño web de CTH
 
-Última actualización: 11 nov 2026.
+Última actualización: 11 nov 2026 (segunda sesión).
 
 ## Dónde estamos
 
-- **Fase actual:** propuesta de diseño con el inicio reorganizado en tres módulos y seis landing pages. Se trabajó el 9 nov a partir de lo que pidió Daniel: resaltar cada servicio por separado y darle más peso a lo corporativo.
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Los cambios del 9 nov ya están publicados (commit `a30cd50`).
+- **Fase actual:** propuesta de diseño con el inicio en **cuatro módulos** y **siete landing pages**. El 11 nov entraron las primeras respuestas de CTH y el texto de la Dra. Milagros sobre el equipo y los equipos (láser, fisiatría con láser, ecografía y Doppler).
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Publicado hasta el commit `3d73a24` (espacios reservados del grupo). **Los cambios de la segunda sesión del 11 nov están en la copia local y falta subirlos.**
+- **No se publica todavía como sitio final:** faltan contenido de CTH y las decisiones del comité.
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
 - **Ecosistema del grupo (10 nov):** CTH es una de las cuatro webs del plan «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). El 11 nov quedaron reservados, invisibles, los espacios de la barra, el pie, la sección del ecosistema y los puentes; se aplican cuando el cliente apruebe el plan con un video (ver `DECISIONES-VIGENTES.md`).
 - El 9 nov se publicó la propuesta para la revisión del comité.
-- Las respuestas de CTH al mensaje de nueve puntos del 30 oct y el feedback de Social Media todavía no llegan.
+- 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El comité sigue decidiendo el logo del grupo. El feedback de Social Media todavía no llega.
 
 ## Qué tiene la propuesta
 
@@ -18,32 +19,37 @@
 
 1. Cabecera: logo, menú Corporativo · Cuidamos tu herida · Prevención · Productos · Aprende · Nosotros, y botón «Preguntas frecuentes».
 2. Hero (sin cambios): video de la Unidad, «Soy paciente» abre Cuidamos tu herida y «Soy institución» abre Corporativo.
-3. «¿Cómo podemos ayudarte?»: tres tarjetas en este orden: **Corporativo e instituciones**, **Cuidamos tu herida** y **Prevención y cuidado de la piel**. Al hacer clic se abre la tarjeta con sus opciones (en escritorio, debajo de las tres; en el teléfono, debajo de la tocada) y cada opción lleva a su landing. El menú abre la tarjeta correspondiente.
-4. Cifras, «Tratamos heridas simples y de difícil cicatrización», Productos, Historias reales, Cumbre (organizadores, edición 2026 y 2027), Aprende, Preguntas frecuentes, cierre y pie.
+3. «¿Cómo podemos ayudarte?»: cuatro tarjetas en este orden: **Corporativo e instituciones**, **Cuidamos tu herida**, **Fisiatría avanzada y terapia láser** y **Prevención y cuidado de la piel**. Al hacer clic se abre la tarjeta con sus opciones (en escritorio, debajo de las cuatro; en el teléfono, debajo de la tocada) y cada opción lleva a su landing. El menú abre la tarjeta correspondiente. Cuidamos tu herida incluye también la opción de Fisiatría.
+4. Cifras, «Tratamos heridas simples y de difícil cicatrización», Productos (con el formulario «¿Te interesa un producto?»), Historias reales, Cumbre (organizadores, edición 2026 y 2027), Aprende, Preguntas frecuentes, cierre y pie.
+5. Menú: Corporativo · Cuidamos tu herida · Fisiatría · Prevención · Productos · Aprende · Nosotros, más «Preguntas frecuentes». Desplegable por debajo de 1100 px.
 
 ### Landing pages
 
 | Página | Módulo | Código de WhatsApp |
 |---|---|---|
 | `corporativo.html` | Corporativo e instituciones (Empresas, Aseguradoras, Instituciones, Hospitales clínicas y cirujanos, cómo trabajamos, formulario de propuesta) | `WEB-CORPORATIVO` |
-| `unidad.html` | Cuidamos tu herida (sedes, qué atendemos, unidad multidisciplinaria, cómo y dónde te atendemos) | `WEB-UNIDAD` |
+| `unidad.html` | Cuidamos tu herida (sedes, qué atendemos, láser para heridas, ecografía y Doppler con jornadas, unidad multidisciplinaria con los nueve especialistas, cómo y dónde te atendemos) | `WEB-UNIDAD` (jornadas: `WEB-ECOGRAFIA`) |
 | `atencion-domiciliaria.html` | Cuidamos tu herida | `WEB-DOMICILIO` |
 | `telemedicina.html` | Cuidamos tu herida | `WEB-TELEMEDICINA` |
-| `prevencion-de-complicaciones.html` | Prevención y cuidado de la piel | `WEB-PREVENCION` |
-| `cuidado-de-la-piel.html` | Prevención y cuidado de la piel (Próximamente) | `WEB-PIEL` |
+| `prevencion-de-complicaciones.html` | Prevención y cuidado de la piel (con láser y ecografía en la prevención) | `WEB-PREVENCION` |
+| `cuidado-de-la-piel.html` | Prevención y cuidado de la piel (Próximamente; láser y estética facial del Dr. Lozada) | `WEB-PIEL` |
+| `fisiatria.html` | Fisiatría avanzada y terapia láser (texto de la Dra. Milagros, quién te atiende, dónde, preguntas) | `WEB-FISIATRIA` |
 
-El contenido que CTH todavía no ha dado (beneficios, servicios a domicilio, zonas, láser, dermatóloga, fotos) está entre corchetes. Detalle en `PENDIENTES.md`.
+Formulario de productos en el inicio: código `WEB-PRODUCTOS`; todavía no envía (fase 1, función de Netlify).
 
-Revisión del 9 nov: las ocho páginas sin errores de estructura, todos los enlaces internos llevan a páginas y anclas que existen, sin errores de JavaScript y sin desborde a 390 px.
+El contenido que CTH todavía no ha dado (beneficios, credenciales y días de los especialistas, zonas, dermatóloga, fotos) está entre corchetes. Detalle en `PENDIENTES.md`.
+
+Revisión del 11 nov: las nueve páginas sin enlaces internos rotos, sin errores de JavaScript y sin desborde a 1280, 1100, 1024 y 390 px. Cabecera en una sola línea desde 1100 px.
 
 ## Próximo paso
 
-1. Recibir el feedback del comité sobre la propuesta publicada el 9 nov.
-2. Presentar a CTH la propuesta del área corporativa y obtener sus decisiones.
-3. Recibir de CTH el contenido de cada landing (lista en `PENDIENTES.md`), las fotos nuevas y el video.
-4. Menú desplegable para teléfono (ahora son seis opciones más el botón).
-5. Plantillas de catálogo y ficha de producto.
-6. Inventario SEO con datos de Search Console y mapa de redirecciones 301.
+1. Subir a `main` los cambios del 11 nov (segunda sesión).
+2. Decisión de Jenny sobre el punto 5: franja de las tres modalidades en el inicio y si el ecosistema del grupo se muestra ya en la propuesta para el comité.
+3. Enviar al comité el mensaje con todas las dudas (lista en `PENDIENTES.md`, sección «Para el comité»).
+4. Recibir de CTH el contenido que falta, las fotos y el video.
+5. Presentar a CTH la propuesta del área corporativa.
+6. Plantillas de catálogo y ficha de producto (el formulario de productos ya existe y se reutiliza en la ficha).
+7. Inventario SEO con datos de Search Console y mapa de redirecciones 301.
 
 ## Fases del proyecto
 

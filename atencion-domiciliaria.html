@@ -25,6 +25,8 @@ summary::-webkit-details-marker{display:none}
 .nav-link:hover::after,.nav-link:focus-visible::after{background:#00A0D0;box-shadow:0 0 10px rgba(0,160,208,.8)}
 .nav-faq{transition:background .2s ease, color .2s ease}
 .nav-faq:hover,.nav-faq:focus-visible{background:#013451 !important;color:#FFFFFF !important}
+.nav-toggle{display:none;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:999px;border:2px solid #013451;background:#FFFFFF;color:#013451;font-family:Roboto,Arial,sans-serif;font-size:15px;font-weight:700;cursor:pointer}
+@media (max-width: 1099px){.nav-toggle{display:inline-flex}.nav-main{display:none !important;width:100%;flex-direction:column;align-items:stretch !important;gap:0 !important;padding:4px 0 8px;border-top:1px solid #E3ECEF}.nav-main.is-open{display:flex !important}.nav-main .nav-link{padding:14px 0}.nav-main .nav-faq{align-self:flex-start;margin-top:12px}}
 .inst-photos{-webkit-mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(180deg,transparent,#000 8%,#000 92%,transparent)}
 .inst-col{display:flex;flex-direction:column;gap:12px;animation:instUp 32s linear infinite}
 .inst-down{animation-name:instDown;animation-duration:38s}
@@ -86,9 +88,11 @@ summary::-webkit-details-marker{display:none}
 <header style="border-bottom: 1px solid #E3ECEF; background: #FFFFFF;">
 <div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
 <a href="index.html" style="display: flex; align-items: center;"><img src="assets/logo-cth.png" alt="Cuidamos Tu Herida" style="height: 52px; width: auto; display: block;"></a>
-<nav aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
+<button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-principal"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#013451" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg><span class="nav-toggle-t">Menú</span></button>
+<nav id="nav-principal" class="nav-main" aria-label="Principal" style="display: flex; flex-wrap: wrap; gap: 28px; align-items: center; font-size: 15px; font-weight: 500;">
 <a class="nav-link" href="index.html#corporativo" style="color: #013451; text-decoration: none;">Corporativo</a>
 <a class="nav-link" href="index.html#cuidamos-tu-herida" style="color: #013451; text-decoration: none;">Cuidamos tu herida</a>
+<a class="nav-link" href="index.html#fisiatria" style="color: #013451; text-decoration: none;">Fisiatría</a>
 <a class="nav-link" href="index.html#prevencion-y-piel" style="color: #013451; text-decoration: none;">Prevención</a>
 <a class="nav-link" href="index.html#productos" style="color: #013451; text-decoration: none;">Productos</a>
 <a class="nav-link" href="index.html#aprende" style="color: #013451; text-decoration: none;">Aprende</a>
@@ -226,6 +230,7 @@ Solicitar una cita</a>
 <span style="font-size: 15px; font-weight: 700;">Navegación</span>
 <a href="index.html#corporativo" style="color: #FFFFFF; text-decoration: none;">Corporativo e instituciones</a>
 <a href="index.html#cuidamos-tu-herida" style="color: #FFFFFF; text-decoration: none;">Cuidamos tu herida</a>
+<a href="index.html#fisiatria" style="color: #FFFFFF; text-decoration: none;">Fisiatría avanzada y terapia láser</a>
 <a href="index.html#prevencion-y-piel" style="color: #FFFFFF; text-decoration: none;">Prevención y cuidado de la piel</a>
 <a href="index.html#productos" style="color: #FFFFFF; text-decoration: none;">Productos</a>
 <a href="index.html#aprende" style="color: #FFFFFF; text-decoration: none;">Aprende</a>
