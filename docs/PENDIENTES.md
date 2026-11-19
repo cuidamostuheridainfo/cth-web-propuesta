@@ -2,6 +2,8 @@
 
 Última actualización: 19 nov 2026.
 
+**Planilla del 19 nov para el equipo de CTH:** «CTH · Información pendiente para la página web» (36 datos: videos, fotos, productos, contenido de cada página y especialistas), con la columna Respuesta para completar: https://claude.ai/artifact/UsHiNV8WujvhDPFQmA4EwA. Cuando llegue respondida, se aplica y se cierran aquí los puntos que cubre.
+
 ## Para el comité (mensaje pendiente de enviar)
 
 Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, armar el mensaje con su formato habitual.
@@ -88,7 +90,9 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 - Autorización de las personas que aparecen en el video y en las fotos (paciente y equipo).
 - Fotos de hospitales, clínicas, empresas o reuniones con aseguradoras para Corporativo.
-- Video nuevo con los pilares del servicio, propuesto por Jenny.
+- **Video de inicio (Jenny, 19 nov):** reemplaza al video actual de la Unidad. Debe mostrar las dos sedes (San Bernardino y Altamira) y la unidad móvil. En los textos de la web se sigue diciendo «atención domiciliaria» (decisión del 30 oct). Necesita la autorización de las personas que aparecen.
+- **Videos de casos clínicos reales (Jenny, 19 nov):** pueden ser varios, para «Historias reales». Cada caso necesita título y resumen validados por la Dra. Milagros Jaimes, el consentimiento escrito del paciente y aviso antes de mostrar imágenes sensibles. Con varios videos, la sección cambia de diseño (hoy tiene un caso y un testimonio).
+- **Aprende con videos de Instagram (Jenny, 19 nov):** la sección «Aprende sobre el cuidado de heridas» usará videos ya publicados en Instagram. Falta la lista de videos (enlaces) y un título para cada uno; decidir si reemplazan o se suman a los artículos del blog actual (cuyas rutas se conservan por SEO) y si los videos se incrustan desde Instagram o se suben a la web.
 - Archivo fuente del diseño aprobado (Figma, Canva u otro) o manual de marca, para confirmar colores y tipografía.
 - Logo en SVG, en color y en blanco.
 - Si OH Laboratorio se presenta como aliado (hoy solo aparece en la dirección de Altamira, como referencia).
