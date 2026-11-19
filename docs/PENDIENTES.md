@@ -33,6 +33,7 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 ## Decisiones de Jenny
 
+- **Logo de la Cumbre en las piezas del grupo:** el encabezado y el pie del grupo muestran el logo actual de la Cumbre (II Cumbre… Heridas, Piel y Longevidad), como la web de la Cumbre; el resto de la web de CTH mantiene el nombre y el logo anteriores (decisión del 11 nov). Confirmar si se deja así o si se cambia también en el resto de la web.
 - Orden de «¿Dónde podemos ayudarte?»: se usó el que dio Jenny (domicilio, telemedicina, Unidad). En el módulo Cuidamos tu herida el orden es Unidad, domicilio, telemedicina. Confirmar si se dejan distintos. Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields implementa IA) es el mensaje de esas piezas.
 - Revisar los ajustes que hizo Claude el 11 nov: en «Cuidado de heridas» aparecen la Dra. Milagros, el Dr. Hinojosa, la Dra. Cedeño y el Dr. Lozada (según sus áreas); a la Dra. Milagros se le agregó «Consulta de medicina general»; a la Lic. Fernández, «Consulta nutricional» en lugar de «Consulta médica nutricional»; el resumen de ecografía en Prevención no es cita textual; la línea de ecografía en Fisiatría no se pidió.
 - Confirmar «usted» para instituciones y «tú» para pacientes. Hoy el formulario de Corporativo dice «tu organización».
@@ -64,7 +65,8 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 ## Ecosistema del grupo (Ethical Shields Group)
 
 - **Plan común:** actualizarlo con los cambios del 16 al 19 nov (nombre, logo, regla del encabezado y del pie, líneas de las marcas, hosting) en una sesión aparte. Mientras tanto, la fuente es `cumbre-web/docs/DECISIONES-VIGENTES.md`.
-- **Aplicar las piezas del grupo al migrar CTH a Cloudflare Pages:** encabezado del grupo, pie (debajo del de CTH), sección «Un solo ecosistema», puentes y el bloque del grupo en Corporativo, en los espacios reservados (`data-grupo`). Copiar sin cambios el logo de `cumbre-web/assets/img/grupo-oficial/` (compacto para el encabezado, horizontal para el pie y la sección). Tomar como modelo el encabezado y el pie de la Cumbre en cumbrechp.pages.dev, en computadora y en teléfono.
+- **Encabezado y pie del grupo:** visibles en la propuesta desde el 19 nov (`assets/grupo.js` y `assets/grupo.css`). Si la Cumbre cambia las marcas, sus textos o el logo del grupo, copiar el cambio aquí.
+- **Aplicar al migrar CTH a Cloudflare Pages:** la sección «Un solo ecosistema», los puentes y el bloque del grupo en Corporativo, en los espacios reservados (`data-grupo`). Logo completo del grupo en `assets/grupo/`.
 - **Ethical Shields AI:** va sin enlace hasta que esté su nueva web.
 - Textos de los puentes hacia productos: validación de la Dra. Milagros Jaimes.
 - Consentimiento de los formularios (Corporativo y productos): cuando Daniel y Gerencia Comercial aprueben la base única de contactos, cambiar «Usaremos estos datos solo para contactarte» por el texto del grupo, con la opción de no recibir ofertas.
@@ -95,5 +97,6 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 - **Migración de CTH a Cloudflare Pages** (después de la Cumbre): proyecto propio en la cuenta del grupo, protegiendo el SEO (mapa de 301 en `_redirects`, como el que dejó preparado la Cumbre en `docs/preparado-migracion/`) y el correo de cuidamostuherida.com.
 - **Seguridad de los datos médicos de CTH e IRIS:** evaluarla por separado antes de migrar.
+- **Desborde a 320 px:** en el inicio y en Unidad la página se sale 4 px a lo ancho en teléfonos muy angostos (320 px). No viene del grupo; ya estaba. Revisar si Jenny lo pide.
 - **Envío de los formularios de la fase 1 (Corporativo y productos):** pendiente. Hoy no envían nada. Se define al migrar, junto con la evaluación de seguridad.
 - En el teléfono, el detalle de una especialidad en Unidad se abre debajo de todos los botones, no debajo del tocado (como antes). Mejorarlo si Jenny lo pide.

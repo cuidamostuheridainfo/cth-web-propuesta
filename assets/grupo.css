@@ -1,0 +1,110 @@
+/* Ethical Shields Group · encabezado y pie del grupo en la propuesta de CTH (19 nov 2026)
+   Regla del grupo del 19 nov (cumbre-web/docs/DECISIONES-VIGENTES.md), con la misma estructura y medidas
+   que la Cumbre (cumbre-web/assets/css/ecosistema-propuesta.css) y los colores de CTH.
+   Lo arma assets/grupo.js dentro de los contenedores data-grupo="barra" y data-grupo="pie". */
+
+:root{
+  --grp-navy:#013451;
+  --grp-gris:#4B6676;
+  --grp-borde:#E3ECEF;
+  --grp-verde:#84B953;
+  --grp-verde-claro:#D9EBC6;
+  --grp-fondo:#F4F9F1;
+}
+
+/* ---------- Logo del grupo ---------- */
+.glogo{display:inline-flex;align-items:center;line-height:1}
+.glogo img{display:block;height:var(--gl-h,32px);width:auto;flex:none}
+
+/* ---------- Encabezado del grupo ---------- */
+.gbar{position:relative;z-index:65;background:#FFFFFF;border-bottom:1px solid var(--grp-borde);font-family:Roboto,Arial,sans-serif;color:var(--grp-navy)}
+/* Se reserva el alto antes de que el JS lo arme, para que la página no salte. */
+.gbar:empty{min-height:53px}
+.gbar-in{max-width:1248px;margin:0 auto;padding:8px 24px;min-height:52px;box-sizing:border-box;display:flex;align-items:center;gap:18px}
+.gbar .glogo{min-height:46px}
+.gbar-pde{font-size:13px;font-weight:500;color:var(--grp-gris);white-space:nowrap;margin-right:-8px}
+.gbar-sep{width:1px;height:26px;background:var(--grp-borde);flex:none}
+.gbar-parte{font-size:14px;font-weight:500;color:var(--grp-gris);white-space:nowrap}
+/* El nombre del logo compacto está por encima del centro del símbolo: el texto se alinea con el nombre (como en la Cumbre). */
+.gbar-pde,.gbar-sep,.gbar-parte{position:relative;top:-6px}
+.gbar-esp{flex:1}
+.gbar-btn{font:inherit;font-size:14px;font-weight:700;color:var(--grp-navy);background:transparent;border:0;padding:8px 4px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.gbar-btn:hover{text-decoration:underline}
+.gbar-btn:focus-visible{outline:2px solid var(--grp-navy);outline-offset:2px;border-radius:4px}
+.gbar-btn svg{transition:transform 200ms ease}
+.gbar-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+
+/* Lista de las cuatro marcas («Conoce el grupo») */
+.gsel{position:absolute;right:max(24px,calc((100% - 1248px) / 2 + 24px));top:calc(100% + 8px);width:min(420px,calc(100vw - 32px));background:#FFFFFF;border:1px solid var(--grp-borde);border-radius:18px;box-shadow:0 24px 60px rgba(1,52,81,0.22);padding:10px;z-index:90;box-sizing:border-box}
+.gsel[hidden]{display:none}
+.gsel-tit{padding:8px 10px 12px;border-bottom:1px solid var(--grp-borde);margin-bottom:6px}
+.gsel a,.gsel .gsel-item{display:grid;grid-template-columns:120px 1fr auto;align-items:center;gap:14px;padding:12px 10px;border-radius:12px;text-decoration:none;color:var(--grp-navy)}
+.gsel a:hover{background:#F3F8FA}
+.gsel a[aria-current="page"]{background:var(--grp-fondo)}
+.gsel-logo{height:34px;display:flex;align-items:center}
+.gsel-logo img{max-height:34px;max-width:120px;width:auto;display:block}
+.gsel-item[data-marca="cumbre"] .gsel-logo img,.gsel a[data-marca="cumbre"] .gsel-logo img{max-height:40px}
+.gsel-txt{display:flex;flex-direction:column;gap:2px;font-size:13px;color:var(--grp-gris)}
+.gsel-txt strong{font-size:15px;color:var(--grp-navy)}
+.gsel-aqui{font-size:12px;font-weight:700;color:var(--grp-navy);background:var(--grp-verde-claro);padding:4px 10px;border-radius:999px;white-space:nowrap}
+.gsel-ir{color:var(--grp-gris)}
+
+/* Logo de Ethical Shields AI: su marca y su nombre, como en la Cumbre */
+.es-logo{display:inline-flex;align-items:center;gap:6px;font-weight:700;letter-spacing:-0.01em;color:#10294D;white-space:nowrap;line-height:1}
+.es-logo img{height:100%;width:auto;display:block}
+.gsel-logo .es-logo{height:30px;font-size:11px}
+
+/* ---------- Pie del grupo (debajo del pie de CTH) ---------- */
+.gpie{background:#FFFFFF;color:var(--grp-navy);border-top:3px solid var(--grp-verde);font-family:Roboto,Arial,sans-serif}
+.gpie:empty{min-height:132px}
+.gpie-in{max-width:1248px;margin:0 auto;padding:26px 24px;display:flex;align-items:center;gap:30px;flex-wrap:wrap;box-sizing:border-box}
+.gpie-sep{width:1px;align-self:stretch;min-height:48px;background:currentColor;opacity:0.15}
+.gpie-logos{display:flex;align-items:flex-end;gap:28px;flex-wrap:nowrap;flex:1;min-width:300px}
+.gpie-logos a,.gpie-logos span.gpie-marca{display:flex;align-items:center;height:30px;padding-bottom:8px;border-bottom:3px solid transparent;text-decoration:none}
+.gpie-logos a[aria-current="page"]{border-bottom-color:var(--grp-verde)}
+.gpie-logos img{max-height:30px;width:auto;display:block}
+.gpie-logos [data-marca="cumbre"]{height:40px}
+.gpie-logos [data-marca="cumbre"] img{max-height:40px}
+.gpie-logos .es-logo{height:28px;font-size:13px}
+
+/* ---------- Tablet ----------
+   CTH es más angosto que la Cumbre (columna de 1200 px más 24 px de margen a cada lado): desde 1100 px el logo del grupo pasa a su propia fila
+   y los logos de las marcas pueden bajar de línea, para que nada se salga del ancho. */
+@media (max-width: 1100px){
+  .gpie-logos{flex-wrap:wrap}
+  /* El logo del grupo ocupa su propia fila en el pie, grande y sin apretar los logos de las empresas. */
+  .gpie-in > .glogo{flex-basis:100%}
+  .gpie-in > .glogo + .gpie-sep{display:none}
+}
+/* ---------- Teléfono: «Parte de» + logo compacto + «Conoce el grupo», sin descriptor ---------- */
+@media (max-width: 760px){
+  .gbar:empty{min-height:47px}
+  .gbar-in{gap:10px;padding:6px 24px;min-height:46px}
+  .gbar-parte,.gbar-sep{display:none!important}
+  .gbar-pde{font-size:12px;margin-right:-4px;top:-4px}
+  .gbar .glogo{min-height:34px;--gl-h:30px!important}
+  .gbar-btn{font-size:13px;padding:6px 0}
+  .gsel{right:8px;left:8px;width:auto}
+  .gsel a,.gsel .gsel-item{grid-template-columns:92px 1fr auto;gap:10px}
+  .gsel-logo img{max-width:88px}
+  .gsel-logo .es-logo{font-size:9px}
+  .gsel-tit .glogo{--gl-h:56px!important}
+  .gpie .glogo{--gl-h:70px!important}
+  .gpie-in{padding:22px 24px;flex-direction:column;align-items:flex-start;gap:18px}
+  .gpie-sep{display:none}
+  .gpie-logos{gap:18px;min-width:0}
+}
+@media (max-width: 380px){
+  /* Con los márgenes de 24 px de CTH, el logo completo del pie se reduce un poco para que entre a lo ancho. */
+  .gpie .glogo{--gl-h:62px!important}
+  .gbar .glogo{--gl-h:26px!important}
+  .gbar-pde{font-size:11px;top:-3px}
+  .gbar-btn{font-size:12px}
+}
+@media (max-width: 340px){
+  .gpie .glogo{--gl-h:54px!important}
+  .gbar-in{padding-left:16px;padding-right:16px}
+  .gbar .glogo{--gl-h:24px!important}
+  .gbar-btn svg{display:none}
+}
+@media (prefers-reduced-motion: reduce){.gbar-btn svg{transition:none}}

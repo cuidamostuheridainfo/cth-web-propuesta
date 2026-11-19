@@ -5,11 +5,11 @@
 ## Dónde estamos
 
 - **Fase actual:** propuesta de diseño con el inicio en **cuatro módulos** y **siete landing pages**. El 11 nov entraron las primeras respuestas de CTH y el texto de la Dra. Milagros sobre el equipo y los equipos (láser, fisiatría con láser, ecografía y Doppler).
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `96aa4cf` (11 nov, «¿Dónde podemos ayudarte?»). Los ajustes del 19 nov son solo comentarios y documentos: la propuesta no cambia a la vista.
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `776c86e` (19 nov, alineación con Ethical Shields Group: solo comentarios y documentos). El encabezado y el pie del grupo, visibles, se agregaron después (19 nov) y se publican con el commit siguiente.
 - **No se publica todavía como sitio final:** faltan contenido de CTH y las decisiones del comité.
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
-- **Ethical Shields Group (19 nov):** CTH es una de las cuatro empresas del grupo (antes «Grupo Medical Shields»). El logo es «Evolución de origen», con el descriptor «Salud · Tecnología · Innovación». Los espacios reservados e invisibles (`data-grupo`) de las nueve páginas ya describen la regla del grupo del 19 nov y se aplican al migrar CTH a Cloudflare Pages. Fuente de lo del grupo: `cumbre-web/docs/DECISIONES-VIGENTES.md`; el plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov (ver `DECISIONES-VIGENTES.md`).
+- **Ethical Shields Group (19 nov):** CTH es una de las cuatro empresas del grupo (antes «Grupo Medical Shields»). El logo es «Evolución de origen», con el descriptor «Salud · Tecnología · Innovación». **El encabezado y el pie del grupo ya se ven en la propuesta** (pedido de Jenny, para que el equipo los revise), con `assets/grupo.js` y `assets/grupo.css`. La sección del ecosistema, los puentes y el bloque del grupo en Corporativo siguen reservados e invisibles hasta la migración a Cloudflare Pages. Fuente de lo del grupo: `cumbre-web/docs/DECISIONES-VIGENTES.md`; el plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov (ver `DECISIONES-VIGENTES.md`).
 - **Hosting (19 nov):** el sitio final irá a Cloudflare Pages (plan gratuito), no a Netlify. Primero se migra la Cumbre; después, CTH.
 - El 9 nov se publicó la propuesta para la revisión del comité.
 - 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El comité sigue decidiendo el logo del grupo. El feedback de Social Media todavía no llega.
@@ -18,6 +18,7 @@
 
 ### Inicio (`index.html`)
 
+0. Encabezado del grupo, arriba de todo (19 nov): «Parte de» + logo de Ethical Shields Group + «Salud · Tecnología · Innovación» + «Conoce el grupo», que abre la lista de las cuatro marcas. En teléfono, sin el descriptor. El pie del grupo va debajo del pie de CTH en las nueve páginas.
 1. Cabecera: logo, menú Corporativo · Cuidamos tu herida · Prevención · Productos · Aprende · Nosotros, y botón «Preguntas frecuentes».
 2. Hero (sin cambios): video de la Unidad, «Soy paciente» abre Cuidamos tu herida y «Soy institución» abre Corporativo.
 3. «¿Cómo podemos ayudarte?»: cuatro tarjetas en este orden: **Corporativo e instituciones**, **Cuidamos tu herida**, **Fisiatría avanzada y terapia láser** y **Prevención y cuidado de la piel**. Al hacer clic se abre la tarjeta con sus opciones (en escritorio, debajo de las cuatro; en el teléfono, debajo de la tocada) y cada opción lleva a su landing. El menú abre la tarjeta correspondiente. Cuidamos tu herida incluye también la opción de Fisiatría.

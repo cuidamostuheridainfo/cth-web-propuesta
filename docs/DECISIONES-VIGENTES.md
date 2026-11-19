@@ -117,7 +117,7 @@ Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo.
   - encabezado en teléfono: «Parte de» + logo compacto + «Conoce el grupo», sin descriptor;
   - «Conoce el grupo» no es un enlace: abre la lista de las cuatro marcas, con «Estás aquí» en la propia;
   - pie: logo completo del grupo, en tamaño legible.
-- **En CTH se aplica al migrar el sitio a Cloudflare Pages.** Mientras tanto queda en los espacios reservados (`data-grupo`) de las nueve páginas. Reemplaza «cuando el cliente apruebe el plan con el video».
+- **En CTH se aplica al migrar el sitio a Cloudflare Pages.** Mientras tanto queda en los espacios reservados (`data-grupo`) de las nueve páginas. Reemplaza «cuando el cliente apruebe el plan con el video». (Superado el mismo día para el encabezado y el pie: ver «Encabezado y pie del grupo visibles», abajo.)
 - **Pie del grupo debajo del pie de CTH**, como en la Cumbre (Jenny, 19 nov). Antes estaba reservado encima.
 - **Orden de las marcas** en la lista de «Conoce el grupo», la sección y el pie: Medical Shields · Cuidamos tu Herida · Cumbre · Ethical Shields AI, el mismo de la Cumbre (Jenny, 19 nov).
 - **Líneas de las marcas** (las mismas de la Cumbre, `assets/js/ecosistema-propuesta.js`):
@@ -128,3 +128,8 @@ Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo.
 - **La seguridad de los datos médicos de CTH e IRIS** se evalúa por separado al migrar CTH.
 - **Envío de los formularios en la fase 1: pendiente** (Jenny, 19 nov). Se define al migrar, junto con esa evaluación. No se reabre el resto de la decisión: por correo, sin guardar el lead en ninguna base y sin datos clínicos.
 - **Fuente de lo del grupo (Jenny, 19 nov):** el plan común está desactualizado desde el 11 nov. Mientras se actualiza en una sesión aparte, `CLAUDE.md` apunta a `cumbre-web/docs/DECISIONES-VIGENTES.md` (solo lectura). El «Registro de cambios» del plan común se sigue usando.
+- **Encabezado y pie del grupo visibles en la propuesta (Jenny, 19 nov, más tarde):** para que el equipo los vea mientras se termina la página. Se aplican en las nueve páginas con `assets/grupo.js` y `assets/grupo.css`, siguiendo la regla del 19 nov, con la estructura y las medidas de la Cumbre y los colores de CTH (azul marino, verde y verde claro para «Estás aquí»). Reemplaza, solo para estas dos piezas, «en CTH se aplica al migrar».
+  - La **sección «Un solo ecosistema», los puentes y el bloque del grupo en Corporativo siguen reservados** e invisibles hasta la migración (los puentes, además, esperan la validación de la Dra. Milagros Jaimes).
+  - Enlaces: Medical Shields a medicalshields.com y la Cumbre a cumbrechp.org, en otra pestaña; Cuidamos tu Herida lleva al inicio y dice «Estás aquí»; Ethical Shields AI va sin enlace, como en la Cumbre.
+  - El pie del grupo no repite la política de privacidad: CTH ya la tiene en su propio pie.
+  - En estas piezas del grupo la Cumbre aparece con su logo actual (II Cumbre… Heridas, Piel y Longevidad), igual que en la web de la Cumbre. El resto de la web de CTH mantiene el nombre y el logo anteriores, como decidió Jenny el 11 nov (pendiente de confirmar).
