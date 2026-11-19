@@ -39,3 +39,10 @@
 ## 11 nov 2026 (tercera sesión)
 
 - El cliente pidió resaltar dónde se atiende como un segmento. Sección «¿Dónde podemos ayudarte?» en el inicio, después de los módulos. Revisada en escritorio y a 390 px, sin enlaces rotos ni errores.
+
+## 19 nov 2026
+
+- Ritual de inicio. Se revisaron los cambios del grupo del 16 al 19 nov en `cumbre-web/docs/DECISIONES-VIGENTES.md` (solo lectura): nombre Ethical Shields Group, logo «Evolución de origen» con «Salud · Tecnología · Innovación», regla del encabezado y del pie, líneas de CTH y de Ethical Shields AI, y hosting en Cloudflare Pages. El plan común y su Registro de cambios no los tenían.
+- Decisiones de Jenny: mientras el plan común se actualiza aparte, `CLAUDE.md` apunta a `cumbre-web` para lo del grupo; el pie del grupo va debajo del de CTH, como en la Cumbre; las marcas van en el mismo orden de la Cumbre; el envío de los formularios queda pendiente hasta la migración.
+- Comentarios de los espacios reservados actualizados en las nueve páginas, y el pie del grupo reservado ahora debajo del pie de CTH. Comprobado que, sin comentarios, las nueve páginas son idénticas a antes: nada cambia a la vista.
+- `CLAUDE.md`, `ESTADO`, `PENDIENTES` y `DECISIONES-VIGENTES` al día con el nombre, el logo y Cloudflare. Queda contestado si el ecosistema se muestra ya: se aplica al migrar.

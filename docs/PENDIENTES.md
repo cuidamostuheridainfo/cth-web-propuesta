@@ -1,6 +1,6 @@
 # PENDIENTES — Rediseño web de CTH
 
-Última actualización: 11 nov 2026 (segunda sesión).
+Última actualización: 19 nov 2026.
 
 ## Para el comité (mensaje pendiente de enviar)
 
@@ -33,7 +33,6 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 ## Decisiones de Jenny
 
-- **Ecosistema del grupo:** ¿se muestra ya en la propuesta para el comité o sigue reservado hasta la aprobación del plan? (Las tres modalidades ya quedaron resueltas con «¿Dónde podemos ayudarte?».)
 - Orden de «¿Dónde podemos ayudarte?»: se usó el que dio Jenny (domicilio, telemedicina, Unidad). En el módulo Cuidamos tu herida el orden es Unidad, domicilio, telemedicina. Confirmar si se dejan distintos. Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields implementa IA) es el mensaje de esas piezas.
 - Revisar los ajustes que hizo Claude el 11 nov: en «Cuidado de heridas» aparecen la Dra. Milagros, el Dr. Hinojosa, la Dra. Cedeño y el Dr. Lozada (según sus áreas); a la Dra. Milagros se le agregó «Consulta de medicina general»; a la Lic. Fernández, «Consulta nutricional» en lugar de «Consulta médica nutricional»; el resumen de ecografía en Prevención no es cita textual; la línea de ecografía en Fisiatría no se pidió.
 - Confirmar «usted» para instituciones y «tú» para pacientes. Hoy el formulario de Corporativo dice «tu organización».
@@ -62,12 +61,11 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 - Presentar a CTH la propuesta del área corporativa (Doc de Claude, enlace en `ESTADO.md`) y obtener sus decisiones: segmentos, modelos de convenio, tarifas y paquetes (Administración y Finanzas), capacidad mensual, responsable y revisión legal.
 - **Revisión legal:** un paquete de cuota fija que cubra lo que cada persona necesite puede encuadrarse como medicina prepagada, que es actividad regulada. La propuesta plantea vender servicios definidos con cupo. Debe revisarlo un abogado antes del primer contrato.
 
-## Ecosistema del grupo
+## Ecosistema del grupo (Ethical Shields Group)
 
-- El comité sigue decidiendo el logo (sello) del grupo (11 nov).
-- Aplicar la barra, el pie, la sección «Un solo ecosistema» y los puentes en los espacios reservados (`data-grupo`) cuando el cliente apruebe el plan con el video, salvo que Jenny decida mostrarlos antes (ver Decisiones de Jenny).
-- Copiar el sello desde el repositorio `cumbre-web`, carpeta `assets/img/grupo/` (versión de cuatro anillos, clara y oscura), cuando el comité lo apruebe.
-- Línea de CTH en el pie del grupo: hoy dice «atención médica de heridas y piel, en sede, a domicilio y por telemedicina». Con el módulo de Fisiatría puede necesitar ajuste (anotado en el Registro de cambios del plan).
+- **Plan común:** actualizarlo con los cambios del 16 al 19 nov (nombre, logo, regla del encabezado y del pie, líneas de las marcas, hosting) en una sesión aparte. Mientras tanto, la fuente es `cumbre-web/docs/DECISIONES-VIGENTES.md`.
+- **Aplicar las piezas del grupo al migrar CTH a Cloudflare Pages:** encabezado del grupo, pie (debajo del de CTH), sección «Un solo ecosistema», puentes y el bloque del grupo en Corporativo, en los espacios reservados (`data-grupo`). Copiar sin cambios el logo de `cumbre-web/assets/img/grupo-oficial/` (compacto para el encabezado, horizontal para el pie y la sección). Tomar como modelo el encabezado y el pie de la Cumbre en cumbrechp.pages.dev, en computadora y en teléfono.
+- **Ethical Shields AI:** va sin enlace hasta que esté su nueva web.
 - Textos de los puentes hacia productos: validación de la Dra. Milagros Jaimes.
 - Consentimiento de los formularios (Corporativo y productos): cuando Daniel y Gerencia Comercial aprueben la base única de contactos, cambiar «Usaremos estos datos solo para contactarte» por el texto del grupo, con la opción de no recibir ofertas.
 - Nombre y logo de la Cumbre: cambiar cuando Jenny lo indique (inicio, pie de las nueve páginas y textos alternativos). El logo nuevo es `logo-cumbre-27-blanco.png` en `cumbre-web`.
@@ -95,6 +93,7 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 ## Técnico
 
-- Revisar el plan de la cuenta de Netlify (dominio propio y límites).
-- Los formularios de Corporativo y de productos no envían nada todavía; en la fase 1 lo hará la función de Netlify.
+- **Migración de CTH a Cloudflare Pages** (después de la Cumbre): proyecto propio en la cuenta del grupo, protegiendo el SEO (mapa de 301 en `_redirects`, como el que dejó preparado la Cumbre en `docs/preparado-migracion/`) y el correo de cuidamostuherida.com.
+- **Seguridad de los datos médicos de CTH e IRIS:** evaluarla por separado antes de migrar.
+- **Envío de los formularios de la fase 1 (Corporativo y productos):** pendiente. Hoy no envían nada. Se define al migrar, junto con la evaluación de seguridad.
 - En el teléfono, el detalle de una especialidad en Unidad se abre debajo de todos los botones, no debajo del tocado (como antes). Mejorarlo si Jenny lo pide.

@@ -1,15 +1,16 @@
 # ESTADO — Rediseño web de CTH
 
-Última actualización: 11 nov 2026 (tercera sesión).
+Última actualización: 19 nov 2026.
 
 ## Dónde estamos
 
 - **Fase actual:** propuesta de diseño con el inicio en **cuatro módulos** y **siete landing pages**. El 11 nov entraron las primeras respuestas de CTH y el texto de la Dra. Milagros sobre el equipo y los equipos (láser, fisiatría con láser, ecografía y Doppler).
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Commit de la segunda sesión: `d018fce`. La sección «¿Dónde podemos ayudarte?» (tercera sesión) está en la copia local y falta subirla.
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `96aa4cf` (11 nov, «¿Dónde podemos ayudarte?»). Los ajustes del 19 nov son solo comentarios y documentos: la propuesta no cambia a la vista.
 - **No se publica todavía como sitio final:** faltan contenido de CTH y las decisiones del comité.
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
-- **Ecosistema del grupo (10 nov):** CTH es una de las cuatro webs del plan «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). El 11 nov quedaron reservados, invisibles, los espacios de la barra, el pie, la sección del ecosistema y los puentes; se aplican cuando el cliente apruebe el plan con un video (ver `DECISIONES-VIGENTES.md`).
+- **Ethical Shields Group (19 nov):** CTH es una de las cuatro empresas del grupo (antes «Grupo Medical Shields»). El logo es «Evolución de origen», con el descriptor «Salud · Tecnología · Innovación». Los espacios reservados e invisibles (`data-grupo`) de las nueve páginas ya describen la regla del grupo del 19 nov y se aplican al migrar CTH a Cloudflare Pages. Fuente de lo del grupo: `cumbre-web/docs/DECISIONES-VIGENTES.md`; el plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov (ver `DECISIONES-VIGENTES.md`).
+- **Hosting (19 nov):** el sitio final irá a Cloudflare Pages (plan gratuito), no a Netlify. Primero se migra la Cumbre; después, CTH.
 - El 9 nov se publicó la propuesta para la revisión del comité.
 - 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El comité sigue decidiendo el logo del grupo. El feedback de Social Media todavía no llega.
 
@@ -36,7 +37,7 @@
 | `cuidado-de-la-piel.html` | Prevención y cuidado de la piel (Próximamente; láser y estética facial del Dr. Lozada) | `WEB-PIEL` |
 | `fisiatria.html` | Fisiatría avanzada y terapia láser (texto de la Dra. Milagros, quién te atiende, dónde, preguntas) | `WEB-FISIATRIA` |
 
-Formulario de productos en el inicio: código `WEB-PRODUCTOS`; todavía no envía (fase 1, función de Netlify).
+Formulario de productos en el inicio: código `WEB-PRODUCTOS`; todavía no envía (el envío de la fase 1 se define al migrar a Cloudflare Pages).
 
 El contenido que CTH todavía no ha dado (beneficios, credenciales y días de los especialistas, zonas, dermatóloga, fotos) está entre corchetes. Detalle en `PENDIENTES.md`.
 
@@ -44,16 +45,15 @@ Revisión del 11 nov: las nueve páginas sin enlaces internos rotos, sin errores
 
 ## Próximo paso
 
-1. Subir a `main` los cambios del 11 nov (segunda sesión).
-2. Decisión de Jenny: si el ecosistema del grupo se muestra ya en la propuesta para el comité. (Las tres modalidades ya están en el inicio.)
-3. Enviar al comité el mensaje con todas las dudas (lista en `PENDIENTES.md`, sección «Para el comité»).
-4. Recibir de CTH el contenido que falta, las fotos y el video.
-5. Presentar a CTH la propuesta del área corporativa.
-6. Plantillas de catálogo y ficha de producto (el formulario de productos ya existe y se reutiliza en la ficha).
-7. Inventario SEO con datos de Search Console y mapa de redirecciones 301.
+1. Enviar al comité el mensaje con todas las dudas (lista en `PENDIENTES.md`, sección «Para el comité»).
+2. Recibir de CTH el contenido que falta, las fotos y el video.
+3. Presentar a CTH la propuesta del área corporativa.
+4. Plantillas de catálogo y ficha de producto (el formulario de productos ya existe y se reutiliza en la ficha).
+5. Inventario SEO con datos de Search Console y mapa de redirecciones 301 (sirve para la migración a Cloudflare).
+6. Al migrar CTH a Cloudflare Pages (después de la Cumbre): evaluación de seguridad de los datos médicos, envío de los formularios y aplicación de las piezas del grupo.
 
 ## Fases del proyecto
 
-- **Fase 1:** sitio en código propio en Netlify; formularios envían el lead por correo, sin guardarlo en ninguna base. Contenido separado del código.
+- **Fase 1:** sitio en código propio en Cloudflare Pages (antes Netlify); formularios envían el lead por correo, sin guardarlo en ninguna base (mecanismo de envío pendiente). Contenido separado del código.
 - **Fase 2A:** conexión con GMS (cada lead crea su caso comercial). Depende de la incorporación de CTH a GMS.
 - **Fase 2B:** traspaso del manejo de contenido al equipo con un gestor de contenido.

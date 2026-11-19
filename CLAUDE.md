@@ -1,6 +1,6 @@
 # CLAUDE.md — Rediseño web de CTH (cuidamostuherida.com)
 
-Frente: rediseño de la web de Cuidamos Tu Herida (CTH), Grupo Medical Shields. Lo lidera Jenny López.
+Frente: rediseño de la web de Cuidamos Tu Herida (CTH), una de las cuatro empresas de Ethical Shields Group. Lo lidera Jenny López.
 Idioma de trabajo: español neutro de Venezuela, tuteo, sin voseo.
 
 ## Ritual de inicio (obligatorio, antes de proponer o cambiar algo)
@@ -10,7 +10,7 @@ Idioma de trabajo: español neutro de Venezuela, tuteo, sin voseo.
 3. Leer `docs/PENDIENTES.md`: qué falta y quién lo responde.
 4. Leer `docs/DECISIONES-VIGENTES.md`: lo que ya se decidió. No se reabre sin que Jenny lo pida.
 5. Si la tarea toca el diseño completo, leer también el documento de diseño (enlace abajo).
-6. Leer el plan común del grupo, «Grupo Medical Shields: un solo ecosistema web» (enlace abajo), sobre todo sus decisiones y el «Registro de cambios».
+6. Para lo del grupo (Ethical Shields Group: nombre, logo, encabezado, pie, sección del ecosistema, hosting), leer en el repositorio `cumbre-web`, **solo lectura**, `docs/DECISIONES-VIGENTES.md` desde «Cambios del 16 nov 2026» en adelante (copia local: `C:\Users\Jenny Lopez\Documents\GitHub\cumbre-web`). El plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov: se usa solo su «Registro de cambios» y, para lo demás, queda como referencia histórica hasta que se actualice (decisión de Jenny, 19 nov).
 7. Devolver a Jenny un resumen corto: estado, próximos pasos y dudas.
 
 ## Ritual de cierre
@@ -26,10 +26,13 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 | Documento de diseño completo (análisis, embudos, SEO, identidad visual) | Doc de Claude «CTH — Rediseño web: análisis y documento de diseño»: https://claude.ai/artifact/X1GBNNn2zR5BkboAvNYihx |
 | Propuesta del área corporativa para CTH (interna, no va en este repositorio) | Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW |
 | Lienzo de diseño original (referencia, ya no se sincroniza) | https://claude.ai/artifact/LUGmeDURncLakjJXKwQMcF |
-| Plan común de las cuatro webs del grupo (decisiones y Registro de cambios) | Doc de Claude «Grupo Medical Shields: un solo ecosistema web»: https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1 |
-| Sello del grupo (archivos) | Repositorio `cumbre-web`, `assets/img/grupo/` |
+| Decisiones vigentes del grupo (desde el 16 nov) | Repositorio `cumbre-web`, `docs/DECISIONES-VIGENTES.md` (solo lectura para este frente). Aplicadas en su `index.html`, `assets/js/ecosistema-propuesta.js` y `assets/css/ecosistema-propuesta.css`; referencia visual en https://cumbrechp.pages.dev |
+| Plan común de las cuatro webs (Registro de cambios; el resto, desactualizado desde el 11 nov) | Doc de Claude «Grupo Medical Shields: un solo ecosistema web»: https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1 |
+| Hosting, migración y SEO de las cuatro webs | Doc de Claude «Grupo Ethical Shields: hosting, migración y SEO de las cuatro webs»: https://claude.ai/artifact/3cC3bMZQAJq3sAQMzE2N5c |
+| Logo del grupo (archivos) | Repositorio `cumbre-web`, `assets/img/grupo-oficial/`: `logo-esg-compacto-claro.svg` y `-oscuro.svg` (encabezado), `logo-esg-horizontal-claro.svg` y `-oscuro.svg` (pie y sección). La carpeta `assets/img/grupo/` tiene las propuestas descartadas: no se usa |
 | Datos oficiales de CTH (sedes, horario, preguntas del bot) | Repositorio privado `IRIS-cth` (solo lectura para este frente) |
 | Sitio actual | cuidamostuherida.com (Shopify) |
+| Sitio final | Cloudflare Pages, proyecto propio de CTH en la cuenta del grupo. Se migra después de la Cumbre |
 
 ## Reglas de este frente
 
@@ -43,7 +46,7 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 - **Accesibilidad:** cada animación respeta «reducir movimiento»; contraste mínimo AA (ver identidad visual en el documento de diseño).
 - **Cambios:** se edita el HTML de este repositorio, se prueba en escritorio y en teléfono (390 px), y se sube a `main`. GitHub Pages publica solo en 1 o 2 minutos.
 - **Commits:** Jenny decide cuándo. Mensajes en español.
-- **Grupo Medical Shields:** las piezas comunes (barra, pie, sección del ecosistema, puentes, sello) se deciden en el plan común. Todo cambio en CTH que afecte a las otras marcas se anota en su «Registro de cambios».
+- **Ethical Shields Group:** las piezas comunes (encabezado del grupo, pie, sección del ecosistema y puentes) siguen la regla del grupo del 19 nov (ver paso 6 del ritual). En CTH quedan reservadas e invisibles y se aplican al migrar el sitio a Cloudflare Pages. Todo cambio en CTH que afecte a las otras marcas se anota en el «Registro de cambios» del plan común.
 
 ## Estructura del código
 
@@ -52,6 +55,6 @@ Al terminar cada sesión: actualizar `ESTADO.md`, `PENDIENTES.md` y `DECISIONES-
 - **Un cambio en la cabecera, el menú, el cierre o el pie se replica en las nueve páginas.** Al terminar, revisar que todos los enlaces internos lleven a páginas y anclas que existen.
 - Menú (11 nov): por debajo de 1100 px se vuelve desplegable con el botón «Menú» (`.nav-toggle`, `#nav-principal`). Si se agrega una opción, comprobar que en 1100 px la cabecera siga en una sola línea.
 - **`assets/equipo.js` es contenido, no código (11 nov):** especialidades, especialistas y servicios (Laboratorio, Ecografía y Doppler) del panel de Unidad y de «Quién te atiende» en Fisiatría. Para agregar un médico o una especialidad se agrega un bloque ahí; las instrucciones están al principio del archivo. Un especialista puede estar en varias especialidades (campo `en`). Una página muestra los especialistas de una especialidad con `<div data-equipo="mf">`.
-- Espacios reservados del grupo: comentarios `GRUPO MEDICAL SHIELDS ·` con un contenedor oculto `data-grupo` (`barra`, `pie`, `ecosistema`, `puente-productos`, `puente-cumbre`, `grupo-corporativo`). Se buscan con `data-grupo=`.
+- Espacios reservados del grupo: comentarios `ETHICAL SHIELDS GROUP ·` con un contenedor oculto `data-grupo` (`barra`, `pie`, `ecosistema`, `puente-productos`, `puente-cumbre`, `grupo-corporativo`). Se buscan con `data-grupo=`. El de `barra` es el encabezado del grupo, arriba de todo; el de `pie` va debajo del pie de CTH, como en la Cumbre.
 - `assets/app.js`: comportamiento (video con sonido y pausa, conteo de cifras, tarjetas de los cuatro módulos del inicio, paneles de «Cómo te atendemos», especialidades desde `equipo.js`, menú desplegable, preguntas). Las anclas `#corporativo`, `#cuidamos-tu-herida`, `#fisiatria` y `#prevencion-y-piel` abren la tarjeta del módulo correspondiente. Usa atributos `data-*`: `data-click`, `data-if`, `data-text`, `data-class`, `data-ref`, `data-attr-*`.
 - `assets/`: logo, fotos (las `tira-*` son verticales 480×800 para la franja de Instituciones) y el video `unidad-completo.mp4` (1280 px, H.264).

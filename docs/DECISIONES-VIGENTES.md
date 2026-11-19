@@ -11,9 +11,9 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 
 ## Plataforma y fases
 
-- Fase 1: código propio en **Netlify** (Jenny ya tiene cuenta), con redirecciones 301 de servidor. GitHub Pages solo para la propuesta, no para el sitio final.
+- ~~Fase 1: código propio en **Netlify** (Jenny ya tiene cuenta), con redirecciones 301 de servidor.~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)». GitHub Pages solo para la propuesta, no para el sitio final (sigue vigente).
 - El contenido se guarda separado del código para que en la fase 2B el equipo lo maneje con un gestor de contenido. No se migra a WordPress.
-- Fase 1: los formularios envían el lead por correo desde una función de Netlify, sin guardarlo en ninguna base.
+- Fase 1: los formularios envían el lead por correo ~~desde una función de Netlify~~, sin guardarlo en ninguna base. El mecanismo de envío queda pendiente desde el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
 - Fase 2A: cada lead crea un caso comercial en GMS, con la función de servidor ya decidida del lado de GMS. Sin bandeja propia ni proyecto aparte.
 
 ## Datos oficiales
@@ -74,10 +74,10 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 
 ## Ecosistema del Grupo Medical Shields (10 y 11 nov 2026)
 
-- CTH sigue el plan común de las cuatro webs: documento «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). Las decisiones del grupo se toman allí, no en este repositorio.
-- Cuatro marcas: Medical Shields, Cuidamos tu Herida, Cumbre y Ethical Shields. Cada una conserva su web y su dominio. Nombre visible: «Grupo Medical Shields». Lema: «Ecosistema de Salud y Bienestar Integral».
-- Piezas comunes: barra del grupo arriba, pie del grupo, sección «Un solo ecosistema», puentes en contexto y sello de cuatro anillos en rombo.
-- **En CTH las piezas están reservadas, invisibles, en el código (11 nov).** Se aplican cuando el cliente apruebe el plan con el video (fase 2 del plan). Cada reserva lleva un comentario que dice qué va y un contenedor oculto con `data-grupo`:
+- CTH sigue el plan común de las cuatro webs: documento «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). Las decisiones del grupo se toman allí, no en este repositorio. (19 nov: el plan quedó desactualizado; mientras tanto, la fuente es `cumbre-web/docs/DECISIONES-VIGENTES.md`.)
+- Cuatro marcas: Medical Shields, Cuidamos tu Herida, Cumbre y Ethical Shields. Cada una conserva su web y su dominio. ~~Nombre visible: «Grupo Medical Shields». Lema: «Ecosistema de Salud y Bienestar Integral».~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
+- Piezas comunes: barra del grupo arriba, pie del grupo, sección «Un solo ecosistema», puentes en contexto y ~~sello de cuatro anillos en rombo~~ logo del grupo. Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
+- **En CTH las piezas están reservadas, invisibles, en el código (11 nov).** ~~Se aplican cuando el cliente apruebe el plan con el video (fase 2 del plan).~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)». Cada reserva lleva un comentario que dice qué va y un contenedor oculto con `data-grupo`:
   - `barra` y `pie`: en las ocho páginas.
   - `ecosistema`: en el inicio, antes de la Cumbre.
   - `puente-productos` (hacia Medical Shields): en el inicio, después de «Tratamos heridas…», y en Unidad, después de «Qué atendemos».
@@ -104,3 +104,27 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 ## Dónde podemos ayudarte (11 nov 2026, pedido del cliente)
 
 - Los sitios donde se atiende al paciente se resaltan como un **segmento propio** en el inicio, justo después de «¿Cómo podemos ayudarte?»: **«¿Dónde podemos ayudarte?»** con A domicilio, Por telemedicina y En nuestra Unidad, cada una con enlace a su landing.
+
+## Ethical Shields Group y Cloudflare (16 al 19 nov 2026)
+
+Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo. Detalle en el repositorio `cumbre-web`, `docs/DECISIONES-VIGENTES.md` (secciones del 16 al 19 nov). En CTH se aplicaron el 19 nov solo en los comentarios de los espacios reservados: la propuesta no cambia a la vista.
+
+- **Nombre del grupo: «Ethical Shields Group»** (dominio ethicalshieldsgroup.com). Reemplaza a «Grupo Medical Shields» y a «Grupo Ethical Shields». Cuatro empresas: Medical Shields, Cuidamos tu Herida (CTH), Ethical Shields AI y Cumbre CHP. Cada una conserva su identidad, su dominio y sus servicios.
+- **Textos visibles del grupo:** «Parte de Ethical Shields Group» y «En Ethical Shields Group encuentras…». En el pie no va «Página del grupo: próximamente».
+- **Logo del grupo:** «Evolución de origen», versión B: ETHICAL SHIELDS GROUP en mayúsculas, con una raya de acento debajo de ETHICAL. Descriptor: «Salud · Tecnología · Innovación». Ya no se usa «Ecosistema de Salud y Bienestar Integral». El sello de anillos queda descartado.
+- **Regla del logo en las webs de las empresas (19 nov):**
+  - encabezado en computadora y tablet: «Parte de» + logo compacto (sin descriptor) + línea divisoria + «Salud · Tecnología · Innovación» como texto legible al lado + botón «Conoce el grupo»;
+  - encabezado en teléfono: «Parte de» + logo compacto + «Conoce el grupo», sin descriptor;
+  - «Conoce el grupo» no es un enlace: abre la lista de las cuatro marcas, con «Estás aquí» en la propia;
+  - pie: logo completo del grupo, en tamaño legible.
+- **En CTH se aplica al migrar el sitio a Cloudflare Pages.** Mientras tanto queda en los espacios reservados (`data-grupo`) de las nueve páginas. Reemplaza «cuando el cliente apruebe el plan con el video».
+- **Pie del grupo debajo del pie de CTH**, como en la Cumbre (Jenny, 19 nov). Antes estaba reservado encima.
+- **Orden de las marcas** en la lista de «Conoce el grupo», la sección y el pie: Medical Shields · Cuidamos tu Herida · Cumbre · Ethical Shields AI, el mismo de la Cumbre (Jenny, 19 nov).
+- **Líneas de las marcas** (las mismas de la Cumbre, `assets/js/ecosistema-propuesta.js`):
+  - CTH: «Atención médica de heridas y piel y fisiatría avanzada, en sede, a domicilio y por telemedicina.»;
+  - Ethical Shields AI: descripción corta «Inteligencia artificial para empresas» y línea «Implementación de inteligencia artificial en empresas. GesPro, su panel de control financiero.». Ya no se usa «IA financiera».
+- **Hosting: Cloudflare Pages, plan gratuito**, con un proyecto y un repositorio por web, en la cuenta del grupo. Reemplaza a Netlify. GitHub Pages sigue solo para la propuesta. Los dominios siguen registrados en GoDaddy.
+- **Migración gradual:** primero la Cumbre (ya desplegada en cumbrechp.pages.dev, sin dominio todavía) y después CTH, protegiendo el SEO y el correo. Plan en el Doc de Claude «Grupo Ethical Shields: hosting, migración y SEO de las cuatro webs» (https://claude.ai/artifact/3cC3bMZQAJq3sAQMzE2N5c).
+- **La seguridad de los datos médicos de CTH e IRIS** se evalúa por separado al migrar CTH.
+- **Envío de los formularios en la fase 1: pendiente** (Jenny, 19 nov). Se define al migrar, junto con esa evaluación. No se reabre el resto de la decisión: por correo, sin guardar el lead en ninguna base y sin datos clínicos.
+- **Fuente de lo del grupo (Jenny, 19 nov):** el plan común está desactualizado desde el 11 nov. Mientras se actualiza en una sesión aparte, `CLAUDE.md` apunta a `cumbre-web/docs/DECISIONES-VIGENTES.md` (solo lectura). El «Registro de cambios» del plan común se sigue usando.
