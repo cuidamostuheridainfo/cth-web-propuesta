@@ -54,7 +54,7 @@ Revisión del 11 nov: las nueve páginas sin enlaces internos rotos, sin errores
 
 ## Próximo paso
 
-1. Enviar al comité el mensaje con todas las dudas (lista en `PENDIENTES.md`, sección «Para el comité»).
+1. ~~Enviar al comité el mensaje con todas las dudas.~~ Enviado el 19 nov con la planilla en Excel: esperar las respuestas.
 2. Recibir de CTH el contenido que falta, las fotos y el video.
 3. Presentar a CTH la propuesta del área corporativa.
 4. Completar productos, fichas y demás contenido con las respuestas de la planilla del 19 nov.
