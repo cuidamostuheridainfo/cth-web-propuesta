@@ -1,6 +1,6 @@
 # PENDIENTES — Rediseño web de CTH
 
-Última actualización: 19 nov 2026.
+Última actualización: 20 nov 2026.
 
 **Planilla del 19 nov para el equipo de CTH:** «CTH · Información pendiente para la página web» (36 datos: videos, fotos, productos, contenido de cada página y especialistas), con la columna Respuesta para completar: https://claude.ai/artifact/UsHiNV8WujvhDPFQmA4EwA. Cuando llegue respondida, se aplica y se cierran aquí los puntos que cubre.
 
@@ -16,7 +16,7 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 6. **Ecografía y Doppler:** cómo se usa en la prevención; fecha de la próxima jornada.
 7. **Equipos de luminiscencia:** la pregunta frecuente «¿Tienen equipos especiales?» los nombraba; no están en la lista de la Dra. Milagros. ¿Siguen?
 8. **Catálogo de productos:** la respuesta «4» trajo los servicios; sigue abierto si vale el catálogo del 26 ago (Covalon y Platsul).
-9. **Correo de destino** de los formularios (Corporativo y productos) y quién atiende cada uno: la ejecutiva de telemarketing para productos.
+9. **Correo de destino** del formulario de Corporativo y quién lo atiende. (Productos ya no tiene formulario: va por WhatsApp desde la ficha.)
 10. **«¿Aceptan seguros médicos?»:** la respuesta dice que no hay convenio directo, y Corporativo ofrece convenios con aseguradoras. Confirmar el texto vigente.
 
 ## Mensaje de nueve puntos (30 oct)
@@ -35,8 +35,11 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 
 ## Decisiones de Jenny
 
+- **Botón del encabezado de Corporativo:** dice «Solicitar una propuesta» y lleva al formulario, que ahora se titula «Hablemos de una colaboración». ¿Se cambia el texto del botón?
+- **Enlace de IRIS para el equipo:** los botones «Agenda con nosotros una evaluación de tu herida» piden el enlace de IRIS por WhatsApp. Confirmar que el equipo de CTH tiene el enlace a mano para responder.
+- **Planilla del 19 nov:** Jenny quita la fila 14 (revisión de la Dra. Milagros de las fichas), porque los textos del fabricante no se validan. Revisar si la fila 13 pide la ficha técnica del fabricante.
 - **Logo de la Cumbre en las piezas del grupo:** el encabezado y el pie del grupo muestran el logo actual de la Cumbre (II Cumbre… Heridas, Piel y Longevidad), como la web de la Cumbre; el resto de la web de CTH mantiene el nombre y el logo anteriores (decisión del 11 nov). Confirmar si se deja así o si se cambia también en el resto de la web.
-- Orden de «¿Dónde podemos ayudarte?»: se usó el que dio Jenny (domicilio, telemedicina, Unidad). En el módulo Cuidamos tu herida el orden es Unidad, domicilio, telemedicina. Confirmar si se dejan distintos. Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields implementa IA) es el mensaje de esas piezas.
+- Orden de «¿Dónde podemos ayudarte?»: se usó el que dio Jenny (domicilio, telemedicina, Unidad). En el módulo Cuidamos tu herida el orden es Unidad, domicilio, telemedicina. Confirmar si se dejan distintos. Lo que Jenny describió el 11 nov (Medical Shields trae la tecnología, la Cumbre educa y hace networking, CTH atiende a instituciones, seguros, clínicas y pacientes en sede, domicilio y telemedicina, y Ethical Shields AI implementa IA) es el mensaje de esas piezas.
 - Revisar los ajustes que hizo Claude el 11 nov: en «Cuidado de heridas» aparecen la Dra. Milagros, el Dr. Hinojosa, la Dra. Cedeño y el Dr. Lozada (según sus áreas); a la Dra. Milagros se le agregó «Consulta de medicina general»; a la Lic. Fernández, «Consulta nutricional» en lugar de «Consulta médica nutricional»; el resumen de ecografía en Prevención no es cita textual; la línea de ecografía en Fisiatría no se pidió.
 - Confirmar «usted» para instituciones y «tú» para pacientes. Hoy el formulario de Corporativo dice «tu organización».
 - Consultas institucionales de productos: ¿casos de CTH o de Medical Shields? (con Gerencia Comercial).
@@ -67,12 +70,12 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 ## Ecosistema del grupo (Ethical Shields Group)
 
 - **Plan común:** actualizarlo con los cambios del 16 al 19 nov (nombre, logo, regla del encabezado y del pie, líneas de las marcas, hosting) en una sesión aparte. Mientras tanto, la fuente es `cumbre-web/docs/DECISIONES-VIGENTES.md`.
-- **Encabezado y pie del grupo:** visibles en la propuesta desde el 19 nov (`assets/grupo.js` y `assets/grupo.css`). Si la Cumbre cambia las marcas, sus textos o el logo del grupo, copiar el cambio aquí.
+- **Encabezado y pie del grupo:** visibles siempre (cerrado el 20 nov), con las medidas de la Cumbre (`assets/grupo.js` y `assets/grupo.css`). Si la Cumbre cambia las marcas, sus textos, el logo del grupo o las medidas, copiar el cambio aquí.
 - **Aplicar al migrar CTH a Cloudflare Pages:** la sección «Un solo ecosistema», los puentes y el bloque del grupo en Corporativo, en los espacios reservados (`data-grupo`). Logo completo del grupo en `assets/grupo/`.
-- **Ethical Shields AI:** va sin enlace hasta que esté su nueva web.
+- **Ethical Shields AI:** va sin enlace hasta que esté su nueva web. (Nombres de las empresas en los documentos: Cumbre CHP y Ethical Shields AI, nunca «Ethical Shields» solo; 20 nov.)
 - Textos de los puentes hacia productos: validación de la Dra. Milagros Jaimes.
-- Consentimiento de los formularios (Corporativo y productos): cuando Daniel y Gerencia Comercial aprueben la base única de contactos, cambiar «Usaremos estos datos solo para contactarte» por el texto del grupo, con la opción de no recibir ofertas.
-- Nombre y logo de la Cumbre: cambiar cuando Jenny lo indique (inicio, pie de las nueve páginas y textos alternativos). El logo nuevo es `logo-cumbre-27-blanco.png` en `cumbre-web`.
+- Consentimiento del formulario de Corporativo: hoy lleva la casilla obligatoria «Autorizo a CTH a contactarme para atender esta solicitud». Cuando Daniel y Gerencia Comercial aprueben la base única de contactos del grupo, revisar si la casilla cambia al texto del grupo, con la opción de no recibir ofertas.
+- Nombre y logo de la Cumbre: cambiar cuando Jenny lo indique (inicio, pie de las doce páginas y textos alternativos). El logo nuevo es `logo-cumbre-27-blanco.png` en `cumbre-web`.
 - «Herida» o «lesión»: lo deciden la Dra. Milagros y Social media para las cuatro webs.
 - Teléfono de Medical Shields (+58 412-2853958): el número que el plan marca como error (+58 414 618 17 60) se parece al WhatsApp de CTH (+58 416-618-1760). Confirmar que en la presentación no se mezclaron. La web de CTH no muestra el teléfono de Medical Shields.
 
@@ -102,5 +105,6 @@ Jenny pidió reunir todas las dudas y mandarlas juntas al comité. Al retomar, a
 - **Migración de CTH a Cloudflare Pages** (después de la Cumbre): proyecto propio en la cuenta del grupo, protegiendo el SEO (mapa de 301 en `_redirects`, como el que dejó preparado la Cumbre en `docs/preparado-migracion/`) y el correo de cuidamostuherida.com.
 - **Seguridad de los datos médicos de CTH e IRIS:** evaluarla por separado antes de migrar.
 - **Desborde a 320 px:** en el inicio y en Unidad la página se sale 4 px a lo ancho en teléfonos muy angostos (320 px). No viene del grupo; ya estaba. Revisar si Jenny lo pide.
-- **Envío de los formularios de la fase 1 (Corporativo y productos):** pendiente. Hoy no envían nada. Se define al migrar, junto con la evaluación de seguridad.
+- **Envío del formulario de Corporativo:** pendiente. Hoy no envía nada. Se define al migrar, junto con la evaluación de seguridad. (El de pacientes no necesita servidor: abre WhatsApp o el correo.)
+- **Una dirección por producto para el SEO:** hoy la ficha es `producto.html?p=<id>`. Al migrar, generar una página estática por producto, con su propia dirección y su título.
 - En el teléfono, el detalle de una especialidad en Unidad se abre debajo de todos los botones, no debajo del tocado (como antes). Mejorarlo si Jenny lo pide.

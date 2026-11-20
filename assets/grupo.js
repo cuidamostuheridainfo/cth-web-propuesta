@@ -2,7 +2,7 @@
    Regla del grupo del 19 nov (cumbre-web/docs/DECISIONES-VIGENTES.md). Mismas marcas, textos y orden que la Cumbre
    (cumbre-web/assets/js/ecosistema-propuesta.js). Arma el contenido de data-grupo="barra" y data-grupo="pie".
    La sección «Un solo ecosistema» y los puentes siguen reservados e invisibles.
-   Un cambio en el encabezado o el pie del grupo se hace aquí, no en las nueve páginas. */
+   Un cambio en el encabezado o el pie del grupo se hace aquí, no en las doce páginas. */
 (function () {
   'use strict';
 

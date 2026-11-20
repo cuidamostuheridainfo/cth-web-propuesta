@@ -1,29 +1,29 @@
 # ESTADO — Rediseño web de CTH
 
-Última actualización: 19 nov 2026.
+Última actualización: 20 nov 2026.
 
 ## Dónde estamos
 
 - **Fase actual:** propuesta de diseño con el inicio en **cuatro módulos** y **siete landing pages**. El 11 nov entraron las primeras respuestas de CTH y el texto de la Dra. Milagros sobre el equipo y los equipos (láser, fisiatría con láser, ecografía y Doppler).
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `776c86e` (19 nov, alineación con Ethical Shields Group: solo comentarios y documentos). El encabezado y el pie del grupo, visibles, se agregaron después (19 nov) y se publican con el commit siguiente.
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `b6c84f0` (19 nov, pendientes de contenido y planilla). Los formularios, los mensajes de WhatsApp y los productos (19 nov, tarde) y los ajustes del grupo del 20 nov se publican con el próximo commit de Jenny.
 - **No se publica todavía como sitio final:** faltan contenido de CTH y las decisiones del comité.
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
-- **Ethical Shields Group (19 nov):** CTH es una de las cuatro empresas del grupo (antes «Grupo Medical Shields»). El logo es «Evolución de origen», con el descriptor «Salud · Tecnología · Innovación». **El encabezado y el pie del grupo ya se ven en la propuesta** (pedido de Jenny, para que el equipo los revise), con `assets/grupo.js` y `assets/grupo.css`. La sección del ecosistema, los puentes y el bloque del grupo en Corporativo siguen reservados e invisibles hasta la migración a Cloudflare Pages. Fuente de lo del grupo: `cumbre-web/docs/DECISIONES-VIGENTES.md`; el plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov (ver `DECISIONES-VIGENTES.md`).
+- **Ethical Shields Group (19 nov):** CTH es una de las cuatro empresas del grupo (antes «Grupo Medical Shields»). El logo es «Evolución de origen», con el descriptor «Salud · Tecnología · Innovación». **El encabezado y el pie del grupo se ven siempre** (pedido de Jenny el 19 nov; decisión cerrada el 20 nov), con `assets/grupo.js` y `assets/grupo.css`. El pie tiene las mismas medidas que el de la Cumbre. La sección del ecosistema, los puentes y el bloque del grupo en Corporativo siguen reservados e invisibles hasta la migración a Cloudflare Pages. Fuente de lo del grupo: `cumbre-web/docs/DECISIONES-VIGENTES.md`; el plan común «Grupo Medical Shields: un solo ecosistema web» está desactualizado desde el 11 nov (ver `DECISIONES-VIGENTES.md`).
 - **Hosting (19 nov):** el sitio final irá a Cloudflare Pages (plan gratuito), no a Netlify. Primero se migra la Cumbre; después, CTH.
 - El 9 nov se publicó la propuesta para la revisión del comité.
-- 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El comité sigue decidiendo el logo del grupo. El feedback de Social Media todavía no llega.
+- 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El logo del grupo quedó elegido el 16 nov (completado). El feedback de Social Media todavía no llega.
 
 ## Qué tiene la propuesta
 
 ### Inicio (`index.html`)
 
-0. Encabezado del grupo, arriba de todo (19 nov): «Parte de» + logo de Ethical Shields Group + «Salud · Tecnología · Innovación» + «Conoce el grupo», que abre la lista de las cuatro marcas. En teléfono, sin el descriptor. El pie del grupo va debajo del pie de CTH en las nueve páginas.
-1. Cabecera: logo, menú Corporativo · Cuidamos tu herida · Prevención · Productos · Aprende · Nosotros, y botón «Preguntas frecuentes».
+0. Encabezado del grupo, arriba de todo (19 nov): «Parte de» + logo de Ethical Shields Group + «Salud · Tecnología · Innovación» + «Conoce el grupo», que abre la lista de las cuatro marcas. En teléfono, sin el descriptor. El pie del grupo va debajo del pie de CTH en las doce páginas, con las medidas de la Cumbre (80 px; 70 px en teléfono; 58 px desde 340 px).
+1. Cabecera: logo, menú (ver punto 6) y botón «Preguntas frecuentes».
 2. Hero (sin cambios): video de la Unidad, «Soy paciente» abre Cuidamos tu herida y «Soy institución» abre Corporativo.
 3. «¿Cómo podemos ayudarte?»: cuatro tarjetas en este orden: **Corporativo e instituciones**, **Cuidamos tu herida**, **Fisiatría avanzada y terapia láser** y **Prevención y cuidado de la piel**. Al hacer clic se abre la tarjeta con sus opciones (en escritorio, debajo de las cuatro; en el teléfono, debajo de la tocada) y cada opción lleva a su landing. El menú abre la tarjeta correspondiente. Cuidamos tu herida incluye también la opción de Fisiatría.
 4. «¿Dónde podemos ayudarte?» (11 nov, pedido del cliente): las tres modalidades como segmento propio, en este orden: A domicilio · Por telemedicina · En nuestra Unidad, cada una con su enlace, y el botón «Solicitar una cita».
-5. Cifras, «Tratamos heridas simples y de difícil cicatrización», Productos (con el formulario «¿Te interesa un producto?»), Historias reales, Cumbre (organizadores, edición 2026 y 2027), Aprende, Preguntas frecuentes, cierre y pie.
+5. Cifras, «Tratamos heridas simples y de difícil cicatrización», Historias reales, «Productos que usamos en tu tratamiento» (bloque corto, 19 nov), Cumbre (organizadores, edición 2026 y 2027), Aprende, Preguntas frecuentes, cierre y pie.
 6. Menú: Corporativo · Cuidamos tu herida · Fisiatría · Prevención · Productos · Aprende · Nosotros, más «Preguntas frecuentes». Desplegable por debajo de 1100 px.
 
 ### Landing pages
@@ -38,7 +38,15 @@
 | `cuidado-de-la-piel.html` | Prevención y cuidado de la piel (Próximamente; láser y estética facial del Dr. Lozada) | `WEB-PIEL` |
 | `fisiatria.html` | Fisiatría avanzada y terapia láser (texto de la Dra. Milagros, quién te atiende, dónde, preguntas) | `WEB-FISIATRIA` |
 
-Formulario de productos en el inicio: código `WEB-PRODUCTOS`; todavía no envía (el envío de la fase 1 se define al migrar a Cloudflare Pages).
+Páginas nuevas (19 nov), con la misma cabecera y el mismo pie:
+
+| Página | Qué es | Código de WhatsApp |
+|---|---|---|
+| `cita.html` | «Solicita tu cita» para pacientes y familiares: abre WhatsApp o el correo con el mensaje listo | `WEB-CITA` |
+| `productos.html` | Catálogo (cuatro productos; faltan los datos de tres) | `WEB-PRODUCTOS` |
+| `producto.html?p=<id>` | Ficha de cada producto, según el modelo de Jenny | `WEB-PRODUCTOS` |
+
+Botones de WhatsApp (19 nov): un solo número; «quiero agendar una cita», «quisiera el enlace para IRIS» o «quiero información», con el código de la página. El formulario de Corporativo («Hablemos de una colaboración») todavía no envía: se define al migrar a Cloudflare Pages.
 
 El contenido que CTH todavía no ha dado (beneficios, credenciales y días de los especialistas, zonas, dermatóloga, fotos) está entre corchetes. Detalle en `PENDIENTES.md`.
 
@@ -49,7 +57,7 @@ Revisión del 11 nov: las nueve páginas sin enlaces internos rotos, sin errores
 1. Enviar al comité el mensaje con todas las dudas (lista en `PENDIENTES.md`, sección «Para el comité»).
 2. Recibir de CTH el contenido que falta, las fotos y el video.
 3. Presentar a CTH la propuesta del área corporativa.
-4. Plantillas de catálogo y ficha de producto (el formulario de productos ya existe y se reutiliza en la ficha).
+4. Completar productos, fichas y demás contenido con las respuestas de la planilla del 19 nov.
 5. Inventario SEO con datos de Search Console y mapa de redirecciones 301 (sirve para la migración a Cloudflare).
 6. Al migrar CTH a Cloudflare Pages (después de la Cumbre): evaluación de seguridad de los datos médicos, envío de los formularios y aplicación de las piezas del grupo.
 

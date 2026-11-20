@@ -89,20 +89,19 @@
   .gsel-logo img{max-width:88px}
   .gsel-logo .es-logo{font-size:9px}
   .gsel-tit .glogo{--gl-h:56px!important}
+  /* Pie igual que la Cumbre (Jenny, 20 nov): logo completo de 70 px y margen de 16 px a cada lado para que entre a lo ancho. */
   .gpie .glogo{--gl-h:70px!important}
-  .gpie-in{padding:22px 24px;flex-direction:column;align-items:flex-start;gap:18px}
+  .gpie-in{padding:22px 16px;flex-direction:column;align-items:flex-start;gap:18px}
   .gpie-sep{display:none}
   .gpie-logos{gap:18px;min-width:0}
 }
 @media (max-width: 380px){
-  /* Con los márgenes de 24 px de CTH, el logo completo del pie se reduce un poco para que entre a lo ancho. */
-  .gpie .glogo{--gl-h:62px!important}
   .gbar .glogo{--gl-h:26px!important}
   .gbar-pde{font-size:11px;top:-3px}
   .gbar-btn{font-size:12px}
 }
 @media (max-width: 340px){
-  .gpie .glogo{--gl-h:54px!important}
+  .gpie .glogo{--gl-h:58px!important}
   .gbar-in{padding-left:16px;padding-right:16px}
   .gbar .glogo{--gl-h:24px!important}
   .gbar-btn svg{display:none}

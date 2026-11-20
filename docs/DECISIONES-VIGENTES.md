@@ -33,8 +33,8 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 
 ## Captación y datos
 
-- Botones: «Solicitar una cita» (WhatsApp) y «Prefiero que me contacten» (formulario). En productos: «Saber más sobre este producto» abre la ficha; dentro, «Consulta con un especialista».
-- «Agenda con nosotros una evaluación de tu herida» lleva al formulario de IRIS. No se usa «Evalúa tu herida».
+- Botones: «Solicitar una cita» (WhatsApp) y «Prefiero que me contacten» (formulario). En productos: «Saber más sobre este producto» abre la ficha; dentro, «Consulta con un especialista». (19 nov: «Prefiero que me contacten» lleva a `cita.html`; ver «Formularios, WhatsApp y productos».)
+- ~~«Agenda con nosotros una evaluación de tu herida» lleva al formulario de IRIS.~~ Reemplazado el 19 nov: ver «Formularios, WhatsApp y productos (19 nov 2026)». No se usa «Evalúa tu herida» (sigue vigente).
 - Los formularios no piden tipo de herida, fotos ni ningún dato clínico.
 - Página, producto y campaña se miden en Google Analytics, sin datos personales.
 
@@ -72,10 +72,10 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 - **Se dice «herida», no «lesión»**, en todo el sitio: en Venezuela «lesión» tiene otro contexto. Por ejemplo: «Tratamos heridas simples y de difícil cicatrización». **Provisional desde el 10 nov:** para las cuatro webs del grupo lo deciden la Dra. Milagros Jaimes y Social media, con criterio médico; mientras tanto, en CTH se sigue usando «herida».
 - «Úlceras vasculares» (antes «úlceras venosas»).
 
-## Ecosistema del Grupo Medical Shields (10 y 11 nov 2026)
+## Ecosistema del Grupo Medical Shields (10 y 11 nov 2026, nombre anterior del grupo)
 
 - CTH sigue el plan común de las cuatro webs: documento «Grupo Medical Shields: un solo ecosistema web» (https://claude.ai/artifact/C9587Udj2jDw2fovZcsVv1). Las decisiones del grupo se toman allí, no en este repositorio. (19 nov: el plan quedó desactualizado; mientras tanto, la fuente es `cumbre-web/docs/DECISIONES-VIGENTES.md`.)
-- Cuatro marcas: Medical Shields, Cuidamos tu Herida, Cumbre y Ethical Shields. Cada una conserva su web y su dominio. ~~Nombre visible: «Grupo Medical Shields». Lema: «Ecosistema de Salud y Bienestar Integral».~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
+- Cuatro marcas: Medical Shields, Cuidamos tu Herida, Cumbre y Ethical Shields (20 nov: los nombres vigentes son **Cumbre CHP** y **Ethical Shields AI**; ver «Cierre de los ajustes del grupo (20 nov 2026)»). Cada una conserva su web y su dominio. ~~Nombre visible: «Grupo Medical Shields». Lema: «Ecosistema de Salud y Bienestar Integral».~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
 - Piezas comunes: barra del grupo arriba, pie del grupo, sección «Un solo ecosistema», puentes en contexto y ~~sello de cuatro anillos en rombo~~ logo del grupo. Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)».
 - **En CTH las piezas están reservadas, invisibles, en el código (11 nov).** ~~Se aplican cuando el cliente apruebe el plan con el video (fase 2 del plan).~~ Reemplazado el 19 nov: ver «Ethical Shields Group y Cloudflare (16 al 19 nov 2026)». Cada reserva lleva un comentario que dice qué va y un contenedor oculto con `data-grupo`:
   - `barra` y `pie`: en las ocho páginas.
@@ -91,7 +91,7 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 ## Respuestas de CTH y estructura (11 nov 2026, segunda sesión)
 
 - **Corporativo:** CTH respondió «Seguros y corporativos», pero a nivel comercial manda Daniel: queda como él lo orientó el 9 nov (empresas, aseguradoras, Estado y organizaciones sin fines de lucro). No se cambia la página.
-- **Productos:** la web no vende ni muestra precios; una persona de CTH atiende la compra, como hasta ahora. Para captar el contacto hay un formulario «¿Te interesa un producto?» en la sección Productos del inicio (`#info-producto`): nombre y teléfono obligatorios, producto de interés y correo opcional, código `WEB-PRODUCTOS`. La llamada la hace la ejecutiva de telemarketing.
+- **Productos:** la web no vende ni muestra precios; una persona de CTH atiende la compra, como hasta ahora. ~~Para captar el contacto hay un formulario «¿Te interesa un producto?» en la sección Productos del inicio (`#info-producto`): nombre y teléfono obligatorios, producto de interés y correo opcional, código `WEB-PRODUCTOS`. La llamada la hace la ejecutiva de telemarketing.~~ Reemplazado el 19 nov: ver «Formularios, WhatsApp y productos (19 nov 2026)».
 - **Textos de la Dra. Milagros Jaimes** (equipo, láser, fisiatría con láser, ecografía y Doppler): están validados por ella y van tal cual. Solo se aplican las reglas de lenguaje vigentes («Heridas que tratamos», «úlceras vasculares»). «Lesión» se mantiene donde se refiere a músculos, tendones o articulaciones.
 - **Equipo de la Unidad:** nueve especialistas con nombre, especialidad y áreas. Entra **Traumatología y ortopedia** (Dr. José Gregorio Barrio). **Medicina general** la atiende la Dra. Milagros. El equipo va a crecer: se mantiene en `assets/equipo.js`, separado del código.
 - **Láser:** es un solo equipo con varias funciones. Está activo en Cuidamos tu herida (cicatrización avanzada) y también se usa en fisiatría, en la prevención (antes y después de una cirugía) y, próximamente, en cosmetología y cuidado antienvejecimiento.
@@ -107,7 +107,7 @@ Solo se agregan decisiones. Si una cambia, se marca la anterior como superada co
 
 ## Ethical Shields Group y Cloudflare (16 al 19 nov 2026)
 
-Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo. Detalle en el repositorio `cumbre-web`, `docs/DECISIONES-VIGENTES.md` (secciones del 16 al 19 nov). En CTH se aplicaron el 19 nov solo en los comentarios de los espacios reservados: la propuesta no cambia a la vista.
+Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo. Detalle en el repositorio `cumbre-web`, `docs/DECISIONES-VIGENTES.md` (secciones del 16 al 19 nov). ~~En CTH se aplicaron el 19 nov solo en los comentarios de los espacios reservados: la propuesta no cambia a la vista.~~ Superado el 19 nov (más tarde) y cerrado el 20 nov: el encabezado y el pie del grupo se ven siempre (ver «Cierre de los ajustes del grupo (20 nov 2026)»).
 
 - **Nombre del grupo: «Ethical Shields Group»** (dominio ethicalshieldsgroup.com). Reemplaza a «Grupo Medical Shields» y a «Grupo Ethical Shields». Cuatro empresas: Medical Shields, Cuidamos tu Herida (CTH), Ethical Shields AI y Cumbre CHP. Cada una conserva su identidad, su dominio y sus servicios.
 - **Textos visibles del grupo:** «Parte de Ethical Shields Group» y «En Ethical Shields Group encuentras…». En el pie no va «Página del grupo: próximamente».
@@ -117,7 +117,7 @@ Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo.
   - encabezado en teléfono: «Parte de» + logo compacto + «Conoce el grupo», sin descriptor;
   - «Conoce el grupo» no es un enlace: abre la lista de las cuatro marcas, con «Estás aquí» en la propia;
   - pie: logo completo del grupo, en tamaño legible.
-- **En CTH se aplica al migrar el sitio a Cloudflare Pages.** Mientras tanto queda en los espacios reservados (`data-grupo`) de las nueve páginas. Reemplaza «cuando el cliente apruebe el plan con el video». (Superado el mismo día para el encabezado y el pie: ver «Encabezado y pie del grupo visibles», abajo.)
+- ~~**En CTH se aplica al migrar el sitio a Cloudflare Pages.** Mientras tanto queda en los espacios reservados (`data-grupo`) de las nueve páginas.~~ Reemplaza «cuando el cliente apruebe el plan con el video». **Superado para el encabezado y el pie** (19 nov, más tarde; cerrado el 20 nov): se ven siempre. Sigue vigente para la sección del ecosistema, los puentes y el bloque del grupo en Corporativo, que se aplican al migrar.
 - **Pie del grupo debajo del pie de CTH**, como en la Cumbre (Jenny, 19 nov). Antes estaba reservado encima.
 - **Orden de las marcas** en la lista de «Conoce el grupo», la sección y el pie: Medical Shields · Cuidamos tu Herida · Cumbre · Ethical Shields AI, el mismo de la Cumbre (Jenny, 19 nov).
 - **Líneas de las marcas** (las mismas de la Cumbre, `assets/js/ecosistema-propuesta.js`):
@@ -128,8 +128,37 @@ Decisiones del grupo tomadas en las sesiones de la Cumbre y de la web del grupo.
 - **La seguridad de los datos médicos de CTH e IRIS** se evalúa por separado al migrar CTH.
 - **Envío de los formularios en la fase 1: pendiente** (Jenny, 19 nov). Se define al migrar, junto con esa evaluación. No se reabre el resto de la decisión: por correo, sin guardar el lead en ninguna base y sin datos clínicos.
 - **Fuente de lo del grupo (Jenny, 19 nov):** el plan común está desactualizado desde el 11 nov. Mientras se actualiza en una sesión aparte, `CLAUDE.md` apunta a `cumbre-web/docs/DECISIONES-VIGENTES.md` (solo lectura). El «Registro de cambios» del plan común se sigue usando.
-- **Encabezado y pie del grupo visibles en la propuesta (Jenny, 19 nov, más tarde):** para que el equipo los vea mientras se termina la página. Se aplican en las nueve páginas con `assets/grupo.js` y `assets/grupo.css`, siguiendo la regla del 19 nov, con la estructura y las medidas de la Cumbre y los colores de CTH (azul marino, verde y verde claro para «Estás aquí»). Reemplaza, solo para estas dos piezas, «en CTH se aplica al migrar».
+- **Encabezado y pie del grupo visibles en la propuesta (Jenny, 19 nov, más tarde):** para que el equipo los vea mientras se termina la página. Se aplican en las nueve páginas (desde el 19 nov, doce: también `cita.html`, `productos.html` y `producto.html`) con `assets/grupo.js` y `assets/grupo.css`, siguiendo la regla del 19 nov, con la estructura y las medidas de la Cumbre y los colores de CTH (azul marino, verde y verde claro para «Estás aquí»). Reemplaza, solo para estas dos piezas, «en CTH se aplica al migrar».
   - La **sección «Un solo ecosistema», los puentes y el bloque del grupo en Corporativo siguen reservados** e invisibles hasta la migración (los puentes, además, esperan la validación de la Dra. Milagros Jaimes).
   - Enlaces: Medical Shields a medicalshields.com y la Cumbre a cumbrechp.org, en otra pestaña; Cuidamos tu Herida lleva al inicio y dice «Estás aquí»; Ethical Shields AI va sin enlace, como en la Cumbre.
   - El pie del grupo no repite la política de privacidad: CTH ya la tiene en su propio pie.
   - En estas piezas del grupo la Cumbre aparece con su logo actual (II Cumbre… Heridas, Piel y Longevidad), igual que en la web de la Cumbre. El resto de la web de CTH mantiene el nombre y el logo anteriores, como decidió Jenny el 11 nov (pendiente de confirmar).
+
+## Formularios, WhatsApp y productos (19 nov 2026, Jenny)
+
+- **Criterio de diseño:** pantallas simples, ordenadas y con una acción clara; sin desplazamiento interminable en el teléfono. El inicio ya separa pacientes e instituciones, así que cada formulario sirve a un solo público y no lleva avisos para el otro.
+- **Un solo WhatsApp para todo** (+58 416-618-1760). El texto del mensaje dice qué necesita la persona y el código dice de qué página viene:
+  - «Solicitar una cita» y «Agenda una valoración preventiva»: «Hola, quiero agendar una cita (WEB-…)».
+  - «Agenda con nosotros una evaluación de tu herida»: «Hola, quisiera el enlace para IRIS (WEB-…)». El equipo responde con el enlace de IRIS. Reemplaza el enlace directo al formulario de IRIS.
+  - «Escríbenos por WhatsApp» y el botón flotante siguen con «Hola, quiero información (WEB-…)».
+  - Códigos nuevos: `WEB-CITA` (formulario de pacientes) y `WEB-PRODUCTOS` (catálogo y fichas).
+- **Formulario de pacientes «Solicita tu cita»** (`cita.html`): «Pacientes y familiares · CTH»; nombre y apellido (con la ayuda para quien pide por un familiar); ¿cómo prefieres que te contactemos?: WhatsApp (por defecto) o correo electrónico, y el campo de correo aparece solo si elige correo; ¿dónde prefieres recibir atención? (opcional): Necesito orientación, En la Unidad, Por telemedicina, A domicilio; aviso de no describir la herida ni enviar fotos.
+  - Con WhatsApp no se pide el número: se abre WhatsApp con «Hola, soy <nombre>. Quiero agendar una cita. <preferencia> (WEB-CITA)».
+  - Con correo se abre el programa de correo de la persona, dirigido a info@cuidamostuherida.com, con el mismo mensaje y su correo. La web no guarda ni envía datos.
+  - «Prefiero que me contacten» lleva a esta página en todas las páginas de pacientes (en Corporativo, al formulario de organizaciones).
+- **Formulario de Corporativo** (solo empresas y organizaciones): título «Hablemos de una colaboración»; texto «Cuéntanos qué necesita tu organización. Nuestro equipo comercial te contactará para conocer el alcance y el siguiente paso.»; campos, en este orden: tipo de organización, nombre de la organización, nombre y apellido de la persona de contacto, teléfono y correo; casilla obligatoria «Autorizo a CTH a contactarme para atender esta solicitud»; línea «No incluyas datos de salud de ninguna persona.»; botón «Enviar solicitud». Salen sector, número de trabajadores, cargo e interés. El envío sigue pendiente hasta la migración.
+  - «Hospital, clínica o consultorio» se queda: en Venezuela un consultorio, aunque lleve el nombre del médico, es una empresa.
+- **Productos:** CTH prefiere no darle tanta publicidad a la venta; le interesan más los servicios.
+  - En el inicio queda un bloque corto, «Productos que usamos en tu tratamiento», después de Historias reales, con las marcas y el botón «Ver productos». Sin tarjetas ni formulario. Reemplaza la sección grande y el formulario del 11 nov.
+  - Catálogo en `productos.html` y una ficha por producto en `producto.html?p=<id>`, según el modelo de Jenny: ruta, foto oficial, marca, nombre, tipo, descripción, «Presentación de interés» (arranca en «Necesito orientación»), «Consulta con un especialista» y «Consultar disponibilidad» por WhatsApp (el mensaje nombra el producto y la presentación elegida), y «Qué aporta esta tecnología» en tres puntos. Datos en `assets/productos.js`.
+  - El menú «Productos» lleva al catálogo en las doce páginas.
+- **Textos de productos:** las funciones e indicaciones declaradas por el fabricante se publican tal cual, sin validación de la Dra. Milagros. Ella valida solo los textos clínicos propios de CTH (servicios, beneficios, prevención y casos).
+
+## Cierre de los ajustes del grupo (20 nov 2026, Jenny)
+
+Decisiones cerradas. No se vuelven a preguntar.
+
+- **Encabezado y pie del grupo: visibles siempre**, en la propuesta y en el sitio final, en las doce páginas. Reemplaza toda indicación anterior de dejarlos reservados hasta la migración. La sección del ecosistema, los puentes y el bloque del grupo en Corporativo siguen reservados hasta la migración (sin cambios).
+- **Nombres de las cuatro empresas:** Medical Shields, Cuidamos tu Herida (CTH), **Cumbre CHP** y **Ethical Shields AI**. En los documentos no se escribe «Ethical Shields» solo, para no confundir a Ethical Shields AI con Ethical Shields Group.
+- **Logo del grupo:** el comité eligió «Evolución de origen» el 16 nov y Jenny aprobó la versión B el 18 nov. **Completado.**
+- **Pie del grupo igual que el de la Cumbre** (logo completo del grupo): 80 px de alto en computadora y tablet; en teléfono, 70 px con 16 px de margen a cada lado, y 58 px desde 340 px. Reemplaza los 62 px (desde 380 px) y 54 px (desde 340 px) del 19 nov. Medido el 20 nov contra cumbrechp.pages.dev: mismas medidas en todos los anchos, sin desborde en las doce páginas de 1440 a 340 px. **Completado.**
