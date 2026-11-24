@@ -1,11 +1,11 @@
 # ESTADO — Rediseño web de CTH
 
-Última actualización: 20 nov 2026.
+Última actualización: 24 nov 2026.
 
 ## Dónde estamos
 
 - **Fase actual:** propuesta de diseño con el inicio en **cuatro módulos** y **siete landing pages**. El 11 nov entraron las primeras respuestas de CTH y el texto de la Dra. Milagros sobre el equipo y los equipos (láser, fisiatría con láser, ecografía y Doppler).
-- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `b6c84f0` (19 nov, pendientes de contenido y planilla). Los formularios, los mensajes de WhatsApp y los productos (19 nov, tarde) y los ajustes del grupo del 20 nov se publican con el próximo commit de Jenny.
+- **Publicada en:** https://cuidamostuheridainfo.github.io/cth-web-propuesta/ (con `noindex`). Último commit publicado: `76abfaf` (24 nov). Incluye los formularios, WhatsApp, productos y ajustes del grupo (19 y 20 nov) y el trabajo del 24 nov; su mensaje dice «Simulacro de inscripción…» por error (es el de la Cumbre), ver `BITACORA.md`.
 - **No se publica todavía como sitio final:** faltan contenido de CTH y las decisiones del comité.
 - **Documento de diseño completo:** Doc de Claude (enlace en `CLAUDE.md`), secciones 1 a 14. No se actualizó el 9 nov; la estructura vigente es la de este archivo y `DECISIONES-VIGENTES.md`.
 - **Propuesta del área corporativa (9 nov):** Doc de Claude «CTH Corporativo — Propuesta para desarrollar el área de servicios a empresas»: https://claude.ai/artifact/B64YgbKyJW7if5Zo7WPfvW. Es para presentarla a CTH; contiene análisis comercial interno y **no** se sube a este repositorio público.
@@ -13,6 +13,13 @@
 - **Hosting (19 nov):** el sitio final irá a Cloudflare Pages (plan gratuito), no a Netlify. Primero se migra la Cumbre; después, CTH.
 - El 9 nov se publicó la propuesta para la revisión del comité.
 - 11 nov: llegaron las respuestas a los puntos 2, 3 y parte del 4 del mensaje del 30 oct (detalle en `PENDIENTES.md`). El logo del grupo quedó elegido el 16 nov (completado). El feedback de Social Media todavía no llega.
+
+## 24 nov 2026
+
+- **Inventario SEO** del sitio actual (Shopify): 111 direcciones, todas en 200 y con canónica propia; propuesta de destino de cada una y seis decisiones (D1 a D6). D2 decidida: al publicar la web nueva, CTH deja de vender en línea por Shopify y las compras van por WhatsApp; la cuenta se conserva.
+- **Shopify revisado y asegurado** (detalle de seguridad fuera de este repositorio): correo y teléfono de la tienda al día, Cristina fuera de las notificaciones, Carmen agregada, una sola app (de Shopify). El canal de Google está con la cuenta de la administradora anterior y sin acceso; Facebook & Instagram queda por revisar en Meta.
+- **Search Console:** propiedad de dominio creada con la cuenta de CTH, pendiente del TXT en GoDaddy.
+- **Grupo:** los títulos de las marcas del 23 nov copiados de la Cumbre en `assets/grupo.js`, y anotados en el Registro de cambios del plan común.
 
 ## Qué tiene la propuesta
 
@@ -58,7 +65,7 @@ Revisión del 11 nov: las nueve páginas sin enlaces internos rotos, sin errores
 2. Recibir de CTH el contenido que falta, las fotos y el video.
 3. Presentar a CTH la propuesta del área corporativa.
 4. Completar productos, fichas y demás contenido con las respuestas de la planilla del 19 nov.
-5. Inventario SEO con datos de Search Console y mapa de redirecciones 301 (sirve para la migración a Cloudflare).
+5. Inventario SEO y mapa de redirecciones: **inventario hecho el 24 nov** (`docs/MIGRACION-CTH.md` y `docs/seo/inventario-shopify.tsv`, 111 direcciones con su propuesta). Faltan las decisiones D1 y D3 a D6, verificar Search Console (TXT en GoDaddy, cuenta de Greg) y los datos del administrador de Shopify; después se arma `_redirects`.
 6. Al migrar CTH a Cloudflare Pages (después de la Cumbre): evaluación de seguridad de los datos médicos, envío de los formularios y aplicación de las piezas del grupo.
 
 ## Fases del proyecto
