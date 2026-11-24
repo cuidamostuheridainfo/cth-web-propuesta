@@ -13,12 +13,12 @@
 
   // Las cuatro marcas, en el mismo orden que la Cumbre (Jenny, 19 nov 2026).
   var MARCAS = [
-    { id: 'ms', nombre: 'Medical Shields', desc: 'Productos y tecnología',
+    { id: 'ms', nombre: 'Medical Shields', desc: 'Casa de representación',
       url: 'https://medicalshields.com', logo: G + 'logo-medical-shields-claro.svg' },
-    { id: 'cth', nombre: 'Cuidamos tu Herida', desc: 'Atención especializada',
+    { id: 'cth', nombre: 'Cuidamos tu Herida', desc: 'Atención médica especializada',
       url: 'index.html', actual: true, logo: 'assets/logo-cth.png' },
     { id: 'cumbre', nombre: 'II Cumbre Internacional para el Cuidado Avanzado de Heridas, Piel y Longevidad', corto: 'Cumbre',
-      desc: 'Formación y comunidad', url: 'https://cumbrechp.org', logo: G + 'logo-cumbre-27-oscuro-1000.webp' },
+      desc: 'Educación médica continua', url: 'https://cumbrechp.org', logo: G + 'logo-cumbre-27-oscuro-1000.webp' },
     // Sin dirección todavía: se muestra sin enlace, como en la Cumbre.
     { id: 'es', nombre: 'Ethical Shields AI', desc: 'Inteligencia artificial para empresas', pendiente: true, es: true }
   ];

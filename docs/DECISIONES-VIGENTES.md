@@ -162,3 +162,9 @@ Decisiones cerradas. No se vuelven a preguntar.
 - **Nombres de las cuatro empresas:** Medical Shields, Cuidamos tu Herida (CTH), **Cumbre CHP** y **Ethical Shields AI**. En los documentos no se escribe «Ethical Shields» solo, para no confundir a Ethical Shields AI con Ethical Shields Group.
 - **Logo del grupo:** el comité eligió «Evolución de origen» el 16 nov y Jenny aprobó la versión B el 18 nov. **Completado.**
 - **Pie del grupo igual que el de la Cumbre** (logo completo del grupo): 80 px de alto en computadora y tablet; en teléfono, 70 px con 16 px de margen a cada lado, y 58 px desde 340 px. Reemplaza los 62 px (desde 380 px) y 54 px (desde 340 px) del 19 nov. Medido el 20 nov contra cumbrechp.pages.dev: mismas medidas en todos los anchos, sin desborde en las doce páginas de 1440 a 340 px. **Completado.**
+
+## Shopify (24 nov 2026, Jenny)
+
+- **Se conserva la cuenta y la tienda de Shopify de CTH** (no se migra a otra tienda ni a otra cuenta), por el historial, los pagos y el SEO. El detalle de seguridad de la cuenta no va en este repositorio (es público).
+- **Al publicar la web nueva, CTH deja de vender en línea por Shopify.** Todas las compras se atienden por WhatsApp, como ya prevé la web (sin precios ni venta en línea, 11 nov). Respuesta del equipo de CTH a la pregunta de Jenny. Las direcciones de productos y colecciones se tratan según `docs/MIGRACION-CTH.md`.
+- **No se usa WordPress** (se reconfirma la decisión del 30 oct ante la consulta del equipo).

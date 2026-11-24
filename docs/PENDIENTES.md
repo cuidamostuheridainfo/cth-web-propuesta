@@ -1,6 +1,6 @@
 # PENDIENTES — Rediseño web de CTH
 
-Última actualización: 20 nov 2026.
+Última actualización: 24 nov 2026.
 
 **Planilla del 19 nov para el equipo de CTH:** «CTH · Información pendiente para la página web» (36 datos: videos, fotos, productos, contenido de cada página y especialistas), con la columna Respuesta para completar: https://claude.ai/artifact/UsHiNV8WujvhDPFQmA4EwA. **Enviada el 19 nov en Excel**, junto con el mensaje al comité. Cuando llegue respondida, se aplica y se cierran aquí los puntos que cubre.
 
@@ -27,7 +27,7 @@ Se envió el 19 nov con la planilla en Excel. Los puntos 1 a 9 están en la plan
 | 2 | Clientes del servicio para empresas | CTH respondió «Seguros y corporativos» (11 nov). Jenny decidió que vale la orientación comercial de Daniel (9 nov): empresas, aseguradoras, Estado y organizaciones sin fines de lucro. **Cerrado.** Falta lo que ofrecen y sus beneficios (ver Corporativo) |
 | 3 | Venta de productos | **Cerrado (11 nov):** la web no vende ni muestra precios; una persona de CTH atiende la compra. Se agregó el formulario «¿Te interesa un producto?» |
 | 4 | Catálogo del 26 ago (Covalon y Platsul) | La respuesta trajo los servicios, no el catálogo. Sigue abierto: planilla, fila 11 |
-| 5 | Acceso a Shopify y a Google Search Console | Esperando (no está en la planilla; hace falta para el inventario SEO y las 301) |
+| 5 | Acceso a Shopify y a Google Search Console | **Shopify: resuelto (24 nov).** Jenny es la propietaria de la cuenta y de la tienda, tras la salida de la administradora anterior; la cuenta quedó revisada y asegurada. Decisión: no se migra a otra tienda ni a otra cuenta, para conservar el historial, los pagos y el SEO. El detalle de seguridad no va en este repositorio (es público). **Search Console: en curso (24 nov).** Cristina todavía no compartió Search Console, Merchant Center ni Google Ads con la cuenta de CTH. Se creó la propiedad de dominio `cuidamostuherida.com` con la cuenta de CTH, pendiente de verificar: falta agregar en GoDaddy (cuenta de Greg) el registro TXT que muestra Search Console, como registro nuevo y sin tocar los existentes. Se pidió a Greg acceso delegado. Al verificarla se ve el historial completo del sitio |
 | 6 | Correo de destino de los formularios y quién los atiende | Esperando: planilla, fila 15 (hoy solo aplica a Corporativo) |
 | 7 | Fecha esperada de publicación | Esperando. Jenny (11 nov): todavía no se publica |
 | 8 | «Farmacia» en el menú: ¿servicio aparte o catálogo? | Esperando: planilla, fila 16 |
@@ -104,6 +104,8 @@ Se envió el 19 nov con la planilla en Excel. Los puntos 1 a 9 están en la plan
 
 - **Migración de CTH a Cloudflare Pages** (después de la Cumbre): proyecto propio en la cuenta del grupo, protegiendo el SEO (mapa de 301 en `_redirects`, como el que dejó preparado la Cumbre en `docs/preparado-migracion/`) y el correo de cuidamostuherida.com.
 - **Seguridad de los datos médicos de CTH e IRIS:** evaluarla por separado antes de migrar.
+- **Shopify y la migración (24 nov):** decidido: al publicar la web nueva, CTH deja de vender en línea por Shopify y las compras van por WhatsApp; la cuenta se conserva. Antes de cambiar el dominio, cerrar los pedidos y pagos pendientes. Inventario SEO y propuesta de 301 en `docs/MIGRACION-CTH.md` y `docs/seo/inventario-shopify.tsv` (faltan D1 y D3 a D6, Search Console y datos del administrador de Shopify).
+- **Shopify, revisión del 24 nov:** apps instaladas: solo Messaging, de Shopify (sin riesgo). Canal Google & YouTube conectado con la cuenta personal de la administradora anterior y sin acceso: no se toca hasta la migración (se desconecta entonces, porque CTH deja de vender por Shopify). Canal Facebook & Instagram: activo desde jul 2023, con el píxel de Meta conectado; la app pide permisos nuevos sobre datos de clientes y pedidos, que no se aceptaron. Falta ver en Meta Business Suite quién administra la página de CTH, el píxel y el catálogo (espera a que Jenny inicie sesión en Meta). Falta también el aviso «Acción necesaria» de Shop, y borrar los teléfonos que Genesis ya no use en las notificaciones a empleados. La verificación en dos pasos de la cuenta tiene un cambio pendiente que Jenny maneja fuera de este repositorio.
 - **Desborde a 320 px:** en el inicio y en Unidad la página se sale 4 px a lo ancho en teléfonos muy angostos (320 px). No viene del grupo; ya estaba. Revisar si Jenny lo pide.
 - **Envío del formulario de Corporativo:** pendiente. Hoy no envía nada. Se define al migrar, junto con la evaluación de seguridad. (El de pacientes no necesita servidor: abre WhatsApp o el correo.)
 - **Una dirección por producto para el SEO:** hoy la ficha es `producto.html?p=<id>`. Al migrar, generar una página estática por producto, con su propia dirección y su título.
